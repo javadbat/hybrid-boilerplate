@@ -1,0 +1,9 @@
+node_modules
+App/dist
+App/WebComponents/ChatVoicePlayer/dist
+.env
+envs
+Dockerfile_SIT
+Dockerfile_UAT
+Dockerfile_RELEASE
+Dockerfile_PROD

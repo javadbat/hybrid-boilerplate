@@ -1,0 +1,37 @@
+$desktop-large-width: 1200px;
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 480px;
+$mobile-small-width:320px;
+@mixin large-desktop {
+    //for defualt our pages style is in this scale but for some cases we define it
+    @media (min-width: #{$desktop-large-width}){
+      @content;
+    }
+  }
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$desktop-large-width - 1px}){
+    @content;
+  }
+}
+@mixin small-desktop {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+      @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+      @content;
+    }
+}
+@mixin mobile {
+    @media (min-width: #{$mobile-small-width}) and (max-width: #{$mobile-width - 1px}) {
+      @content;
+    }
+}
+@mixin mobile-tablet {
+    @media (min-width: #{$mobile-small-width}) and (max-width: #{$tablet-width - 1px}) {
+      @content;
+    }
+}
+//if it smaller than 320 i think he must change device :D

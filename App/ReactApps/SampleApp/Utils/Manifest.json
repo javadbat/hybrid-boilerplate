@@ -1,0 +1,32 @@
+{
+    "name": "hybrid react app",
+    "short_name": "app",
+    "lang": "fa",
+    "start_url": "/sample-app",
+    "display": "standalone",
+    "theme_color": "#FFF",
+    "background_color": "#FF9800",
+    "icons": [
+      {
+        "src": "/App/Assets/Images/logo-128.png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "/App/Assets/Images/logo-192.png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/App/Assets/Images/logo-256.png",
+        "sizes": "256x256"
+      },
+      {
+        "src": "/App/Assets/Images/logo-384.png",
+        "sizes": "384x384"
+      },
+      {
+        "src": "/App/Assets/Images/logo-512.png",
+        "sizes": "512x512"
+      }
+    ]
+}
+  
