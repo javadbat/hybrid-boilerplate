@@ -24,6 +24,12 @@ you can load data in nodejs server and render it serverside for SEO need
 - Rollup
 - Webpack
 ## usage
- 1- clone the project
- 2- run `npm i`
- 3- run `npm start`
+ 1- clone the project    
+ 2- run `npm i`    
+ 3- run `npm start`    
+ for production 
+ 1- clone from your git
+ 2- run `npm i`    
+ 3- set `NODE_ENV` and `APP_STAGE`    
+ 4- run `npm run build`    
+ 5- run `npm run serve`    
