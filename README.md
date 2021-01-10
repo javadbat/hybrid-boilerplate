@@ -33,4 +33,18 @@ you can load data in nodejs server and render it serverside for SEO need
  2- run `npm i`    
  3- set `NODE_ENV` and `APP_STAGE`    
  4- run `npm run build`    
- 5- run `npm run serve`    
+ 5- run `npm run serve`
+
+## environment variables
+| env variable name| values                      |
+| -------------    | -------------               |
+| NODE_ENV         | development, production     |
+| App_Stage        | dev, uat, release, main,... |
+
+### command
+
+set envirement variable
+```
+$env:APP_STAGE="dev"
+
+``` 
