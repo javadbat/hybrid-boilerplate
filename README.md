@@ -23,3 +23,7 @@ you can load data in nodejs server and render it serverside for SEO need
 - ExpressJs
 - Rollup
 - Webpack
+## usage
+ 1- clone the project
+ 2- run `npm i`
+ 3- run `npm start`
