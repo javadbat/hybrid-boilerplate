@@ -32,7 +32,7 @@
     "ace-builds": "^1.4.12",
     "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^8.2.2",
     "colors": "^1.4.0",
     "cookie-parser": "^1.4.5",
     "css-loader": "^3.5.3",
@@ -62,7 +62,7 @@
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
     "uuid": "^8.3.1",
-    "webpack": "^4.43.0",
+    "webpack": "^5.21.1",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0"
   },

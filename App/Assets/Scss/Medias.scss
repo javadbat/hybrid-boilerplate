@@ -4,7 +4,7 @@ $tablet-width: 768px;
 $mobile-width: 480px;
 $mobile-small-width:320px;
 @mixin large-desktop {
-    //for defualt our pages style is in this scale but for some cases we define it
+    //for default our pages style is in this scale but for some cases we define it
     @media (min-width: #{$desktop-large-width}){
       @content;
     }

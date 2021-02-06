@@ -227,7 +227,10 @@ class Build {
                         test: /\.(js|jsx)$/,
                         exclude: /node_modules/,
                         loader: 'babel-loader',
-                        options: babelOption
+                        options: babelOption,
+                        resolve: {
+                            fullySpecified: false
+                        }
                     },
                     {
                         test: /\.s[ac]ss$/i,
@@ -243,6 +246,17 @@ class Build {
                     {
                         test: /\.html$/i,
                         loader: 'html-loader',
+                    },
+                    {
+                        test: /\.(png|jpg|gif)$/i,
+                        type: 'asset/resource',
+                        generator: {
+                            filename: 'assets/images/[contenthash][ext][query]'
+                        }
+                    },
+                    {
+                        test: /\.svg/,
+                        type: 'asset/inline'
                     },
                 ]
             },
