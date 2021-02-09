@@ -11,6 +11,7 @@ function Index() {
                 <div className="project-title">ReactJs App Sample</div>
                 <div className="link-box">
                     <Link to="/assets-load-sample">assets load sample</Link>
+                    <Link to="/folder-structure">folder structure</Link>
                 </div>
             </div>
         </div>
