@@ -44,8 +44,8 @@ const render = () => {
     );
 };
 render();
-if (module.hot) {
-    module.hot.accept('./Layout/Layout', () => {
+if (import.meta.webpackHot) {
+    import.meta.webpackHot.accept('./Layout/Layout', () => {
         render();
     });
 }
