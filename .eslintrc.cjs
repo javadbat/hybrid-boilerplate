@@ -30,7 +30,7 @@ module.exports = {
         "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
         "no-debugger":"warn",
         "no-duplicate-imports":"error",
-        "react/prop-types":[0],
+        "react/prop-types":[1],
         'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
         'react/jsx-closing-tag-location': 'error',
         'react/jsx-wrap-multilines': ['error', {
