@@ -13,6 +13,12 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Analysis",
+            "program": "${workspaceFolder}/Command/Analysis/Analysis.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Start",
             "program": "${workspaceFolder}/Command/Start/Start.js"
         },

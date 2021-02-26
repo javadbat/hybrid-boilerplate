@@ -14,7 +14,8 @@ import webpack from 'webpack';
 import generalConfig from'../../Config/GeneralConfigServer.js';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webPackHotMiddleware from "webpack-hot-middleware";
-
+/* to analysis our app */
+import WebpackBundleAnalyzer from 'webpack-bundle-analyzer';
 class Build {
     constructor(app) {
         this.app = app;
@@ -273,6 +274,13 @@ class Build {
         };
         if (watch && config.reactApps.hotReload) {
             inputOptions.plugins.push(new webpack.HotModuleReplacementPlugin());
+        }
+        if(generalConfig.env == "development"){
+            inputOptions.plugins.push(new WebpackBundleAnalyzer.BundleAnalyzerPlugin({
+                analyzerMode:'disabled',
+                generateStatsFile:true,
+                statsFilename:'webpack-bundle-analysis.json'
+            }));
         }
         return inputOptions;
     }

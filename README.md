@@ -23,12 +23,16 @@ you can load data in nodejs server and render it serverside for SEO need
 - ExpressJs
 - Rollup
 - Webpack
+
 ## usage
- ### for development 
+
+### for development
+
  1- clone the project    
  2- run `npm i`    
  3- run `npm start`    
- ### for production     
+### for production     
+
  1- clone from your git
  2- run `npm i`    
  3- set `NODE_ENV` and `APP_STAGE`    
@@ -36,6 +40,7 @@ you can load data in nodejs server and render it serverside for SEO need
  5- run `npm run serve`
 
 ## environment variables
+
 | env variable name| values                      |
 | -------------    | -------------               |
 | NODE_ENV         | development, production     |
@@ -43,8 +48,17 @@ you can load data in nodejs server and render it serverside for SEO need
 
 ### command
 
-set envirement variable
-```
+set envirement variable on windows:
+
+```command
 $env:APP_STAGE="dev"
 
-``` 
+```
+
+see React apps webpack analytics report:
+
+```command
+npm run analysis
+```
+
+it will open analytic report of your app package so you can detect heavy package of your app. remember you cant run this command before you build your project and you have to build your project once before run this command.

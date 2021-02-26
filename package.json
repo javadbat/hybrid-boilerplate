@@ -7,6 +7,7 @@
     "serve": "node Command/Serve/Serve.js",
     "build": "node Command/Build/Build.js",
     "start": "node Command/Start/Start.js",
+    "analysis": "node Command/Analysis/Analysis.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint \"**/*.js\""
   },
@@ -65,6 +66,7 @@
     "tcp-port-used": "^1.0.2",
     "uuid": "^8.3.1",
     "webpack": "^5.21.1",
+    "webpack-bundle-analyzer": "^4.4.0",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0"
   },
