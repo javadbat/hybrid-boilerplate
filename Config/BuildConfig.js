@@ -12,6 +12,7 @@ var config = {
         baseOutputPath:'App/dist/ReactApps',
         basePublicPath:'/dist/ReactApps/',
         hotReload:true,
+        enableAnalyzer:false,
         appList:[
             {
                 name:'SampleApp',

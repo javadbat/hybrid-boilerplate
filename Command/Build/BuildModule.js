@@ -275,7 +275,7 @@ class Build {
         if (watch && config.reactApps.hotReload) {
             inputOptions.plugins.push(new webpack.HotModuleReplacementPlugin());
         }
-        if(generalConfig.env == "development"){
+        if(generalConfig.env == "development" && config.reactApps.enableAnalyzer){
             inputOptions.plugins.push(new WebpackBundleAnalyzer.BundleAnalyzerPlugin({
                 analyzerMode:'disabled',
                 generateStatsFile:true,
