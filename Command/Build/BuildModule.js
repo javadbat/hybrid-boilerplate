@@ -9,6 +9,7 @@ import rollupJson from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 import config from '../../Config/BuildConfig.js';
 import rollupReplace from'@rollup/plugin-replace';
+import { terser } from "rollup-plugin-terser";
 /* webpack section */
 import webpack from 'webpack';
 import generalConfig from'../../Config/GeneralConfigServer.js';
@@ -113,8 +114,12 @@ class Build {
                 ignoreGlobal: false,
                 sourceMap: true
             }),
-            rollupJson()
+            rollupJson(),
         ];
+        if(generalConfig.env == "production" && config.reactApps.useMinifier){
+            //add minifier
+            plugins.push(terser());
+        }
         let inputOptions = {
             input: path.join(...module.path.split('/')),
             external: module.external || [],

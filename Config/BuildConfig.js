@@ -13,6 +13,7 @@ var config = {
         basePublicPath:'/dist/ReactApps/',
         hotReload:true,
         enableAnalyzer:false,
+        useMinifier:true,
         appList:[
             {
                 name:'SampleApp',
