@@ -131,7 +131,7 @@ class Build {
     _getOutputOption(module) {
         let outputOptions = {
             // core output options
-            sourcemap: true,
+            sourcemap: generalConfig.env == "development",
             file: path.join(...module.outputPath.split('/')),
             format: 'es', //es for native code , system for systemjs known module
             //dir: 'App/dist',
