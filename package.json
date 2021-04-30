@@ -9,11 +9,17 @@
     "start": "node Command/Start/Start.js",
     "analysis": "node Command/Analysis/Analysis.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint \"**/*.js\""
+    "eslint": "eslint \"**/*.js\"",
+    "validate": "npm-run-all --parallel test lint",
+    "precommit": "npm run validate",
+    "prepush": "npm run validate"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "npm-run-all": "^4.1.5"
+  },
   "dependencies": {
     "@babel/core": "^7.9.6",
     "@babel/plugin-external-helpers": "^7.8.3",
