@@ -6,6 +6,8 @@ fs.readFile( path.join(generalConfig.basePath, 'App','dist','ReactApps','webpack
     if(!err){
         const analysisData = JSON.parse(jsonString);
         webpackAnalyzer.start(analysisData);
+        if(analysisData)
+            analysisData.start;
     }else{
         console.error(err);
     }
