@@ -9,15 +9,18 @@
     "start": "node Command/Start/Start.js",
     "analysis": "node Command/Analysis/Analysis.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint \"**/*.js\"",
-    "validate": "npm run eslint",
-    "precommit": "echo \" precommit \""
+    "eslint": "eslint \"**/*.js\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint"
+    }
   },
   "dependencies": {
     "@babel/core": "^7.9.6",
