@@ -10,15 +10,14 @@
     "analysis": "node Command/Analysis/Analysis.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint \"**/*.js\"",
-    "validate": "npm-run-all --parallel test lint",
-    "precommit": "npm run validate",
-    "prepush": "npm run validate"
+    "validate": "npm run eslint",
+    "precommit": "npm run validate"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "husky": "^6.0.0",
-    "npm-run-all": "^4.1.5"
+    "lint-staged": "^10.5.4"
   },
   "dependencies": {
     "@babel/core": "^7.9.6",
