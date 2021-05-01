@@ -7,7 +7,7 @@ fs.readFile( path.join(generalConfig.basePath, 'App','dist','ReactApps','webpack
         const analysisData = JSON.parse(jsonString);
         webpackAnalyzer.start(analysisData);
         if(analysisData)
-            analysisData.start;
+            analysisData.start();
     }else{
         console.error(err);
     }
