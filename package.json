@@ -9,7 +9,7 @@
     "start": "node Command/Start/Start.js",
     "analysis": "node Command/Analysis/Analysis.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix"
+    "eslint": "./node_modules/.bin/eslint --ignore-path .gitignore ."
   },
   "author": "",
   "license": "ISC",
@@ -19,8 +19,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run eslint"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "@babel/core": "^7.9.6",
