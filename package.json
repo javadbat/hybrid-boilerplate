@@ -9,7 +9,7 @@
     "start": "node Command/Start/Start.js",
     "analysis": "node Command/Analysis/Analysis.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint \"**/*.js\""
+    "eslint": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix"
   },
   "author": "",
   "license": "ISC",
