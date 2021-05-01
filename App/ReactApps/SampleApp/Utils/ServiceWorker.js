@@ -90,6 +90,6 @@ function clearCaches() {
             return caches.delete(key);
         })
         );
-    })
+    });
 }
 //read this: https://www.afasterweb.com/2017/01/31/upgrading-your-service-worker-cache/
