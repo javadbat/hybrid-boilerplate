@@ -203,22 +203,7 @@ class Build {
         return outputOptions;
     }
     _getReactAppInputOption(appList, watch) {
-        const babelOption = {
-            presets: [
-                ["@babel/preset-env", {
-                    "targets": { "browsers": ["last 2 chrome versions"] },
-                    "useBuiltIns": "usage",
-                    "corejs": "3.6.5"
-                }],
-                "@babel/preset-react",
-            ],
-            plugins: [
-                ["@babel/plugin-proposal-decorators", { "legacy": true }],
-                "@babel/plugin-proposal-optional-chaining",
-                ["@babel/plugin-proposal-class-properties", { loose: true }],
-                "@babel/plugin-syntax-dynamic-import"
-            ]
-        };
+        const babelOption = Build.getReactAppBabelOption();
         const entry = {};
         appList.forEach((reactApp)=>{
             const entryPath = [path.join(generalConfig.basePath, ...reactApp.path.split('/'))];
@@ -292,6 +277,25 @@ class Build {
             }));
         }
         return inputOptions;
+    }
+    static getReactAppBabelOption(){
+        const babelOption = {
+            presets: [
+                ["@babel/preset-env", {
+                    "targets": { "browsers": ["last 2 chrome versions"] },
+                    "useBuiltIns": "usage",
+                    "corejs": "3.6.5"
+                }],
+                "@babel/preset-react",
+            ],
+            plugins: [
+                ["@babel/plugin-proposal-decorators", { "legacy": true }],
+                "@babel/plugin-proposal-optional-chaining",
+                ["@babel/plugin-proposal-class-properties", { loose: true }],
+                "@babel/plugin-syntax-dynamic-import"
+            ]
+        };
+        return babelOption;
     }
 }
 export default Build;

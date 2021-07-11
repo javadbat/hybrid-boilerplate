@@ -8,13 +8,14 @@
     "build": "node Command/Build/Build.js",
     "start": "node Command/Start/Start.js",
     "analysis": "node Command/Analysis/Analysis.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node Command/Test/Test.js",
     "eslint": "./node_modules/.bin/eslint --ignore-path .gitignore ."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "husky": "^4.2.3",
+    "jest": "^27.0.6",
     "lint-staged": "^10.5.4"
   },
   "husky": {
