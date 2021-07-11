@@ -1,4 +1,4 @@
-var config = {
+var buildConfig = {
     pagesBundle:[
         {
             name:'index',
@@ -22,6 +22,20 @@ var config = {
         ]
     },
     webComponents : [
+        //for example:
+        // {
+        //     name:'component-name',
+        //     path:'/App/WebComponents/ComponentName/lib/ComponentName.js',
+        //     outputPath:'/App/WebComponents/ComponentName/dist/ComponentName.js'
+        // },
+    ],
+    sassFiles:[
+        {
+            path:'/App/Assets/Scss/Pages/Index.scss',
+            outputPath:'/App/Assets/Css/Pages/Index.css',
+            //you can make watch true to decrease build and watch overhead and run npm run build manually every time you need to build the sass file
+            watch:true
+        }
     ]
 };
-export default config;
+export default buildConfig;

@@ -17,8 +17,11 @@ import webpackMiddleware from 'webpack-dev-middleware';
 import webPackHotMiddleware from "webpack-hot-middleware";
 /* to analysis our app */
 import WebpackBundleAnalyzer from 'webpack-bundle-analyzer';
+import SassBuilder from './SassBuilder.js';
+/* add sass builder to project */
 class Build {
     constructor(app) {
+        this.sassBuilder = new SassBuilder();
         this.app = app;
     }
     build(watch) {
@@ -26,6 +29,7 @@ class Build {
             this.BuildPageModules(watch);
             this.buildReactApps(watch);
         });
+        this.sassBuilder.buildSassFiles(watch);
 
     }
     buildWebComponents(watch) {
