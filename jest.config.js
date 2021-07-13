@@ -6,7 +6,7 @@ export default async () => {
         verbose: true,
         testEnvironment:'jsdom',
         transform: {
-            '\\.js$': ['babel-jest', { configFile: path.join(generalConfig.basePath, 'Command', 'Test', 'BabelConfig.js') }]
+            '\\.jsx?$': ['babel-jest', { configFile: path.join(generalConfig.basePath, 'Command', 'Test', 'BabelConfig.js') }]
         },
         moduleNameMapper: {
             "^.+\\.(css|less|scss)$": "babel-jest"
