@@ -9,7 +9,9 @@ export default async () => {
             '\\.jsx?$': ['babel-jest', { configFile: path.join(generalConfig.basePath, 'Command', 'Test', 'BabelConfig.js') }]
         },
         moduleNameMapper: {
-            "^.+\\.(css|less|scss)$": "babel-jest"
+            '.*\\.(css|less|styl|scss|sass)$': path.join(generalConfig.basePath, 'Command', 'Test', 'mocks', 'styleMocks.js'),
+            '.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+            path.join(generalConfig.basePath, 'Command', 'Test', 'mocks', 'styleMocks.js'),
         },
         setupFiles: ['raf/polyfill', path.join(generalConfig.basePath, 'Command', 'Test', 'EnzymeConfig.js')],
         globals: {
