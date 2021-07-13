@@ -11,7 +11,7 @@ export default async () => {
         moduleNameMapper: {
             "^.+\\.(css|less|scss)$": "babel-jest"
         },
-        setupFiles: [path.join(generalConfig.basePath, 'Command', 'Test', 'EnzymeConfig.js')],
+        setupFiles: ['raf/polyfill', path.join(generalConfig.basePath, 'Command', 'Test', 'EnzymeConfig.js')],
         globals: {
             NODE_ENV: "test"
         },
