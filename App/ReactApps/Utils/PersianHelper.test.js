@@ -1,5 +1,6 @@
 import { expect, test } from '@jest/globals';
 import {faToEnDigits, enToFaDigits} from './PersianHelper';
+
 test('farsi to en number',()=>{
     expect(faToEnDigits('۱۲۳')).toBe('123');
 });

@@ -22,6 +22,11 @@
             "name": "Start",
             "program": "${workspaceFolder}/Command/Start/Start.js"
         },
-
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test",
+            "program": "${workspaceFolder}/Command/Test/Test.js"
+        },
     ]
 }
