@@ -17,5 +17,6 @@ export default async () => {
         globals: {
             NODE_ENV: "test"
         },
+        injectGlobals: false
     };
 };
