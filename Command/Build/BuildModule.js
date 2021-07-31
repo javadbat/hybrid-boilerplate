@@ -107,6 +107,7 @@ class Build {
             rollupReplace({
                 'process.env.NODE_ENV': `"${generalConfig.env}"`,
                 'process.env.APP_STAGE': `"${generalConfig.appStage}"`,
+                preventAssignment: true
             }),
             commonjs({
                 include: ["./index.js", "node_modules/**"],
