@@ -52,6 +52,7 @@
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-replace": "^3.0.0",
+    "@svgr/webpack": "^5.5.0",
     "ace-builds": "^1.4.12",
     "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",

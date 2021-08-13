@@ -117,7 +117,7 @@ export class ReactBuilder {
                     },
                     {
                         test: /\.svg/,
-                        type: 'asset/inline'
+                        use: ['@svgr/webpack']
                     },
                 ]
             },
