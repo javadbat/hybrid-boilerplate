@@ -34,5 +34,15 @@
             color:#fff;
             font-weight: 600;
         }
+        .link-box{
+            display: flex;
+            gap:8px;
+            a{
+                color:#ededed;
+                &:visited{
+                    color:aqua;
+                }
+            }
+        }
     }
 }
