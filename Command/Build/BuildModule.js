@@ -13,6 +13,10 @@ import { terser } from "rollup-plugin-terser";
 import SassBuilder from './SassBuilder.js';
 import { ReactBuilder } from './ReactBuilder.js';
 import generalConfig from '../../Config/GeneralConfigServer.js';
+
+/**
+ * @classdesc responible to build project files like react apps, web components or sass files
+ */
 class Build {
     constructor(app) {
         this.sassBuilder = new SassBuilder();

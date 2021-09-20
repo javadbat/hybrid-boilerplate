@@ -1,9 +1,12 @@
 var buildConfig = {
+    //you may bundle your pages js file and use it in your html file. you just had to add it here
     pagesBundle:[
         {
             name:'index',
             path:'/App/Assets/Js/Pages/Index.js',
             outputPath:'/App/dist/Assets/Js/Pages/Index.js',
+            //for performance reason and due to limited of watching file you can made them not be watch even in development mode
+            // in production mode they dont be watched
             watch:true,
         },
         
@@ -11,10 +14,13 @@ var buildConfig = {
     reactApps:{
         baseOutputPath:'App/dist/ReactApps',
         basePublicPath:'/dist/ReactApps/',
+        // apply change on the fly in your browser on change in development envirement(NODE_ENV=development)
         hotReload:true,
         enableAnalyzer:false,
+        // will minify your app on production mode(NODE_ENV=production)
         useMinifier:true,
         appList:[
+            //you can define multiple react apps here
             {
                 name:'SampleApp',
                 path:'/App/ReactApps/SampleApp/SampleAppBootstrapper.js',

@@ -150,7 +150,8 @@ export class ReactBuilder {
                 ["@babel/preset-env", {
                     "targets": { "browsers": ["last 2 chrome versions"] },
                     "useBuiltIns": "usage",
-                    "corejs": "3.6.5"
+                    "corejs": "3.6.5",
+                    "loose":true
                 }],
                 "@babel/preset-react",
             ],

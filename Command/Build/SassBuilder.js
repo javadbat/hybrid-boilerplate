@@ -4,6 +4,10 @@ import chalk from 'chalk';
 import path from 'path';
 import generalConfig from '../../Config/GeneralConfigServer.js';
 import buildConfig from '../../Config/BuildConfig.js';
+
+/**
+ * @classdesc this class is responsible to convert sass file to css file
+ */
 class SassBuilder {
     constructor() {
 

@@ -1,3 +1,6 @@
+/**
+ * @classdesc hybrid boilerplate support both client side app and server side app here you can add your server side urls and address for example you can put docker address here for your servers comunications
+ */
 class AddressConfig{
     constructor(env){
         this.env = env;
