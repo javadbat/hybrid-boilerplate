@@ -37,6 +37,7 @@ class PageRoutes {
     registerRoutes() {
         this.app.get('/', this.indexPage.bind(this));
         this.app.use('/sample-app',this.sampleAppController.router);
+        // here you can add your own custom page routes they may be a html page route or react app page route
     }
     indexPage(req, res) {
         const hbsData = {

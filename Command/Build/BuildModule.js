@@ -2,7 +2,7 @@ import {rollup,watch} from'rollup' ;
 import path from 'path';
 import Colors from 'colors';
 
-import html from '@rollup/plugin-html';
+import html from 'rollup-plugin-html';
 import postcss from 'rollup-plugin-postcss';
 import commonjs from '@rollup/plugin-commonjs';
 import rollupJson from '@rollup/plugin-json';
