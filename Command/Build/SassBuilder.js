@@ -15,6 +15,7 @@ class SassBuilder {
     buildSassFiles(watch) {
         const fileList = buildConfig.sassFiles;
         fileList.forEach((file) => {
+            this.ensureDirectoryExistence(path.join(generalConfig.basePath, ...file.outputPath.split('/')));
             this.buildSassFile(file);
         });
         if (watch) {
@@ -42,10 +43,12 @@ class SassBuilder {
                 if (fsWait) return;
                 fsWait = setTimeout(() => {
                     fsWait = false;
-                }, 100);
+                }, 300);
             }
             if (fileName && event == "change") {
-                this.buildSassFile(fileConfig);
+                setTimeout(() => {
+                    this.buildSassFile(fileConfig);
+                }, 300);
             }
         });
     }
@@ -84,6 +87,15 @@ class SassBuilder {
                 console.error(err);
             }
         });
+    }
+    ensureDirectoryExistence(filePath) {
+        //make sure css file directory is exist or create it
+        var dirname = path.dirname(filePath);
+        if (fs.existsSync(dirname)) {
+            return true;
+        }
+        this.ensureDirectoryExistence(dirname);
+        fs.mkdirSync(dirname);
     }
 }
 export default SassBuilder;
