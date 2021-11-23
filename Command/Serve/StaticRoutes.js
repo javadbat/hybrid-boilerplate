@@ -12,6 +12,7 @@ class StaticRoutes{
         var assetsOptions = {
             dotfiles: 'ignore',
             etag: false,
+            //if you want to add more static files to be loaded as a static assets you can add them here
             extensions: ['htm', 'html','js','css','jpg','png','svg','gif'],
             index: false,
             maxAge: '1d',
