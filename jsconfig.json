@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "jsx": "react",
+        "baseUrl": "./",
+        "paths": {
+            "@utils": ["App/ReactApps/Utils/index"],
+            "@components": ["App/ReactApps/Components/index"],
+            "App": ["App"],
+            "Command": ["Command"],
+            "Config": ["Config"],
+            "Server": ["Server"]
+        }
+    },
+    "include": ["App", "Command", "Config", "Server"],
+    "exclude": ["node_modules", "dist", "App/dist"]
+}

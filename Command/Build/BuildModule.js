@@ -15,10 +15,13 @@ import webpack from 'webpack';
 import generalConfig from'../../Config/GeneralConfigServer.js';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webPackHotMiddleware from "webpack-hot-middleware";
-/* to analysis our app */
+/* to analyze our app */
 import WebpackBundleAnalyzer from 'webpack-bundle-analyzer';
-import SassBuilder from './SassBuilder.js';
 /* add sass builder to project */
+import SassBuilder from './SassBuilder.js';
+/* auto-configure path aliases */
+import { resolvedAliases } from '../../Config/PathConfig.js';
+
 class Build {
     constructor(app) {
         this.sassBuilder = new SassBuilder();
@@ -259,6 +262,7 @@ class Build {
                 new webpack.EnvironmentPlugin(['NODE_ENV','APP_STAGE'])
             ],
             resolve: {
+                alias: resolvedAliases,
                 extensions: ['*', '.js', '.jsx'],
                 modules: [path.join(generalConfig.basePath, 'node_modules')],
             },

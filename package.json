@@ -4,11 +4,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "serve": "node Command/Serve/Serve.js",
-    "build": "node Command/Build/Build.js",
-    "start": "node Command/Start/Start.js",
-    "analysis": "node Command/Analysis/Analysis.js",
-    "test": "node Command/Test/Test.js",
+    "serve": "node --experimental-json-modules Command/Serve/Serve.js",
+    "build": "node --experimental-json-modules Command/Build/Build.js",
+    "start": "node --experimental-json-modules Command/Start/Start.js",
+    "analysis": "node --experimental-json-modules Command/Analysis/Analysis.js",
+    "test": "node --experimental-json-modules Command/Test/Test.js",
     "eslint": "./node_modules/.bin/eslint --ignore-path .gitignore ."
   },
   "author": "",
