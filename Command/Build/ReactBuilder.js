@@ -3,11 +3,13 @@ import path from 'path';
 import fs from 'fs';
 /* webpack section */
 import webpack from 'webpack';
-import generalConfig from '../../Config/GeneralConfigServer.js';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webPackHotMiddleware from "webpack-hot-middleware";
 /* to analysis our app */
 import WebpackBundleAnalyzer from 'webpack-bundle-analyzer';
+import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
+import { resolvedAliases } from '../../Config/PathAliasesConfig.js';
+
 export class ReactBuilder {
     constructor(app) {
         this.app = app;
@@ -18,7 +20,7 @@ export class ReactBuilder {
         this.buildReactApp(inputOptions, outputOptions, watch);
     }
     buildReactApp(inputOptions, outputOptions, watch = true) {
-        this.deletePrevBuild(path.join(generalConfig.basePath, ...config.reactApps.baseOutputPath.split('/')));
+        this.deletePrevBuild(path.join(generalConfigServer.basePath, ...config.reactApps.baseOutputPath.split('/')));
 
         const compiler = webpack({
             ...inputOptions,
@@ -59,10 +61,10 @@ export class ReactBuilder {
     _getReactAppOutputOption() {
         let outputOptions = {
             // core output options
-            path: path.join(generalConfig.basePath, ...config.reactApps.baseOutputPath.split('/')),
+            path: path.join(generalConfigServer.basePath, ...config.reactApps.baseOutputPath.split('/')),
             filename: "[name].js",
             //in production we make it id to make it less readble
-            chunkFilename: generalConfig.env=="production"?path.join('[id]@[contenthash].chunk.js'):path.join('[name]@[contenthash].chunk.js'),
+            chunkFilename: generalConfigServer.env=="production"?path.join('[id]@[contenthash].chunk.js'):path.join('[name]@[contenthash].chunk.js'),
             sourceMapFilename: '[file].map',
             publicPath: config.reactApps.basePublicPath,
         };
@@ -72,7 +74,7 @@ export class ReactBuilder {
         const babelOption = ReactBuilder.getReactAppBabelOption();
         const entry = {};
         appList.forEach((reactApp) => {
-            const entryPath = [path.join(generalConfig.basePath, ...reactApp.path.split('/'))];
+            const entryPath = [path.join(generalConfigServer.basePath, ...reactApp.path.split('/'))];
             if (watch && config.reactApps.hotReload) {
                 entryPath.push('webpack-hot-middleware/client');
             }
@@ -80,8 +82,8 @@ export class ReactBuilder {
         });
         let inputOptions = {
             entry: entry,
-            mode: generalConfig.env,
-            devtool: generalConfig.env == 'development' ? 'source-map' : false,
+            mode: generalConfigServer.env,
+            devtool: generalConfigServer.env == 'development' ? 'source-map' : false,
             module: {
                 rules: [
                     {
@@ -125,17 +127,18 @@ export class ReactBuilder {
                 new webpack.EnvironmentPlugin(['NODE_ENV', 'APP_STAGE'])
             ],
             resolve: {
+                alias: resolvedAliases,
                 extensions: ['*', '.js', '.jsx'],
-                modules: [path.join(generalConfig.basePath, 'node_modules')],
+                modules: [path.join(generalConfigServer.basePath, 'node_modules')],
             },
             resolveLoader: {
-                modules: ["node_modules", path.join(generalConfig.basePath, 'node_modules')]
+                modules: ["node_modules", path.join(generalConfigServer.basePath, 'node_modules')]
             },
         };
         if (watch && config.reactApps.hotReload) {
             inputOptions.plugins.push(new webpack.HotModuleReplacementPlugin());
         }
-        if (generalConfig.env == "development" && config.reactApps.enableAnalyzer) {
+        if (generalConfigServer.env == "development" && config.reactApps.enableAnalyzer) {
             inputOptions.plugins.push(new WebpackBundleAnalyzer.BundleAnalyzerPlugin({
                 analyzerMode: 'disabled',
                 generateStatsFile: true,

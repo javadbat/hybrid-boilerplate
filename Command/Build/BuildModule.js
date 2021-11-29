@@ -12,7 +12,7 @@ import rollupReplace from'@rollup/plugin-replace';
 import { terser } from "rollup-plugin-terser";
 import SassBuilder from './SassBuilder.js';
 import { ReactBuilder } from './ReactBuilder.js';
-import generalConfig from '../../Config/GeneralConfigServer.js';
+import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
 
 /**
  * @classdesc responible to build project files like react apps, web components or sass files
@@ -109,8 +109,8 @@ class Build {
                 jsnext: true,
             }),
             rollupReplace({
-                'process.env.NODE_ENV': `"${generalConfig.env}"`,
-                'process.env.APP_STAGE': `"${generalConfig.appStage}"`,
+                'process.env.NODE_ENV': `"${generalConfigServer.env}"`,
+                'process.env.APP_STAGE': `"${generalConfigServer.appStage}"`,
                 preventAssignment: true
             }),
             commonjs({
@@ -120,7 +120,7 @@ class Build {
             }),
             rollupJson(),
         ];
-        if(generalConfig.env == "production" && config.reactApps.useMinifier){
+        if(generalConfigServer.env == "production" && config.reactApps.useMinifier){
             //add minifier
             plugins.push(terser());
         }
@@ -135,7 +135,7 @@ class Build {
     _getOutputOption(module) {
         let outputOptions = {
             // core output options
-            sourcemap: generalConfig.env == "development",
+            sourcemap: generalConfigServer.env == "development",
             file: path.join(...module.outputPath.split('/')),
             format: 'es', //es for native code , system for systemjs known module
             //dir: 'App/dist',

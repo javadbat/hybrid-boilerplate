@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "jsx": "react",
+    "paths": {
+      "@config/*": ["Config/*"],
+      "@utils/*": ["App/Utils/*"],
+      "@assets/*": ["App/Assets/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "App/dist"]
+}

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import BottonNavigation from './BottomNavigation.js/BottomNavigation';
+import BottonNavigation from './BottomNavigation/BottomNavigation';
 import './LayoutWithBottomNavigation.scss';
 import TopNavigation from './TopNavigation/TopNavigation';
 export default function LayoutWithBottomNavigation(props) {
