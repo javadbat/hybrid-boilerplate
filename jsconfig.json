@@ -2,7 +2,9 @@
   "compilerOptions": {
     "target": "es6",
     "jsx": "react",
+    "baseUrl": ".",
     "paths": {
+      "*": ["__INVALID__/*"],
       "@config/*": ["Config/*"],
       "@utils/*": ["App/Utils/*"],
       "@assets/*": ["App/Assets/*"]
