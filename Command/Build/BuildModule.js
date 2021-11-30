@@ -9,11 +9,12 @@ import rollupJson from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 import config from '../../Config/BuildConfig.js';
 import rollupReplace from'@rollup/plugin-replace';
+import rollupAlias from '@rollup/plugin-alias';
 import { terser } from "rollup-plugin-terser";
 import SassBuilder from './SassBuilder.js';
 import { ReactBuilder } from './ReactBuilder.js';
 import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
-
+import { resolvedAliases } from '../../Config/PathAliasesConfig.js';
 /**
  * @classdesc responible to build project files like react apps, web components or sass files
  */
@@ -117,6 +118,9 @@ class Build {
                 include: ["./index.js", "node_modules/**"],
                 ignoreGlobal: false,
                 sourceMap: true
+            }),
+            rollupAlias({
+                entries: resolvedAliases
             }),
             rollupJson(),
         ];
