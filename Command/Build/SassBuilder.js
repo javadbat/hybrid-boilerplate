@@ -2,8 +2,8 @@ import sass from 'sass';
 import fs from 'fs';
 import chalk from 'chalk';
 import path from 'path';
-import generalConfig from '../../Config/GeneralConfigServer.js';
 import buildConfig from '../../Config/BuildConfig.js';
+import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
 
 /**
  * @classdesc this class is responsible to convert sass file to css file
@@ -15,7 +15,7 @@ class SassBuilder {
     buildSassFiles(watch) {
         const fileList = buildConfig.sassFiles;
         fileList.forEach((file) => {
-            this.ensureDirectoryExistence(path.join(generalConfig.basePath, ...file.outputPath.split('/')));
+            this.ensureDirectoryExistence(path.join(generalConfigServer.basePath, ...file.outputPath.split('/')));
             this.buildSassFile(file);
         });
         if (watch) {
@@ -37,7 +37,7 @@ class SassBuilder {
     watchSassFile(fileConfig) {
 
         let fsWait = false;
-        const filePath = path.join(generalConfig.basePath, ...fileConfig.path.split('/'));
+        const filePath = path.join(generalConfigServer.basePath, ...fileConfig.path.split('/'));
         fs.watch(filePath, (event, fileName) => {
             if (fileName) {
                 if (fsWait) return;
@@ -60,10 +60,10 @@ class SassBuilder {
      */
     buildSassFile(fileConfig) {
         const config = {
-            file: path.join(generalConfig.basePath, ...fileConfig.path.split('/')),
-            sourceMap: generalConfig.env == "development",
+            file: path.join(generalConfigServer.basePath, ...fileConfig.path.split('/')),
+            sourceMap: generalConfigServer.env == "development",
             outputStyle: 'compressed',
-            outFile: path.join(generalConfig.basePath, ...fileConfig.outputPath.split('/')),
+            outFile: path.join(generalConfigServer.basePath, ...fileConfig.outputPath.split('/')),
         };
         sass.render(config, function (err, result) {
             if (!err) {

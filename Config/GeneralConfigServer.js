@@ -1,6 +1,7 @@
-import AddressConfig from"./AddressConfigServer.js";
 import path, {dirname} from 'path';
 import { fileURLToPath } from 'url';
+import AddressConfig from"./AddressConfigServer.js";
+
 class GeneralConfig{
     constructor(){
         this.env = process.env.NODE_ENV?process.env.NODE_ENV:'development';
@@ -13,5 +14,5 @@ class GeneralConfig{
         this.address = new AddressConfig(this.env);
     }
 }
-const generalConfig = new GeneralConfig();
-export default generalConfig;
+
+export const generalConfigServer = new GeneralConfig();

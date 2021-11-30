@@ -60,7 +60,7 @@ module.exports = {
             prefer: {returns: 'return'},
         }],
         'curly': ['error', 'multi-line'],
-        'guard-for-in': 'error',
+        'guard-for-in': 'warn',
         'no-caller': 'error',
         'no-extra-bind': 'error',
         'no-multi-spaces': 'error',

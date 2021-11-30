@@ -1,9 +1,9 @@
-import generalConfig from '../../Config/GeneralConfigServer.js';
+import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
 if (!process.env.NODE_ENV) {
-    process.env.NODE_ENV = generalConfig.env;
+    process.env.NODE_ENV = generalConfigServer.env;
 }
 if (!process.env.APP_STAGE) {
-    process.env.APP_STAGE = generalConfig.appStage;
+    process.env.APP_STAGE = generalConfigServer.appStage;
 }
 console.log('==================' + process.env.NODE_ENV + '-' + process.env.APP_STAGE + '=============================');
 import express from 'express';
@@ -20,22 +20,21 @@ export class ExpressApp {
         const app = this.app;
         const serveApp = function () {
             app.use(cookieParser());
-            var staticRoutes = new StaticsRoutes(app, generalConfig);
-            var pageRoutes = new PageRoutes(app, generalConfig);
+            var staticRoutes = new StaticsRoutes(app, generalConfigServer);
+            var pageRoutes = new PageRoutes(app, generalConfigServer);
             staticRoutes.init();
             pageRoutes.init();
-            app.listen(generalConfig.port, generalConfig.host, function () {
-                console.info('server is running on: http://localhost:' + generalConfig.port);
+            app.listen(generalConfigServer.port, generalConfigServer.host, function () {
+                console.info('server is running on: http://localhost:' + generalConfigServer.port);
             });
         };
         //check if port is busy
-        tcpPortUsed.check(generalConfig.port).then((isUsed) => {
+        tcpPortUsed.check(generalConfigServer.port).then((isUsed) => {
             if (isUsed) {
-                console.error(chalk.bold.red(`${generalConfig.port} port is busy please free up port or change your application port in GeneralConfig.js`));
+                console.error(chalk.bold.red(`${generalConfigServer.port} port is busy please free up port or change your application port in GeneralConfig.js`));
             } else {
                 serveApp();
             }
         });
     }
 }
-
