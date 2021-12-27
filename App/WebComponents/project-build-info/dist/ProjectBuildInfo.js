@@ -8,7 +8,7 @@ class ProjectBuildInfoWebComponent extends HTMLElement {
         this.initWebComponent();
     }
     initWebComponent() {
-        const shadowRoot = this.attachShadow({ mode: 'open' });     
+        const shadowRoot = this.attachShadow({ mode: 'open' });
         const html = `<style>${css_248z}</style>` + '\n' + HTML;
         const element = document.createElement('template');
         element.innerHTML = html;
@@ -20,7 +20,7 @@ class ProjectBuildInfoWebComponent extends HTMLElement {
         };
     }
     static get observedAttributes() {
-        return ['version','build-env','app-stage'];
+        return ['version', 'build-env', 'app-stage'];
     }
     attributeChangedCallback(name, oldValue, newValue) {
         // do something when an attribute has changed
@@ -41,7 +41,7 @@ class ProjectBuildInfoWebComponent extends HTMLElement {
     }
 }
 const myElementNotExists = !customElements.get('project-build-info');
-if(myElementNotExists){
+if (myElementNotExists) {
     window.customElements.define('project-build-info', ProjectBuildInfoWebComponent);
 }
 

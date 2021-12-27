@@ -30,7 +30,7 @@ var buildConfig = {
     webComponents : [
         {
             name:'project-build-info',
-            path:'/App/WebComponents/project-build-info/lib/ProjectBuildInfo.js',
+            path:'/App/WebComponents/project-build-info/lib/ProjectBuildInfo.ts',
             outputPath:'/App/WebComponents/project-build-info/dist/ProjectBuildInfo.js'
         },
     ],

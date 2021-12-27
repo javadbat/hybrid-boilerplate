@@ -1,6 +1,8 @@
 import HTML from './ProjectBuildInfo.html';
 import CSS from './ProjectBuildInfo.scss';
+import {ElementsObject} from './types';
 export class ProjectBuildInfoWebComponent extends HTMLElement {
+    elements:ElementsObject;
     constructor() {
         super();
         this.initWebComponent();
@@ -20,11 +22,11 @@ export class ProjectBuildInfoWebComponent extends HTMLElement {
     static get observedAttributes() {
         return ['version','build-env','app-stage'];
     }
-    attributeChangedCallback(name, oldValue, newValue) {
+    attributeChangedCallback(name:string, oldValue:string, newValue:string) {
         // do something when an attribute has changed
         this.onAttributeChange(name, newValue);
     }
-    onAttributeChange(name, value) {
+    onAttributeChange(name:string, value:string) {
         switch (name) {
             case 'version':
                 this.elements.versionWrapper.innerHTML = `version:${value}`;

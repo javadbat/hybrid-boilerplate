@@ -13,6 +13,7 @@ import SassBuilder from './SassBuilder.js';
 import { ReactBuilder } from './ReactBuilder.js';
 import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
 import { resolvedAliases } from '../../Config/PathAliasesConfig.js';
+import typescript from 'rollup-plugin-typescript2';
 import chalk from 'chalk';
 
 /**
@@ -124,6 +125,10 @@ class Build {
             }),
             rollupJson(),
         ];
+        const isTypeScriptModule = this._isTypeScriptModule(module);
+        if (isTypeScriptModule) {
+            plugins.push(typescript({tsconfigDefaults:this._getTypeScriptCompilerOptions(module)}));
+        }
         if(generalConfigServer.env == "production" && config.reactApps.useMinifier){
             //add minifier
             plugins.push(terser());
@@ -135,6 +140,45 @@ class Build {
             //manualChunks: config.chuncks
         };
         return inputOptions;
+    }
+    _isTypeScriptModule(module) {
+        const filePaths = module.path.split('/');
+        const fileName = filePaths[filePaths.length - 1];
+        const fileExtension = fileName.split('.').pop();
+        return fileExtension === 'ts';
+    }
+    _getTypeScriptCompilerOptions(module) {
+        const includePaths = path.join(...module.path.split('/').slice(0, -1))+ '/**/*';
+        const externalModules = module.external || [];
+        return {
+            "compilerOptions": {
+                "target": "es2020",
+                "module": "es2020",
+                "moduleResolution": "node",
+                "allowSyntheticDefaultImports": true,
+                "sourceMap": true,
+                "emitDecoratorMetadata": true,
+                "experimentalDecorators": true,
+                "removeComments": false,
+                "noImplicitAny": false,
+                "suppressImplicitAnyIndexErrors": true,
+                "noLib": false,
+                "preserveConstEnums": true,
+                "suppressExcessPropertyErrors": true,
+                "allowJs": true,
+                "declaration": true,
+                "declarationDir": './',
+                "declarationMap": false,
+                // "outDir": "../dist",
+            },
+            "include": [
+                includePaths,
+            ],
+            "exclude": [
+                ...externalModules
+            ]
+
+        };
     }
     _getOutputOption(module) {
         let outputOptions = {
