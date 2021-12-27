@@ -1,7 +1,5 @@
 import {rollup,watch} from'rollup' ;
 import path from 'path';
-import Colors from 'colors';
-
 import html from 'rollup-plugin-html';
 import postcss from 'rollup-plugin-postcss';
 import commonjs from '@rollup/plugin-commonjs';
@@ -15,6 +13,8 @@ import SassBuilder from './SassBuilder.js';
 import { ReactBuilder } from './ReactBuilder.js';
 import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
 import { resolvedAliases } from '../../Config/PathAliasesConfig.js';
+import chalk from 'chalk';
+
 /**
  * @classdesc responible to build project files like react apps, web components or sass files
  */
@@ -86,10 +86,10 @@ class Build {
             if (event.code === 'BUNDLE_START') {
                 console.log('Bundling...');
             } else if (event.code === 'BUNDLE_END') {
-                console.log(Colors.green(event.input + '\n' + 'Bundled in ' + event.duration + 'ms.'));
+                console.log(chalk.green(event.input + '\n' + 'Bundled in ' + event.duration + 'ms.'));
                 resolver();
             } else if (event.code === 'ERROR' || event.code === 'FATAL') {
-                console.error(Colors.red(event.error));
+                console.error(chalk.red(event.error));
                 rejecter();
             }
         });
