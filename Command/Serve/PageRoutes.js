@@ -1,6 +1,7 @@
 import path from 'path';
 import exphbs from 'express-handlebars';
 import SampleAppController from '../../Server/Controllers/SampleAppController.js';
+import {generalConfigServer} from '../../Config/GeneralConfigServer.js';
 class PageRoutes {
     constructor(app, config) {
         this.app = app;
@@ -41,6 +42,9 @@ class PageRoutes {
     }
     indexPage(req, res) {
         const hbsData = {
+            version: process.env.npm_package_version,
+            buildEnv:generalConfigServer.env,
+            appStage:generalConfigServer.appStage
         };
         res.render('Index.hbs', hbsData);
     }

@@ -28,12 +28,11 @@ var buildConfig = {
         ]
     },
     webComponents : [
-        //for example:
-        // {
-        //     name:'component-name',
-        //     path:'/App/WebComponents/ComponentName/lib/ComponentName.js',
-        //     outputPath:'/App/WebComponents/ComponentName/dist/ComponentName.js'
-        // },
+        {
+            name:'project-build-info',
+            path:'/App/WebComponents/project-build-info/lib/ProjectBuildInfo.js',
+            outputPath:'/App/WebComponents/project-build-info/dist/ProjectBuildInfo.js'
+        },
     ],
     sassFiles:[
         {
