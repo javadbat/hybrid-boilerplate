@@ -11,6 +11,4 @@ if(!process.env.APP_STAGE){
 
 const build = new Build();
 build.build(false);
-//service worker builder
-const serviceWorkerBuilder = new ServiceWorkerBuilder();
-serviceWorkerBuilder.init();
+
