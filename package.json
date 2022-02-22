@@ -92,7 +92,8 @@
     "webpack": "^5.53.0",
     "webpack-bundle-analyzer": "^4.4.2",
     "webpack-dev-middleware": "^5.1.0",
-    "webpack-hot-middleware": "^2.25.1"
+    "webpack-hot-middleware": "^2.25.1",
+    "workbox-build": "^6.4.2"
   },
   "description": "hybrid handlebar and react boilerplate"
 }

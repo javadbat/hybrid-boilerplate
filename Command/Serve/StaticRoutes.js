@@ -37,8 +37,8 @@ class StaticRoutes{
         this.app.use('/WebComponents',express.static(path.join(this.appConfig.basePath,'App','WebComponents'),assetsOptions));
         this.app.use(express.static('Config'));
         // pwa config file
-        this.app.use('/sample-app/manifest.json',express.static(path.join(this.appConfig.basePath,'App','ReactApps', 'SampleApp', 'Utils', 'Manifest.json')));
-        this.app.use('/service-worker.js',express.static(path.join(this.appConfig.basePath,'App','ReactApps', 'SampleApp', 'Utils', 'ServiceWorker.js')));
+        this.app.use('/sample-app/manifest.json',express.static(path.join(this.appConfig.basePath,'App','ReactApps', 'SampleApp', 'PWA', 'Manifest.json')));
+        this.app.use('/sample-app/service-worker.js',express.static(path.join(this.appConfig.basePath,'App','ReactApps', 'SampleApp', 'PWA', 'ServiceWorker.js')));
     }
 }
 export default StaticRoutes;

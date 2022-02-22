@@ -1,3 +1,5 @@
+//this is manually writed service worker 
+// if you want to write your own service worker code please rename this file name to ServiceWorker.js and disable automatic workbox service worker generator 
 const cacheName = 'sample-app-cache';
 const version = '1.0.0';
 const precacheResources = [

@@ -26,7 +26,7 @@ export class SampleApp{
     registerServiceWorker() {
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
-                navigator.serviceWorker.register('service-worker.js')
+                navigator.serviceWorker.register('/sample-app/service-worker.js')
                     .then(reg => {
                         console.log('Service worker registered! 😎', reg);
                     })
@@ -62,5 +62,5 @@ if (import.meta.webpackHot) {
     });
 }
 //uncomment it if you have PWA and want service worker
-//sampleApp.registerServiceWorker();
+sampleApp.registerServiceWorker();
 
