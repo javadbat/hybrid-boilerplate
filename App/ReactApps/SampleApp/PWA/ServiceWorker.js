@@ -4507,10 +4507,17 @@ __webpack_require__.r(__webpack_exports__);
  // Use with precache injection
 // will precache all files in globDirectory that match globPatterns
 
-const machineGeneratedPreCacheList = [{'revision':null,'url':'/dist/ReactApps/App_ReactApps_SampleApp_Pages_AssetsLoadSample_AssetsLoadSample_js@764ed1df2a79bc11b421.chunk.js'},{'revision':null,'url':'/dist/ReactApps/App_ReactApps_SampleApp_Pages_FolderStructure_FolderStructure_js@9aa3b618e516b99be142.chunk.js'},{'revision':null,'url':'/dist/ReactApps/App_ReactApps_SampleApp_Pages_Index_Index_js@4df75cc5fc5532a1dd01.chunk.js'},{'revision':null,'url':'/dist/ReactApps/SampleApp/SampleApp.ccf2626d43a6fa2b7fe0.hot-update.js'},{'revision':'3638b07a48b03db87084b3b755b5b3ff','url':'/dist/ReactApps/SampleApp/SampleApp.js'},{'revision':null,'url':'/dist/ReactApps/SampleApp_SampleApp.ccf2626d43a6fa2b7fe0.hot-update.json'},{'revision':null,'url':'/dist/ReactApps/assets/images/05c80f266535944fa798.png'},{'revision':null,'url':'/dist/ReactApps/assets/images/070d6c4b6f2ee9a36bc7.jpg'},{'revision':null,'url':'/dist/ReactApps/assets/images/37340165bb582c490a85.PNG'},{'revision':null,'url':'/dist/ReactApps/assets/images/6cb76579770f26e392de.png'}];
+const machineGeneratedPreCacheList = [{'revision':null,'url':'/dist/ReactApps/App_ReactApps_SampleApp_Pages_AssetsLoadSample_AssetsLoadSample_js@764ed1df2a79bc11b421.chunk.js'},{'revision':null,'url':'/dist/ReactApps/App_ReactApps_SampleApp_Pages_FolderStructure_FolderStructure_js@9aa3b618e516b99be142.chunk.js'},{'revision':null,'url':'/dist/ReactApps/App_ReactApps_SampleApp_Pages_Index_Index_js@4df75cc5fc5532a1dd01.chunk.js'},{'revision':'25445777a5dac60df386ed64700840fd','url':'/dist/ReactApps/SampleApp/SampleApp.js'},{'revision':null,'url':'/dist/ReactApps/assets/images/05c80f266535944fa798.png'},{'revision':null,'url':'/dist/ReactApps/assets/images/070d6c4b6f2ee9a36bc7.jpg'},{'revision':null,'url':'/dist/ReactApps/assets/images/37340165bb582c490a85.PNG'},{'revision':null,'url':'/dist/ReactApps/assets/images/6cb76579770f26e392de.png'}];
 const htmlFilePath = '/sample-app';
-let preCacheList = [htmlFilePath, ...machineGeneratedPreCacheList];
-(0,workbox_precaching__WEBPACK_IMPORTED_MODULE_0__.precacheAndRoute)(preCacheList);
+let preCacheList = [{
+  url: htmlFilePath,
+  revision: '383676'
+}, ...machineGeneratedPreCacheList];
+(0,workbox_precaching__WEBPACK_IMPORTED_MODULE_0__.precacheAndRoute)(preCacheList, {
+  // Ignore all URL parameters. /about.html?q=1 => /about.html
+  ignoreURLParametersMatching: [/.*/],
+  directoryIndex: null
+});
 })();
 
 /******/ })()

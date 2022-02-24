@@ -2,7 +2,7 @@
     "name": "hybrid react app",
     "short_name": "app",
     "lang": "fa",
-    "start_url": "/sample-app",
+    "start_url": "sample-app/",
     "display": "standalone",
     "theme_color": "#FFF",
     "background_color": "#FF9800",
