@@ -2,6 +2,73 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/workbox-core/_private.js":
+/*!***********************************************!*\
+  !*** ./node_modules/workbox-core/_private.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "assert": () => (/* reexport safe */ _private_assert_js__WEBPACK_IMPORTED_MODULE_0__.assert),
+/* harmony export */   "cacheMatchIgnoreParams": () => (/* reexport safe */ _private_cacheMatchIgnoreParams_js__WEBPACK_IMPORTED_MODULE_2__.cacheMatchIgnoreParams),
+/* harmony export */   "cacheNames": () => (/* reexport safe */ _private_cacheNames_js__WEBPACK_IMPORTED_MODULE_1__.cacheNames),
+/* harmony export */   "canConstructReadableStream": () => (/* reexport safe */ _private_canConstructReadableStream_js__WEBPACK_IMPORTED_MODULE_3__.canConstructReadableStream),
+/* harmony export */   "canConstructResponseFromBodyStream": () => (/* reexport safe */ _private_canConstructResponseFromBodyStream_js__WEBPACK_IMPORTED_MODULE_4__.canConstructResponseFromBodyStream),
+/* harmony export */   "dontWaitFor": () => (/* reexport safe */ _private_dontWaitFor_js__WEBPACK_IMPORTED_MODULE_5__.dontWaitFor),
+/* harmony export */   "Deferred": () => (/* reexport safe */ _private_Deferred_js__WEBPACK_IMPORTED_MODULE_6__.Deferred),
+/* harmony export */   "executeQuotaErrorCallbacks": () => (/* reexport safe */ _private_executeQuotaErrorCallbacks_js__WEBPACK_IMPORTED_MODULE_7__.executeQuotaErrorCallbacks),
+/* harmony export */   "getFriendlyURL": () => (/* reexport safe */ _private_getFriendlyURL_js__WEBPACK_IMPORTED_MODULE_8__.getFriendlyURL),
+/* harmony export */   "logger": () => (/* reexport safe */ _private_logger_js__WEBPACK_IMPORTED_MODULE_9__.logger),
+/* harmony export */   "resultingClientExists": () => (/* reexport safe */ _private_resultingClientExists_js__WEBPACK_IMPORTED_MODULE_10__.resultingClientExists),
+/* harmony export */   "timeout": () => (/* reexport safe */ _private_timeout_js__WEBPACK_IMPORTED_MODULE_11__.timeout),
+/* harmony export */   "waitUntil": () => (/* reexport safe */ _private_waitUntil_js__WEBPACK_IMPORTED_MODULE_12__.waitUntil),
+/* harmony export */   "WorkboxError": () => (/* reexport safe */ _private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_13__.WorkboxError)
+/* harmony export */ });
+/* harmony import */ var _private_assert_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_private/assert.js */ "./node_modules/workbox-core/_private/assert.js");
+/* harmony import */ var _private_cacheNames_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_private/cacheNames.js */ "./node_modules/workbox-core/_private/cacheNames.js");
+/* harmony import */ var _private_cacheMatchIgnoreParams_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_private/cacheMatchIgnoreParams.js */ "./node_modules/workbox-core/_private/cacheMatchIgnoreParams.js");
+/* harmony import */ var _private_canConstructReadableStream_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_private/canConstructReadableStream.js */ "./node_modules/workbox-core/_private/canConstructReadableStream.js");
+/* harmony import */ var _private_canConstructResponseFromBodyStream_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_private/canConstructResponseFromBodyStream.js */ "./node_modules/workbox-core/_private/canConstructResponseFromBodyStream.js");
+/* harmony import */ var _private_dontWaitFor_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_private/dontWaitFor.js */ "./node_modules/workbox-core/_private/dontWaitFor.js");
+/* harmony import */ var _private_Deferred_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_private/Deferred.js */ "./node_modules/workbox-core/_private/Deferred.js");
+/* harmony import */ var _private_executeQuotaErrorCallbacks_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_private/executeQuotaErrorCallbacks.js */ "./node_modules/workbox-core/_private/executeQuotaErrorCallbacks.js");
+/* harmony import */ var _private_getFriendlyURL_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./_private/getFriendlyURL.js */ "./node_modules/workbox-core/_private/getFriendlyURL.js");
+/* harmony import */ var _private_logger_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./_private/logger.js */ "./node_modules/workbox-core/_private/logger.js");
+/* harmony import */ var _private_resultingClientExists_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./_private/resultingClientExists.js */ "./node_modules/workbox-core/_private/resultingClientExists.js");
+/* harmony import */ var _private_timeout_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./_private/timeout.js */ "./node_modules/workbox-core/_private/timeout.js");
+/* harmony import */ var _private_waitUntil_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./_private/waitUntil.js */ "./node_modules/workbox-core/_private/waitUntil.js");
+/* harmony import */ var _private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./_private/WorkboxError.js */ "./node_modules/workbox-core/_private/WorkboxError.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-core/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_14__);
+/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+// We either expose defaults or we expose every named export.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/workbox-core/_private/Deferred.js":
 /*!********************************************************!*\
   !*** ./node_modules/workbox-core/_private/Deferred.js ***!
@@ -313,6 +380,55 @@ const cacheNames = {
 
 /***/ }),
 
+/***/ "./node_modules/workbox-core/_private/canConstructReadableStream.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/workbox-core/_private/canConstructReadableStream.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "canConstructReadableStream": () => (/* binding */ canConstructReadableStream)
+/* harmony export */ });
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_version.js */ "./node_modules/workbox-core/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_0__);
+/*
+  Copyright 2019 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+let supportStatus;
+/**
+ * A utility function that determines whether the current browser supports
+ * constructing a [`ReadableStream`](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/ReadableStream)
+ * object.
+ *
+ * @return {boolean} `true`, if the current browser can successfully
+ *     construct a `ReadableStream`, `false` otherwise.
+ *
+ * @private
+ */
+function canConstructReadableStream() {
+    if (supportStatus === undefined) {
+        // See https://github.com/GoogleChrome/workbox/issues/1473
+        try {
+            new ReadableStream({ start() { } });
+            supportStatus = true;
+        }
+        catch (error) {
+            supportStatus = false;
+        }
+    }
+    return supportStatus;
+}
+
+
+
+/***/ }),
+
 /***/ "./node_modules/workbox-core/_private/canConstructResponseFromBodyStream.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/workbox-core/_private/canConstructResponseFromBodyStream.js ***!
@@ -364,6 +480,38 @@ function canConstructResponseFromBodyStream() {
 
 /***/ }),
 
+/***/ "./node_modules/workbox-core/_private/dontWaitFor.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/workbox-core/_private/dontWaitFor.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "dontWaitFor": () => (/* binding */ dontWaitFor)
+/* harmony export */ });
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_version.js */ "./node_modules/workbox-core/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_0__);
+/*
+  Copyright 2019 Google LLC
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+/**
+ * A helper function that prevents a promise from being flagged as unused.
+ *
+ * @private
+ **/
+function dontWaitFor(promise) {
+    // Effective no-op.
+    void promise.then(() => { });
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/workbox-core/_private/executeQuotaErrorCallbacks.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/workbox-core/_private/executeQuotaErrorCallbacks.js ***!
@@ -392,7 +540,7 @@ __webpack_require__.r(__webpack_exports__);
  * Runs all of the callback functions, one at a time sequentially, in the order
  * in which they were registered.
  *
- * @memberof module:workbox-core
+ * @memberof workbox-core
  * @private
  */
 async function executeQuotaErrorCallbacks() {
@@ -527,6 +675,71 @@ const logger = ( false
 
 /***/ }),
 
+/***/ "./node_modules/workbox-core/_private/resultingClientExists.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/workbox-core/_private/resultingClientExists.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "resultingClientExists": () => (/* binding */ resultingClientExists)
+/* harmony export */ });
+/* harmony import */ var _timeout_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./timeout.js */ "./node_modules/workbox-core/_private/timeout.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_version.js */ "./node_modules/workbox-core/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_1__);
+/*
+  Copyright 2019 Google LLC
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+const MAX_RETRY_TIME = 2000;
+/**
+ * Returns a promise that resolves to a window client matching the passed
+ * `resultingClientId`. For browsers that don't support `resultingClientId`
+ * or if waiting for the resulting client to apper takes too long, resolve to
+ * `undefined`.
+ *
+ * @param {string} [resultingClientId]
+ * @return {Promise<Client|undefined>}
+ * @private
+ */
+async function resultingClientExists(resultingClientId) {
+    if (!resultingClientId) {
+        return;
+    }
+    let existingWindows = await self.clients.matchAll({ type: 'window' });
+    const existingWindowIds = new Set(existingWindows.map((w) => w.id));
+    let resultingWindow;
+    const startTime = performance.now();
+    // Only wait up to `MAX_RETRY_TIME` to find a matching client.
+    while (performance.now() - startTime < MAX_RETRY_TIME) {
+        existingWindows = await self.clients.matchAll({ type: 'window' });
+        resultingWindow = existingWindows.find((w) => {
+            if (resultingClientId) {
+                // If we have a `resultingClientId`, we can match on that.
+                return w.id === resultingClientId;
+            }
+            else {
+                // Otherwise match on finding a window not in `existingWindowIds`.
+                return !existingWindowIds.has(w.id);
+            }
+        });
+        if (resultingWindow) {
+            break;
+        }
+        // Sleep for 100ms and retry.
+        await (0,_timeout_js__WEBPACK_IMPORTED_MODULE_0__.timeout)(100);
+    }
+    return resultingWindow;
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/workbox-core/_private/timeout.js":
 /*!*******************************************************!*\
   !*** ./node_modules/workbox-core/_private/timeout.js ***!
@@ -608,9 +821,102 @@ function waitUntil(event, asyncFn) {
 
 // @ts-ignore
 try {
-    self['workbox:core:6.4.1'] && _();
+    self['workbox:core:6.4.2'] && _();
 }
 catch (e) { }
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-core/cacheNames.js":
+/*!*************************************************!*\
+  !*** ./node_modules/workbox-core/cacheNames.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "cacheNames": () => (/* binding */ cacheNames)
+/* harmony export */ });
+/* harmony import */ var _private_cacheNames_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_private/cacheNames.js */ "./node_modules/workbox-core/_private/cacheNames.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-core/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_1__);
+/*
+  Copyright 2019 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+/**
+ * Get the current cache names and prefix/suffix used by Workbox.
+ *
+ * `cacheNames.precache` is used for precached assets,
+ * `cacheNames.googleAnalytics` is used by `workbox-google-analytics` to
+ * store `analytics.js`, and `cacheNames.runtime` is used for everything else.
+ *
+ * `cacheNames.prefix` can be used to retrieve just the current prefix value.
+ * `cacheNames.suffix` can be used to retrieve just the current suffix value.
+ *
+ * @return {Object} An object with `precache`, `runtime`, `prefix`, and
+ *     `googleAnalytics` properties.
+ *
+ * @memberof workbox-core
+ */
+const cacheNames = {
+    get googleAnalytics() {
+        return _private_cacheNames_js__WEBPACK_IMPORTED_MODULE_0__.cacheNames.getGoogleAnalyticsName();
+    },
+    get precache() {
+        return _private_cacheNames_js__WEBPACK_IMPORTED_MODULE_0__.cacheNames.getPrecacheName();
+    },
+    get prefix() {
+        return _private_cacheNames_js__WEBPACK_IMPORTED_MODULE_0__.cacheNames.getPrefix();
+    },
+    get runtime() {
+        return _private_cacheNames_js__WEBPACK_IMPORTED_MODULE_0__.cacheNames.getRuntimeName();
+    },
+    get suffix() {
+        return _private_cacheNames_js__WEBPACK_IMPORTED_MODULE_0__.cacheNames.getSuffix();
+    },
+};
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-core/clientsClaim.js":
+/*!***************************************************!*\
+  !*** ./node_modules/workbox-core/clientsClaim.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "clientsClaim": () => (/* binding */ clientsClaim)
+/* harmony export */ });
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-core/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_0__);
+/*
+  Copyright 2019 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+/**
+ * Claim any currently available clients once the service worker
+ * becomes active. This is normally used in conjunction with `skipWaiting()`.
+ *
+ * @memberof workbox-core
+ */
+function clientsClaim() {
+    self.addEventListener('activate', () => self.clients.claim());
+}
+
 
 
 /***/ }),
@@ -656,7 +962,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @param {Response} response
  * @param {Function} modifier
- * @memberof module:workbox-core
+ * @memberof workbox-core
  */
 async function copyResponse(response, modifier) {
     let origin = null;
@@ -685,6 +991,60 @@ async function copyResponse(response, modifier) {
         : await clonedResponse.blob();
     return new Response(body, modifiedResponseInit);
 }
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-core/index.js":
+/*!********************************************!*\
+  !*** ./node_modules/workbox-core/index.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "_private": () => (/* reexport module object */ _private_js__WEBPACK_IMPORTED_MODULE_1__),
+/* harmony export */   "cacheNames": () => (/* reexport safe */ _cacheNames_js__WEBPACK_IMPORTED_MODULE_2__.cacheNames),
+/* harmony export */   "clientsClaim": () => (/* reexport safe */ _clientsClaim_js__WEBPACK_IMPORTED_MODULE_4__.clientsClaim),
+/* harmony export */   "copyResponse": () => (/* reexport safe */ _copyResponse_js__WEBPACK_IMPORTED_MODULE_3__.copyResponse),
+/* harmony export */   "registerQuotaErrorCallback": () => (/* reexport safe */ _registerQuotaErrorCallback_js__WEBPACK_IMPORTED_MODULE_0__.registerQuotaErrorCallback),
+/* harmony export */   "setCacheNameDetails": () => (/* reexport safe */ _setCacheNameDetails_js__WEBPACK_IMPORTED_MODULE_5__.setCacheNameDetails),
+/* harmony export */   "skipWaiting": () => (/* reexport safe */ _skipWaiting_js__WEBPACK_IMPORTED_MODULE_6__.skipWaiting)
+/* harmony export */ });
+/* harmony import */ var _registerQuotaErrorCallback_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./registerQuotaErrorCallback.js */ "./node_modules/workbox-core/registerQuotaErrorCallback.js");
+/* harmony import */ var _private_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_private.js */ "./node_modules/workbox-core/_private.js");
+/* harmony import */ var _cacheNames_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cacheNames.js */ "./node_modules/workbox-core/cacheNames.js");
+/* harmony import */ var _copyResponse_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./copyResponse.js */ "./node_modules/workbox-core/copyResponse.js");
+/* harmony import */ var _clientsClaim_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./clientsClaim.js */ "./node_modules/workbox-core/clientsClaim.js");
+/* harmony import */ var _setCacheNameDetails_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./setCacheNameDetails.js */ "./node_modules/workbox-core/setCacheNameDetails.js");
+/* harmony import */ var _skipWaiting_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./skipWaiting.js */ "./node_modules/workbox-core/skipWaiting.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-core/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _types_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./types.js */ "./node_modules/workbox-core/types.js");
+/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+
+
+
+
+
+
+/**
+ * All of the Workbox service worker libraries use workbox-core for shared
+ * code as well as setting default values that need to be shared (like cache
+ * names).
+ *
+ * @module workbox-core
+ */
+
 
 
 
@@ -961,6 +1321,15 @@ const messages = {
         return (`workbox-core.copyResponse() can only be used with same-origin ` +
             `responses. It was passed a response with origin ${origin}.`);
     },
+    'opaque-streams-source': ({ type }) => {
+        const message = `One of the workbox-streams sources resulted in an ` +
+            `'${type}' response.`;
+        if (type === 'opaqueredirect') {
+            return (`${message} Please do not use a navigation request that results ` +
+                `in a redirect as a source.`);
+        }
+        return `${message} Please ensure your sources are CORS-enabled.`;
+    },
 };
 
 
@@ -990,6 +1359,203 @@ __webpack_require__.r(__webpack_exports__);
 // Can't change Function type right now.
 // eslint-disable-next-line @typescript-eslint/ban-types
 const quotaErrorCallbacks = new Set();
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-core/registerQuotaErrorCallback.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/workbox-core/registerQuotaErrorCallback.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "registerQuotaErrorCallback": () => (/* binding */ registerQuotaErrorCallback)
+/* harmony export */ });
+/* harmony import */ var _private_logger_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_private/logger.js */ "./node_modules/workbox-core/_private/logger.js");
+/* harmony import */ var _private_assert_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_private/assert.js */ "./node_modules/workbox-core/_private/assert.js");
+/* harmony import */ var _models_quotaErrorCallbacks_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./models/quotaErrorCallbacks.js */ "./node_modules/workbox-core/models/quotaErrorCallbacks.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-core/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_3__);
+/*
+  Copyright 2019 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+
+
+/**
+ * Adds a function to the set of quotaErrorCallbacks that will be executed if
+ * there's a quota error.
+ *
+ * @param {Function} callback
+ * @memberof workbox-core
+ */
+// Can't change Function type
+// eslint-disable-next-line @typescript-eslint/ban-types
+function registerQuotaErrorCallback(callback) {
+    if (true) {
+        _private_assert_js__WEBPACK_IMPORTED_MODULE_1__.assert.isType(callback, 'function', {
+            moduleName: 'workbox-core',
+            funcName: 'register',
+            paramName: 'callback',
+        });
+    }
+    _models_quotaErrorCallbacks_js__WEBPACK_IMPORTED_MODULE_2__.quotaErrorCallbacks.add(callback);
+    if (true) {
+        _private_logger_js__WEBPACK_IMPORTED_MODULE_0__.logger.log('Registered a callback to respond to quota errors.', callback);
+    }
+}
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-core/setCacheNameDetails.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/workbox-core/setCacheNameDetails.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "setCacheNameDetails": () => (/* binding */ setCacheNameDetails)
+/* harmony export */ });
+/* harmony import */ var _private_assert_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_private/assert.js */ "./node_modules/workbox-core/_private/assert.js");
+/* harmony import */ var _private_cacheNames_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_private/cacheNames.js */ "./node_modules/workbox-core/_private/cacheNames.js");
+/* harmony import */ var _private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_private/WorkboxError.js */ "./node_modules/workbox-core/_private/WorkboxError.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-core/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_3__);
+/*
+  Copyright 2019 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+
+
+/**
+ * Modifies the default cache names used by the Workbox packages.
+ * Cache names are generated as `<prefix>-<Cache Name>-<suffix>`.
+ *
+ * @param {Object} details
+ * @param {Object} [details.prefix] The string to add to the beginning of
+ *     the precache and runtime cache names.
+ * @param {Object} [details.suffix] The string to add to the end of
+ *     the precache and runtime cache names.
+ * @param {Object} [details.precache] The cache name to use for precache
+ *     caching.
+ * @param {Object} [details.runtime] The cache name to use for runtime caching.
+ * @param {Object} [details.googleAnalytics] The cache name to use for
+ *     `workbox-google-analytics` caching.
+ *
+ * @memberof workbox-core
+ */
+function setCacheNameDetails(details) {
+    if (true) {
+        Object.keys(details).forEach((key) => {
+            _private_assert_js__WEBPACK_IMPORTED_MODULE_0__.assert.isType(details[key], 'string', {
+                moduleName: 'workbox-core',
+                funcName: 'setCacheNameDetails',
+                paramName: `details.${key}`,
+            });
+        });
+        if ('precache' in details && details['precache'].length === 0) {
+            throw new _private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_2__.WorkboxError('invalid-cache-name', {
+                cacheNameId: 'precache',
+                value: details['precache'],
+            });
+        }
+        if ('runtime' in details && details['runtime'].length === 0) {
+            throw new _private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_2__.WorkboxError('invalid-cache-name', {
+                cacheNameId: 'runtime',
+                value: details['runtime'],
+            });
+        }
+        if ('googleAnalytics' in details &&
+            details['googleAnalytics'].length === 0) {
+            throw new _private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_2__.WorkboxError('invalid-cache-name', {
+                cacheNameId: 'googleAnalytics',
+                value: details['googleAnalytics'],
+            });
+        }
+    }
+    _private_cacheNames_js__WEBPACK_IMPORTED_MODULE_1__.cacheNames.updateDetails(details);
+}
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-core/skipWaiting.js":
+/*!**************************************************!*\
+  !*** ./node_modules/workbox-core/skipWaiting.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "skipWaiting": () => (/* binding */ skipWaiting)
+/* harmony export */ });
+/* harmony import */ var _private_logger_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_private/logger.js */ "./node_modules/workbox-core/_private/logger.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-core/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_1__);
+/*
+  Copyright 2019 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+/**
+ * This method is deprecated, and will be removed in Workbox v7.
+ *
+ * Calling self.skipWaiting() is equivalent, and should be used instead.
+ *
+ * @memberof workbox-core
+ */
+function skipWaiting() {
+    // Just call self.skipWaiting() directly.
+    // See https://github.com/GoogleChrome/workbox/issues/2525
+    if (true) {
+        _private_logger_js__WEBPACK_IMPORTED_MODULE_0__.logger.warn(`skipWaiting() from workbox-core is no longer recommended ` +
+            `and will be removed in Workbox v7. Using self.skipWaiting() instead ` +
+            `is equivalent.`);
+    }
+    void self.skipWaiting();
+}
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-core/types.js":
+/*!********************************************!*\
+  !*** ./node_modules/workbox-core/types.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-core/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_0__);
+/*
+  Copyright 2019 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
 
 
 
@@ -1040,7 +1606,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Performs efficient precaching of assets.
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 class PrecacheController {
     /**
@@ -1070,7 +1636,7 @@ class PrecacheController {
         this.activate = this.activate.bind(this);
     }
     /**
-     * @type {module:workbox-precaching.PrecacheStrategy} The strategy created by this controller and
+     * @type {workbox-precaching.PrecacheStrategy} The strategy created by this controller and
      * used to cache assets and respond to fetch events.
      */
     get strategy() {
@@ -1079,7 +1645,7 @@ class PrecacheController {
     /**
      * Adds items to the precache list, removing any duplicates and
      * stores the files in the
-     * ["precache cache"]{@link module:workbox-core.cacheNames} when the service
+     * {@link workbox-core.cacheNames|"precache cache"} when the service
      * worker installs.
      *
      * This method can be called multiple times.
@@ -1098,7 +1664,7 @@ class PrecacheController {
      * This method will add items to the precache list, removing duplicates
      * and ensuring the information is valid.
      *
-     * @param {Array<module:workbox-precaching.PrecacheController.PrecacheEntry|string>} entries
+     * @param {Array<workbox-precaching.PrecacheController.PrecacheEntry|string>} entries
      *     Array of entries to precache.
      */
     addToCacheList(entries) {
@@ -1158,7 +1724,7 @@ class PrecacheController {
      * to call it yourself in your event handlers.
      *
      * @param {ExtendableEvent} event
-     * @return {Promise<module:workbox-precaching.InstallResult>}
+     * @return {Promise<workbox-precaching.InstallResult>}
      */
     install(event) {
         // waitUntil returns Promise<any>
@@ -1197,7 +1763,7 @@ class PrecacheController {
      * to call it yourself in your event handlers.
      *
      * @param {ExtendableEvent} event
-     * @return {Promise<module:workbox-precaching.CleanupResult>}
+     * @return {Promise<workbox-precaching.CleanupResult>}
      */
     activate(event) {
         // waitUntil returns Promise<any>
@@ -1291,7 +1857,7 @@ class PrecacheController {
      *
      * @param {string} url The precached URL which will be used to lookup the
      * `Response`.
-     * @return {module:workbox-routing~handlerCallback}
+     * @return {workbox-routing~handlerCallback}
      */
     createHandlerBoundToURL(url) {
         const cacheKey = this.getCacheKeyForURL(url);
@@ -1344,7 +1910,7 @@ __webpack_require__.r(__webpack_exports__);
  * constructor, the default instance will be used. Generally speaking, most
  * developers will end up using the default.
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 class PrecacheFallbackPlugin {
     /**
@@ -1403,13 +1969,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * A subclass of [Route]{@link module:workbox-routing.Route} that takes a
- * [PrecacheController]{@link module:workbox-precaching.PrecacheController}
+ * A subclass of {@link workbox-routing.Route} that takes a
+ * {@link workbox-precaching.PrecacheController}
  * instance and uses it to match incoming requests and handle fetching
  * responses from the precache.
  *
- * @memberof module:workbox-precaching
- * @extends module:workbox-routing.Route
+ * @memberof workbox-precaching
+ * @extends workbox-routing.Route
  */
 class PrecacheRoute extends workbox_routing_Route_js__WEBPACK_IMPORTED_MODULE_2__.Route {
     /**
@@ -1424,7 +1990,7 @@ class PrecacheRoute extends workbox_routing_Route_js__WEBPACK_IMPORTED_MODULE_2_
      * array of regex's to remove search params when looking for a cache match.
      * @param {boolean} [options.cleanURLs=true] The `cleanURLs` option will
      * check the cache for the URL with a `.html` added to the end of the end.
-     * @param {module:workbox-precaching~urlManipulation} [options.urlManipulation]
+     * @param {workbox-precaching~urlManipulation} [options.urlManipulation]
      * This is a function that should take a URL and return an array of
      * alternative URLs that should be checked for precache matches.
      */
@@ -1484,16 +2050,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * A [Strategy]{@link module:workbox-strategies.Strategy} implementation
+ * A {@link workbox-strategies.Strategy} implementation
  * specifically designed to work with
- * [PrecacheController]{@link module:workbox-precaching.PrecacheController}
+ * {@link workbox-precaching.PrecacheController}
  * to both cache and fetch precached assets.
  *
  * Note: an instance of this class is created automatically when creating a
  * `PrecacheController`; it's generally not necessary to create this yourself.
  *
- * @extends module:workbox-strategies.Strategy
- * @memberof module:workbox-precaching
+ * @extends workbox-strategies.Strategy
+ * @memberof workbox-precaching
  */
 class PrecacheStrategy extends workbox_strategies_Strategy_js__WEBPACK_IMPORTED_MODULE_5__.Strategy {
     /**
@@ -1501,14 +2067,14 @@ class PrecacheStrategy extends workbox_strategies_Strategy_js__WEBPACK_IMPORTED_
      * @param {Object} [options]
      * @param {string} [options.cacheName] Cache name to store and retrieve
      * requests. Defaults to the cache names provided by
-     * [workbox-core]{@link module:workbox-core.cacheNames}.
-     * @param {Array<Object>} [options.plugins] [Plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}
+     * {@link workbox-core.cacheNames}.
+     * @param {Array<Object>} [options.plugins] {@link https://developers.google.com/web/tools/workbox/guides/using-plugins|Plugins}
      * to use in conjunction with this caching strategy.
      * @param {Object} [options.fetchOptions] Values passed along to the
-     * [`init`]{@link https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters}
+     * {@link https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters|init}
      * of all fetch() requests made by this strategy.
      * @param {Object} [options.matchOptions] The
-     * [`CacheQueryOptions`]{@link https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions}
+     * {@link https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions|CacheQueryOptions}
      * for any `cache.match()` or `cache.put()` calls made by this strategy.
      * @param {boolean} [options.fallbackToNetwork=true] Whether to attempt to
      * get the response from the network if there's a precache miss.
@@ -1527,7 +2093,7 @@ class PrecacheStrategy extends workbox_strategies_Strategy_js__WEBPACK_IMPORTED_
     /**
      * @private
      * @param {Request|string} request A request to run this strategy for.
-     * @param {module:workbox-strategies.StrategyHandler} handler The event that
+     * @param {workbox-strategies.StrategyHandler} handler The event that
      *     triggered the request.
      * @return {Promise<Response>}
      */
@@ -1718,14 +2284,14 @@ __webpack_require__.r(__webpack_exports__);
  * @property {Array<string>} notUpdatedURLs List of URLs that were already up to
  * date.
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 /**
  * @typedef {Object} CleanupResult
  * @property {Array<string>} deletedCacheRequests List of URLs that were deleted
  * while cleaning up the cache.
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 /**
  * @typedef {Object} PrecacheEntry
@@ -1734,7 +2300,7 @@ __webpack_require__.r(__webpack_exports__);
  * @property {string} [integrity] Integrity metadata that will be used when
  * making the network request for the URL.
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 /**
  * The "urlManipulation" callback can be used to determine if there are any
@@ -1750,7 +2316,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {Array<URL>} To add additional urls to test, return an Array of
  * URLs. Please note that these **should not be strings**, but URL objects.
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 
 
@@ -1765,7 +2331,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // @ts-ignore
 try {
-    self['workbox:precaching:6.4.1'] && _();
+    self['workbox:precaching:6.4.2'] && _();
 }
 catch (e) { }
 
@@ -1799,7 +2365,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @param {Array<Object>} plugins
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function addPlugins(plugins) {
     const precacheController = (0,_utils_getOrCreatePrecacheController_js__WEBPACK_IMPORTED_MODULE_0__.getOrCreatePrecacheController)();
@@ -1845,10 +2411,10 @@ __webpack_require__.r(__webpack_exports__);
  * responded to, allowing the event to fall through to other `fetch` event
  * listeners.
  *
- * @param {Object} [options] See
- * [PrecacheRoute options]{@link module:workbox-precaching.PrecacheRoute}.
+ * @param {Object} [options] See the {@link workbox-precaching.PrecacheRoute}
+ * options.
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function addRoute(options) {
     const precacheController = (0,_utils_getOrCreatePrecacheController_js__WEBPACK_IMPORTED_MODULE_1__.getOrCreatePrecacheController)();
@@ -1890,7 +2456,7 @@ __webpack_require__.r(__webpack_exports__);
  * Adds an `activate` event listener which will clean up incompatible
  * precaches that were created by older versions of Workbox.
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function cleanupOutdatedCaches() {
     // See https://github.com/Microsoft/TypeScript/issues/28357#issuecomment-436484705
@@ -1946,9 +2512,9 @@ __webpack_require__.r(__webpack_exports__);
  * `Response`.
  * @param {boolean} [fallbackToNetwork=true] Whether to attempt to get the
  * response from the network if there's a precache miss.
- * @return {module:workbox-routing~handlerCallback}
+ * @return {workbox-routing~handlerCallback}
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function createHandlerBoundToURL(url) {
     const precacheController = (0,_utils_getOrCreatePrecacheController_js__WEBPACK_IMPORTED_MODULE_0__.getOrCreatePrecacheController)();
@@ -1998,7 +2564,7 @@ __webpack_require__.r(__webpack_exports__);
  * @param {string} url The URL whose cache key to look up.
  * @return {string} The cache key that corresponds to that URL.
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function getCacheKeyForURL(url) {
     const precacheController = (0,_utils_getOrCreatePrecacheController_js__WEBPACK_IMPORTED_MODULE_0__.getOrCreatePrecacheController)();
@@ -2067,12 +2633,12 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * Most consumers of this module will want to use the
- * [precacheAndRoute()]{@link module:workbox-precaching.precacheAndRoute}
+ * {@link workbox-precaching.precacheAndRoute}
  * method to add assets to the cache and respond to network requests with these
  * cached assets.
  *
  * If you require more control over caching and routing, you can use the
- * [PrecacheController]{@link module:workbox-precaching.PrecacheController}
+ * {@link workbox-precaching.PrecacheController}
  * interface.
  *
  * @module workbox-precaching
@@ -2118,7 +2684,7 @@ __webpack_require__.r(__webpack_exports__);
  * to look up in the precache.
  * @return {Promise<Response|undefined>}
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function matchPrecache(request) {
     const precacheController = (0,_utils_getOrCreatePrecacheController_js__WEBPACK_IMPORTED_MODULE_0__.getOrCreatePrecacheController)();
@@ -2154,21 +2720,21 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Adds items to the precache list, removing any duplicates and
  * stores the files in the
- * ["precache cache"]{@link module:workbox-core.cacheNames} when the service
+ * {@link workbox-core.cacheNames|"precache cache"} when the service
  * worker installs.
  *
  * This method can be called multiple times.
  *
  * Please note: This method **will not** serve any of the cached files for you.
  * It only precaches files. To respond to a network request you call
- * [addRoute()]{@link module:workbox-precaching.addRoute}.
+ * {@link workbox-precaching.addRoute}.
  *
  * If you have a single array of files to precache, you can just call
- * [precacheAndRoute()]{@link module:workbox-precaching.precacheAndRoute}.
+ * {@link workbox-precaching.precacheAndRoute}.
  *
  * @param {Array<Object|string>} [entries=[]] Array of entries to precache.
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function precache(entries) {
     const precacheController = (0,_utils_getOrCreatePrecacheController_js__WEBPACK_IMPORTED_MODULE_0__.getOrCreatePrecacheController)();
@@ -2208,14 +2774,14 @@ __webpack_require__.r(__webpack_exports__);
  * respond to fetch events.
  *
  * This is a convenience method that will call
- * [precache()]{@link module:workbox-precaching.precache} and
- * [addRoute()]{@link module:workbox-precaching.addRoute} in a single call.
+ * {@link workbox-precaching.precache} and
+ * {@link workbox-precaching.addRoute} in a single call.
  *
  * @param {Array<Object|string>} entries Array of entries to precache.
- * @param {Object} [options] See
- * [PrecacheRoute options]{@link module:workbox-precaching.PrecacheRoute}.
+ * @param {Object} [options] See the
+ * {@link workbox-precaching.PrecacheRoute} options.
  *
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function precacheAndRoute(entries, options) {
     (0,_precache_js__WEBPACK_IMPORTED_MODULE_1__.precache)(entries);
@@ -2363,7 +2929,7 @@ const REVISION_SEARCH_PARAM = '__WB_REVISION__';
  * @return {string} A URL with versioning info.
  *
  * @private
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function createCacheKey(entry) {
     if (!entry) {
@@ -2442,7 +3008,7 @@ const SUBSTRING_TO_FIND = '-precache-';
  * @return {Array<string>} A list of all the cache names that were deleted.
  *
  * @private
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 const deleteOutdatedCaches = async (currentPrecacheName, substringToFind = SUBSTRING_TO_FIND) => {
     const cacheNames = await self.caches.keys();
@@ -2489,7 +3055,7 @@ __webpack_require__.r(__webpack_exports__);
  * @param {Object} options
  *
  * @private
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function* generateURLVariations(url, { ignoreURLParametersMatching = [/^utm_/, /^fbclid$/], directoryIndex = 'index.html', cleanURLs = true, urlManipulation, } = {}) {
     const urlObject = new URL(url, location.href);
@@ -2594,7 +3160,7 @@ const logGroup = (groupTitle, deletedURLs) => {
  * @param {Array<string>} deletedURLs
  *
  * @private
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function printCleanupDetails(deletedURLs) {
     const deletionCount = deletedURLs.length;
@@ -2653,7 +3219,7 @@ function _nestedGroup(groupTitle, urls) {
  * @param {Array<string>} urlsAlreadyPrecached
  *
  * @private
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function printInstallDetails(urlsToPrecache, urlsAlreadyPrecached) {
     const precachedCount = urlsToPrecache.length;
@@ -2705,7 +3271,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {URL} The URL with any ignored search parameters removed.
  *
  * @private
- * @memberof module:workbox-precaching
+ * @memberof workbox-precaching
  */
 function removeIgnoredSearchParams(urlObject, ignoreURLParametersMatching = []) {
     // Convert the iterable into an array at the start of the loop to make sure
@@ -2717,6 +3283,130 @@ function removeIgnoredSearchParams(urlObject, ignoreURLParametersMatching = []) 
     }
     return urlObject;
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-routing/NavigationRoute.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/workbox-routing/NavigationRoute.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "NavigationRoute": () => (/* binding */ NavigationRoute)
+/* harmony export */ });
+/* harmony import */ var workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! workbox-core/_private/assert.js */ "./node_modules/workbox-core/_private/assert.js");
+/* harmony import */ var workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! workbox-core/_private/logger.js */ "./node_modules/workbox-core/_private/logger.js");
+/* harmony import */ var _Route_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Route.js */ "./node_modules/workbox-routing/Route.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-routing/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_3__);
+/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+
+
+/**
+ * NavigationRoute makes it easy to create a
+ * {@link workbox-routing.Route} that matches for browser
+ * [navigation requests]{@link https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests}.
+ *
+ * It will only match incoming Requests whose
+ * {@link https://fetch.spec.whatwg.org/#concept-request-mode|mode}
+ * is set to `navigate`.
+ *
+ * You can optionally only apply this route to a subset of navigation requests
+ * by using one or both of the `denylist` and `allowlist` parameters.
+ *
+ * @memberof workbox-routing
+ * @extends workbox-routing.Route
+ */
+class NavigationRoute extends _Route_js__WEBPACK_IMPORTED_MODULE_2__.Route {
+    /**
+     * If both `denylist` and `allowlist` are provided, the `denylist` will
+     * take precedence and the request will not match this route.
+     *
+     * The regular expressions in `allowlist` and `denylist`
+     * are matched against the concatenated
+     * [`pathname`]{@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/pathname}
+     * and [`search`]{@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search}
+     * portions of the requested URL.
+     *
+     * @param {workbox-routing~handlerCallback} handler A callback
+     * function that returns a Promise resulting in a Response.
+     * @param {Object} options
+     * @param {Array<RegExp>} [options.denylist] If any of these patterns match,
+     * the route will not handle the request (even if a allowlist RegExp matches).
+     * @param {Array<RegExp>} [options.allowlist=[/./]] If any of these patterns
+     * match the URL's pathname and search parameter, the route will handle the
+     * request (assuming the denylist doesn't match).
+     */
+    constructor(handler, { allowlist = [/./], denylist = [] } = {}) {
+        if (true) {
+            workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__.assert.isArrayOfClass(allowlist, RegExp, {
+                moduleName: 'workbox-routing',
+                className: 'NavigationRoute',
+                funcName: 'constructor',
+                paramName: 'options.allowlist',
+            });
+            workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__.assert.isArrayOfClass(denylist, RegExp, {
+                moduleName: 'workbox-routing',
+                className: 'NavigationRoute',
+                funcName: 'constructor',
+                paramName: 'options.denylist',
+            });
+        }
+        super((options) => this._match(options), handler);
+        this._allowlist = allowlist;
+        this._denylist = denylist;
+    }
+    /**
+     * Routes match handler.
+     *
+     * @param {Object} options
+     * @param {URL} options.url
+     * @param {Request} options.request
+     * @return {boolean}
+     *
+     * @private
+     */
+    _match({ url, request }) {
+        if (request && request.mode !== 'navigate') {
+            return false;
+        }
+        const pathnameAndSearch = url.pathname + url.search;
+        for (const regExp of this._denylist) {
+            if (regExp.test(pathnameAndSearch)) {
+                if (true) {
+                    workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.log(`The navigation route ${pathnameAndSearch} is not ` +
+                        `being used, since the URL matches this denylist pattern: ` +
+                        `${regExp.toString()}`);
+                }
+                return false;
+            }
+        }
+        if (this._allowlist.some((regExp) => regExp.test(pathnameAndSearch))) {
+            if (true) {
+                workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.debug(`The navigation route ${pathnameAndSearch} ` + `is being used.`);
+            }
+            return true;
+        }
+        if (true) {
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.log(`The navigation route ${pathnameAndSearch} is not ` +
+                `being used, since the URL being navigated to doesn't ` +
+                `match the allowlist.`);
+        }
+        return false;
+    }
+}
+
 
 
 /***/ }),
@@ -2749,7 +3439,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * RegExpRoute makes it easy to create a regular expression based
- * [Route]{@link module:workbox-routing.Route}.
+ * {@link workbox-routing.Route}.
  *
  * For same-origin requests the RegExp only needs to match part of the URL. For
  * requests against third-party servers, you must define a RegExp that matches
@@ -2757,19 +3447,19 @@ __webpack_require__.r(__webpack_exports__);
  *
  * [See the module docs for info.]{@link https://developers.google.com/web/tools/workbox/modules/workbox-routing}
  *
- * @memberof module:workbox-routing
- * @extends module:workbox-routing.Route
+ * @memberof workbox-routing
+ * @extends workbox-routing.Route
  */
 class RegExpRoute extends _Route_js__WEBPACK_IMPORTED_MODULE_2__.Route {
     /**
      * If the regular expression contains
      * [capture groups]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#grouping-back-references},
      * the captured values will be passed to the
-     * [handler's]{@link module:workbox-routing~handlerCallback} `params`
+     * {@link workbox-routing~handlerCallback} `params`
      * argument.
      *
      * @param {RegExp} regExp The regular expression to match against URLs.
-     * @param {module:workbox-routing~handlerCallback} handler A callback
+     * @param {workbox-routing~handlerCallback} handler A callback
      * function that returns a Promise resulting in a Response.
      * @param {string} [method='GET'] The HTTP method to match the Route
      * against.
@@ -2848,16 +3538,16 @@ __webpack_require__.r(__webpack_exports__);
  * is called when there is a match and should return a Promise that resolves
  * to a `Response`.
  *
- * @memberof module:workbox-routing
+ * @memberof workbox-routing
  */
 class Route {
     /**
      * Constructor for Route class.
      *
-     * @param {module:workbox-routing~matchCallback} match
+     * @param {workbox-routing~matchCallback} match
      * A callback function that determines whether the route matches a given
      * `fetch` event by returning a non-falsy value.
-     * @param {module:workbox-routing~handlerCallback} handler A callback
+     * @param {workbox-routing~handlerCallback} handler A callback
      * function that returns a Promise resolving to a Response.
      * @param {string} [method='GET'] The HTTP method to match the Route
      * against.
@@ -2882,7 +3572,7 @@ class Route {
     }
     /**
      *
-     * @param {module:workbox-routing-handlerCallback} handler A callback
+     * @param {workbox-routing-handlerCallback} handler A callback
      * function that returns a Promise resolving to a Response
      */
     setCatchHandler(handler) {
@@ -2927,8 +3617,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * The Router can be used to process a FetchEvent through one or more
- * [Routes]{@link module:workbox-routing.Route} responding  with a Request if
+ * The Router can be used to process a `FetchEvent` using one or more
+ * {@link workbox-routing.Route}, responding with a `Response` if
  * a matching route exists.
  *
  * If no route matches a given a request, the Router will use a "default"
@@ -2941,7 +3631,7 @@ __webpack_require__.r(__webpack_exports__);
  * If a request matches multiple routes, the **earliest** registered route will
  * be used to respond to the request.
  *
- * @memberof module:workbox-routing
+ * @memberof workbox-routing
  */
 class Router {
     /**
@@ -2952,7 +3642,7 @@ class Router {
         this._defaultHandlerMap = new Map();
     }
     /**
-     * @return {Map<string, Array<module:workbox-routing.Route>>} routes A `Map` of HTTP
+     * @return {Map<string, Array<workbox-routing.Route>>} routes A `Map` of HTTP
      * method name ('GET', etc.) to an array of all the corresponding `Route`
      * instances that are registered.
      */
@@ -3221,7 +3911,7 @@ class Router {
      * Without a default handler, unmatched requests will go against the
      * network as if there were no service worker present.
      *
-     * @param {module:workbox-routing~handlerCallback} handler A callback
+     * @param {workbox-routing~handlerCallback} handler A callback
      * function that returns a Promise resulting in a Response.
      * @param {string} [method='GET'] The HTTP method to associate with this
      * default handler. Each method has its own default.
@@ -3233,7 +3923,7 @@ class Router {
      * If a Route throws an error while handling a request, this `handler`
      * will be called and given a chance to provide a response.
      *
-     * @param {module:workbox-routing~handlerCallback} handler A callback
+     * @param {workbox-routing~handlerCallback} handler A callback
      * function that returns a Promise resulting in a Response.
      */
     setCatchHandler(handler) {
@@ -3242,7 +3932,7 @@ class Router {
     /**
      * Registers a route with the router.
      *
-     * @param {module:workbox-routing.Route} route The route to register.
+     * @param {workbox-routing.Route} route The route to register.
      */
     registerRoute(route) {
         if (true) {
@@ -3287,7 +3977,7 @@ class Router {
     /**
      * Unregisters a route with the router.
      *
-     * @param {module:workbox-routing.Route} route The route to unregister.
+     * @param {workbox-routing.Route} route The route to unregister.
      */
     unregisterRoute(route) {
         if (!this._routes.has(route.method)) {
@@ -3318,9 +4008,57 @@ class Router {
 
 // @ts-ignore
 try {
-    self['workbox:routing:6.4.1'] && _();
+    self['workbox:routing:6.4.2'] && _();
 }
 catch (e) { }
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-routing/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/workbox-routing/index.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "NavigationRoute": () => (/* reexport safe */ _NavigationRoute_js__WEBPACK_IMPORTED_MODULE_0__.NavigationRoute),
+/* harmony export */   "RegExpRoute": () => (/* reexport safe */ _RegExpRoute_js__WEBPACK_IMPORTED_MODULE_1__.RegExpRoute),
+/* harmony export */   "registerRoute": () => (/* reexport safe */ _registerRoute_js__WEBPACK_IMPORTED_MODULE_2__.registerRoute),
+/* harmony export */   "Route": () => (/* reexport safe */ _Route_js__WEBPACK_IMPORTED_MODULE_3__.Route),
+/* harmony export */   "Router": () => (/* reexport safe */ _Router_js__WEBPACK_IMPORTED_MODULE_4__.Router),
+/* harmony export */   "setCatchHandler": () => (/* reexport safe */ _setCatchHandler_js__WEBPACK_IMPORTED_MODULE_5__.setCatchHandler),
+/* harmony export */   "setDefaultHandler": () => (/* reexport safe */ _setDefaultHandler_js__WEBPACK_IMPORTED_MODULE_6__.setDefaultHandler)
+/* harmony export */ });
+/* harmony import */ var _NavigationRoute_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NavigationRoute.js */ "./node_modules/workbox-routing/NavigationRoute.js");
+/* harmony import */ var _RegExpRoute_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RegExpRoute.js */ "./node_modules/workbox-routing/RegExpRoute.js");
+/* harmony import */ var _registerRoute_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./registerRoute.js */ "./node_modules/workbox-routing/registerRoute.js");
+/* harmony import */ var _Route_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Route.js */ "./node_modules/workbox-routing/Route.js");
+/* harmony import */ var _Router_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Router.js */ "./node_modules/workbox-routing/Router.js");
+/* harmony import */ var _setCatchHandler_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./setCatchHandler.js */ "./node_modules/workbox-routing/setCatchHandler.js");
+/* harmony import */ var _setDefaultHandler_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./setDefaultHandler.js */ "./node_modules/workbox-routing/setDefaultHandler.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-routing/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_7__);
+/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+
+
+
+
+
+
+/**
+ * @module workbox-routing
+ */
+
 
 
 /***/ }),
@@ -3360,19 +4098,19 @@ __webpack_require__.r(__webpack_exports__);
  * strategy to a singleton Router instance.
  *
  * This method will generate a Route for you if needed and
- * call [registerRoute()]{@link module:workbox-routing.Router#registerRoute}.
+ * call {@link workbox-routing.Router#registerRoute}.
  *
- * @param {RegExp|string|module:workbox-routing.Route~matchCallback|module:workbox-routing.Route} capture
+ * @param {RegExp|string|workbox-routing.Route~matchCallback|workbox-routing.Route} capture
  * If the capture param is a `Route`, all other arguments will be ignored.
- * @param {module:workbox-routing~handlerCallback} [handler] A callback
+ * @param {workbox-routing~handlerCallback} [handler] A callback
  * function that returns a Promise resulting in a Response. This parameter
  * is required if `capture` is not a `Route` object.
  * @param {string} [method='GET'] The HTTP method to match the Route
  * against.
- * @return {module:workbox-routing.Route} The generated `Route`(Useful for
+ * @return {workbox-routing.Route} The generated `Route`(Useful for
  * unregistering).
  *
- * @memberof module:workbox-routing
+ * @memberof workbox-routing
  */
 function registerRoute(capture, handler, method) {
     let route;
@@ -3434,6 +4172,89 @@ function registerRoute(capture, handler, method) {
     const defaultRouter = (0,_utils_getOrCreateDefaultRouter_js__WEBPACK_IMPORTED_MODULE_4__.getOrCreateDefaultRouter)();
     defaultRouter.registerRoute(route);
     return route;
+}
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-routing/setCatchHandler.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/workbox-routing/setCatchHandler.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "setCatchHandler": () => (/* binding */ setCatchHandler)
+/* harmony export */ });
+/* harmony import */ var _utils_getOrCreateDefaultRouter_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/getOrCreateDefaultRouter.js */ "./node_modules/workbox-routing/utils/getOrCreateDefaultRouter.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-routing/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_1__);
+/*
+  Copyright 2019 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+/**
+ * If a Route throws an error while handling a request, this `handler`
+ * will be called and given a chance to provide a response.
+ *
+ * @param {workbox-routing~handlerCallback} handler A callback
+ * function that returns a Promise resulting in a Response.
+ *
+ * @memberof workbox-routing
+ */
+function setCatchHandler(handler) {
+    const defaultRouter = (0,_utils_getOrCreateDefaultRouter_js__WEBPACK_IMPORTED_MODULE_0__.getOrCreateDefaultRouter)();
+    defaultRouter.setCatchHandler(handler);
+}
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-routing/setDefaultHandler.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/workbox-routing/setDefaultHandler.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "setDefaultHandler": () => (/* binding */ setDefaultHandler)
+/* harmony export */ });
+/* harmony import */ var _utils_getOrCreateDefaultRouter_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/getOrCreateDefaultRouter.js */ "./node_modules/workbox-routing/utils/getOrCreateDefaultRouter.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-routing/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_1__);
+/*
+  Copyright 2019 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+/**
+ * Define a default `handler` that's called when no routes explicitly
+ * match the incoming request.
+ *
+ * Without a default handler, unmatched requests will go against the
+ * network as if there were no service worker present.
+ *
+ * @param {workbox-routing~handlerCallback} handler A callback
+ * function that returns a Promise resulting in a Response.
+ *
+ * @memberof workbox-routing
+ */
+function setDefaultHandler(handler) {
+    const defaultRouter = (0,_utils_getOrCreateDefaultRouter_js__WEBPACK_IMPORTED_MODULE_0__.getOrCreateDefaultRouter)();
+    defaultRouter.setDefaultHandler(handler);
 }
 
 
@@ -3589,6 +4410,678 @@ const normalizeHandler = (handler) => {
 
 /***/ }),
 
+/***/ "./node_modules/workbox-strategies/CacheFirst.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/workbox-strategies/CacheFirst.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CacheFirst": () => (/* binding */ CacheFirst)
+/* harmony export */ });
+/* harmony import */ var workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! workbox-core/_private/assert.js */ "./node_modules/workbox-core/_private/assert.js");
+/* harmony import */ var workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! workbox-core/_private/logger.js */ "./node_modules/workbox-core/_private/logger.js");
+/* harmony import */ var workbox_core_private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! workbox-core/_private/WorkboxError.js */ "./node_modules/workbox-core/_private/WorkboxError.js");
+/* harmony import */ var _Strategy_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Strategy.js */ "./node_modules/workbox-strategies/Strategy.js");
+/* harmony import */ var _utils_messages_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/messages.js */ "./node_modules/workbox-strategies/utils/messages.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-strategies/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_5__);
+/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+
+
+
+
+/**
+ * An implementation of a [cache-first]{@link https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network}
+ * request strategy.
+ *
+ * A cache first strategy is useful for assets that have been revisioned,
+ * such as URLs like `/styles/example.a8f5f1.css`, since they
+ * can be cached for long periods of time.
+ *
+ * If the network request fails, and there is no cache match, this will throw
+ * a `WorkboxError` exception.
+ *
+ * @extends workbox-strategies.Strategy
+ * @memberof workbox-strategies
+ */
+class CacheFirst extends _Strategy_js__WEBPACK_IMPORTED_MODULE_3__.Strategy {
+    /**
+     * @private
+     * @param {Request|string} request A request to run this strategy for.
+     * @param {workbox-strategies.StrategyHandler} handler The event that
+     *     triggered the request.
+     * @return {Promise<Response>}
+     */
+    async _handle(request, handler) {
+        const logs = [];
+        if (true) {
+            workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__.assert.isInstance(request, Request, {
+                moduleName: 'workbox-strategies',
+                className: this.constructor.name,
+                funcName: 'makeRequest',
+                paramName: 'request',
+            });
+        }
+        let response = await handler.cacheMatch(request);
+        let error = undefined;
+        if (!response) {
+            if (true) {
+                logs.push(`No response found in the '${this.cacheName}' cache. ` +
+                    `Will respond with a network request.`);
+            }
+            try {
+                response = await handler.fetchAndCachePut(request);
+            }
+            catch (err) {
+                if (err instanceof Error) {
+                    error = err;
+                }
+            }
+            if (true) {
+                if (response) {
+                    logs.push(`Got response from network.`);
+                }
+                else {
+                    logs.push(`Unable to get a response from the network.`);
+                }
+            }
+        }
+        else {
+            if (true) {
+                logs.push(`Found a cached response in the '${this.cacheName}' cache.`);
+            }
+        }
+        if (true) {
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.groupCollapsed(_utils_messages_js__WEBPACK_IMPORTED_MODULE_4__.messages.strategyStart(this.constructor.name, request));
+            for (const log of logs) {
+                workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.log(log);
+            }
+            _utils_messages_js__WEBPACK_IMPORTED_MODULE_4__.messages.printFinalResponse(response);
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.groupEnd();
+        }
+        if (!response) {
+            throw new workbox_core_private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_2__.WorkboxError('no-response', { url: request.url, error });
+        }
+        return response;
+    }
+}
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-strategies/CacheOnly.js":
+/*!******************************************************!*\
+  !*** ./node_modules/workbox-strategies/CacheOnly.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CacheOnly": () => (/* binding */ CacheOnly)
+/* harmony export */ });
+/* harmony import */ var workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! workbox-core/_private/assert.js */ "./node_modules/workbox-core/_private/assert.js");
+/* harmony import */ var workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! workbox-core/_private/logger.js */ "./node_modules/workbox-core/_private/logger.js");
+/* harmony import */ var workbox_core_private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! workbox-core/_private/WorkboxError.js */ "./node_modules/workbox-core/_private/WorkboxError.js");
+/* harmony import */ var _Strategy_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Strategy.js */ "./node_modules/workbox-strategies/Strategy.js");
+/* harmony import */ var _utils_messages_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/messages.js */ "./node_modules/workbox-strategies/utils/messages.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-strategies/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_5__);
+/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+
+
+
+
+/**
+ * An implementation of a
+ * [cache-only]{@link https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-only}
+ * request strategy.
+ *
+ * This class is useful if you want to take advantage of any
+ * [Workbox plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}.
+ *
+ * If there is no cache match, this will throw a `WorkboxError` exception.
+ *
+ * @extends workbox-strategies.Strategy
+ * @memberof workbox-strategies
+ */
+class CacheOnly extends _Strategy_js__WEBPACK_IMPORTED_MODULE_3__.Strategy {
+    /**
+     * @private
+     * @param {Request|string} request A request to run this strategy for.
+     * @param {workbox-strategies.StrategyHandler} handler The event that
+     *     triggered the request.
+     * @return {Promise<Response>}
+     */
+    async _handle(request, handler) {
+        if (true) {
+            workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__.assert.isInstance(request, Request, {
+                moduleName: 'workbox-strategies',
+                className: this.constructor.name,
+                funcName: 'makeRequest',
+                paramName: 'request',
+            });
+        }
+        const response = await handler.cacheMatch(request);
+        if (true) {
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.groupCollapsed(_utils_messages_js__WEBPACK_IMPORTED_MODULE_4__.messages.strategyStart(this.constructor.name, request));
+            if (response) {
+                workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.log(`Found a cached response in the '${this.cacheName}' ` + `cache.`);
+                _utils_messages_js__WEBPACK_IMPORTED_MODULE_4__.messages.printFinalResponse(response);
+            }
+            else {
+                workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.log(`No response found in the '${this.cacheName}' cache.`);
+            }
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.groupEnd();
+        }
+        if (!response) {
+            throw new workbox_core_private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_2__.WorkboxError('no-response', { url: request.url });
+        }
+        return response;
+    }
+}
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-strategies/NetworkFirst.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/workbox-strategies/NetworkFirst.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "NetworkFirst": () => (/* binding */ NetworkFirst)
+/* harmony export */ });
+/* harmony import */ var workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! workbox-core/_private/assert.js */ "./node_modules/workbox-core/_private/assert.js");
+/* harmony import */ var workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! workbox-core/_private/logger.js */ "./node_modules/workbox-core/_private/logger.js");
+/* harmony import */ var workbox_core_private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! workbox-core/_private/WorkboxError.js */ "./node_modules/workbox-core/_private/WorkboxError.js");
+/* harmony import */ var _plugins_cacheOkAndOpaquePlugin_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./plugins/cacheOkAndOpaquePlugin.js */ "./node_modules/workbox-strategies/plugins/cacheOkAndOpaquePlugin.js");
+/* harmony import */ var _Strategy_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Strategy.js */ "./node_modules/workbox-strategies/Strategy.js");
+/* harmony import */ var _utils_messages_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/messages.js */ "./node_modules/workbox-strategies/utils/messages.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-strategies/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_6__);
+/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+
+
+
+
+
+/**
+ * An implementation of a
+ * [network first]{@link https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache}
+ * request strategy.
+ *
+ * By default, this strategy will cache responses with a 200 status code as
+ * well as [opaque responses]{@link https://developers.google.com/web/tools/workbox/guides/handle-third-party-requests}.
+ * Opaque responses are are cross-origin requests where the response doesn't
+ * support [CORS]{@link https://enable-cors.org/}.
+ *
+ * If the network request fails, and there is no cache match, this will throw
+ * a `WorkboxError` exception.
+ *
+ * @extends workbox-strategies.Strategy
+ * @memberof workbox-strategies
+ */
+class NetworkFirst extends _Strategy_js__WEBPACK_IMPORTED_MODULE_4__.Strategy {
+    /**
+     * @param {Object} [options]
+     * @param {string} [options.cacheName] Cache name to store and retrieve
+     * requests. Defaults to cache names provided by
+     * {@link workbox-core.cacheNames}.
+     * @param {Array<Object>} [options.plugins] [Plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}
+     * to use in conjunction with this caching strategy.
+     * @param {Object} [options.fetchOptions] Values passed along to the
+     * [`init`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+     * of [non-navigation](https://github.com/GoogleChrome/workbox/issues/1796)
+     * `fetch()` requests made by this strategy.
+     * @param {Object} [options.matchOptions] [`CacheQueryOptions`](https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions)
+     * @param {number} [options.networkTimeoutSeconds] If set, any network requests
+     * that fail to respond within the timeout will fallback to the cache.
+     *
+     * This option can be used to combat
+     * "[lie-fi]{@link https://developers.google.com/web/fundamentals/performance/poor-connectivity/#lie-fi}"
+     * scenarios.
+     */
+    constructor(options = {}) {
+        super(options);
+        // If this instance contains no plugins with a 'cacheWillUpdate' callback,
+        // prepend the `cacheOkAndOpaquePlugin` plugin to the plugins list.
+        if (!this.plugins.some((p) => 'cacheWillUpdate' in p)) {
+            this.plugins.unshift(_plugins_cacheOkAndOpaquePlugin_js__WEBPACK_IMPORTED_MODULE_3__.cacheOkAndOpaquePlugin);
+        }
+        this._networkTimeoutSeconds = options.networkTimeoutSeconds || 0;
+        if (true) {
+            if (this._networkTimeoutSeconds) {
+                workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__.assert.isType(this._networkTimeoutSeconds, 'number', {
+                    moduleName: 'workbox-strategies',
+                    className: this.constructor.name,
+                    funcName: 'constructor',
+                    paramName: 'networkTimeoutSeconds',
+                });
+            }
+        }
+    }
+    /**
+     * @private
+     * @param {Request|string} request A request to run this strategy for.
+     * @param {workbox-strategies.StrategyHandler} handler The event that
+     *     triggered the request.
+     * @return {Promise<Response>}
+     */
+    async _handle(request, handler) {
+        const logs = [];
+        if (true) {
+            workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__.assert.isInstance(request, Request, {
+                moduleName: 'workbox-strategies',
+                className: this.constructor.name,
+                funcName: 'handle',
+                paramName: 'makeRequest',
+            });
+        }
+        const promises = [];
+        let timeoutId;
+        if (this._networkTimeoutSeconds) {
+            const { id, promise } = this._getTimeoutPromise({ request, logs, handler });
+            timeoutId = id;
+            promises.push(promise);
+        }
+        const networkPromise = this._getNetworkPromise({
+            timeoutId,
+            request,
+            logs,
+            handler,
+        });
+        promises.push(networkPromise);
+        const response = await handler.waitUntil((async () => {
+            // Promise.race() will resolve as soon as the first promise resolves.
+            return ((await handler.waitUntil(Promise.race(promises))) ||
+                // If Promise.race() resolved with null, it might be due to a network
+                // timeout + a cache miss. If that were to happen, we'd rather wait until
+                // the networkPromise resolves instead of returning null.
+                // Note that it's fine to await an already-resolved promise, so we don't
+                // have to check to see if it's still "in flight".
+                (await networkPromise));
+        })());
+        if (true) {
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.groupCollapsed(_utils_messages_js__WEBPACK_IMPORTED_MODULE_5__.messages.strategyStart(this.constructor.name, request));
+            for (const log of logs) {
+                workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.log(log);
+            }
+            _utils_messages_js__WEBPACK_IMPORTED_MODULE_5__.messages.printFinalResponse(response);
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.groupEnd();
+        }
+        if (!response) {
+            throw new workbox_core_private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_2__.WorkboxError('no-response', { url: request.url });
+        }
+        return response;
+    }
+    /**
+     * @param {Object} options
+     * @param {Request} options.request
+     * @param {Array} options.logs A reference to the logs array
+     * @param {Event} options.event
+     * @return {Promise<Response>}
+     *
+     * @private
+     */
+    _getTimeoutPromise({ request, logs, handler, }) {
+        let timeoutId;
+        const timeoutPromise = new Promise((resolve) => {
+            const onNetworkTimeout = async () => {
+                if (true) {
+                    logs.push(`Timing out the network response at ` +
+                        `${this._networkTimeoutSeconds} seconds.`);
+                }
+                resolve(await handler.cacheMatch(request));
+            };
+            timeoutId = setTimeout(onNetworkTimeout, this._networkTimeoutSeconds * 1000);
+        });
+        return {
+            promise: timeoutPromise,
+            id: timeoutId,
+        };
+    }
+    /**
+     * @param {Object} options
+     * @param {number|undefined} options.timeoutId
+     * @param {Request} options.request
+     * @param {Array} options.logs A reference to the logs Array.
+     * @param {Event} options.event
+     * @return {Promise<Response>}
+     *
+     * @private
+     */
+    async _getNetworkPromise({ timeoutId, request, logs, handler, }) {
+        let error;
+        let response;
+        try {
+            response = await handler.fetchAndCachePut(request);
+        }
+        catch (fetchError) {
+            if (fetchError instanceof Error) {
+                error = fetchError;
+            }
+        }
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+        if (true) {
+            if (response) {
+                logs.push(`Got response from network.`);
+            }
+            else {
+                logs.push(`Unable to get a response from the network. Will respond ` +
+                    `with a cached response.`);
+            }
+        }
+        if (error || !response) {
+            response = await handler.cacheMatch(request);
+            if (true) {
+                if (response) {
+                    logs.push(`Found a cached response in the '${this.cacheName}'` + ` cache.`);
+                }
+                else {
+                    logs.push(`No response found in the '${this.cacheName}' cache.`);
+                }
+            }
+        }
+        return response;
+    }
+}
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-strategies/NetworkOnly.js":
+/*!********************************************************!*\
+  !*** ./node_modules/workbox-strategies/NetworkOnly.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "NetworkOnly": () => (/* binding */ NetworkOnly)
+/* harmony export */ });
+/* harmony import */ var workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! workbox-core/_private/assert.js */ "./node_modules/workbox-core/_private/assert.js");
+/* harmony import */ var workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! workbox-core/_private/logger.js */ "./node_modules/workbox-core/_private/logger.js");
+/* harmony import */ var workbox_core_private_timeout_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! workbox-core/_private/timeout.js */ "./node_modules/workbox-core/_private/timeout.js");
+/* harmony import */ var workbox_core_private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! workbox-core/_private/WorkboxError.js */ "./node_modules/workbox-core/_private/WorkboxError.js");
+/* harmony import */ var _Strategy_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Strategy.js */ "./node_modules/workbox-strategies/Strategy.js");
+/* harmony import */ var _utils_messages_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/messages.js */ "./node_modules/workbox-strategies/utils/messages.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-strategies/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_6__);
+/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+
+
+
+
+
+/**
+ * An implementation of a
+ * [network-only]{@link https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#network-only}
+ * request strategy.
+ *
+ * This class is useful if you want to take advantage of any
+ * [Workbox plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}.
+ *
+ * If the network request fails, this will throw a `WorkboxError` exception.
+ *
+ * @extends workbox-strategies.Strategy
+ * @memberof workbox-strategies
+ */
+class NetworkOnly extends _Strategy_js__WEBPACK_IMPORTED_MODULE_4__.Strategy {
+    /**
+     * @param {Object} [options]
+     * @param {Array<Object>} [options.plugins] [Plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}
+     * to use in conjunction with this caching strategy.
+     * @param {Object} [options.fetchOptions] Values passed along to the
+     * [`init`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+     * of [non-navigation](https://github.com/GoogleChrome/workbox/issues/1796)
+     * `fetch()` requests made by this strategy.
+     * @param {number} [options.networkTimeoutSeconds] If set, any network requests
+     * that fail to respond within the timeout will result in a network error.
+     */
+    constructor(options = {}) {
+        super(options);
+        this._networkTimeoutSeconds = options.networkTimeoutSeconds || 0;
+    }
+    /**
+     * @private
+     * @param {Request|string} request A request to run this strategy for.
+     * @param {workbox-strategies.StrategyHandler} handler The event that
+     *     triggered the request.
+     * @return {Promise<Response>}
+     */
+    async _handle(request, handler) {
+        if (true) {
+            workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__.assert.isInstance(request, Request, {
+                moduleName: 'workbox-strategies',
+                className: this.constructor.name,
+                funcName: '_handle',
+                paramName: 'request',
+            });
+        }
+        let error = undefined;
+        let response;
+        try {
+            const promises = [
+                handler.fetch(request),
+            ];
+            if (this._networkTimeoutSeconds) {
+                const timeoutPromise = (0,workbox_core_private_timeout_js__WEBPACK_IMPORTED_MODULE_2__.timeout)(this._networkTimeoutSeconds * 1000);
+                promises.push(timeoutPromise);
+            }
+            response = await Promise.race(promises);
+            if (!response) {
+                throw new Error(`Timed out the network response after ` +
+                    `${this._networkTimeoutSeconds} seconds.`);
+            }
+        }
+        catch (err) {
+            if (err instanceof Error) {
+                error = err;
+            }
+        }
+        if (true) {
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.groupCollapsed(_utils_messages_js__WEBPACK_IMPORTED_MODULE_5__.messages.strategyStart(this.constructor.name, request));
+            if (response) {
+                workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.log(`Got response from network.`);
+            }
+            else {
+                workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.log(`Unable to get a response from the network.`);
+            }
+            _utils_messages_js__WEBPACK_IMPORTED_MODULE_5__.messages.printFinalResponse(response);
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.groupEnd();
+        }
+        if (!response) {
+            throw new workbox_core_private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_3__.WorkboxError('no-response', { url: request.url, error });
+        }
+        return response;
+    }
+}
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-strategies/StaleWhileRevalidate.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/workbox-strategies/StaleWhileRevalidate.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "StaleWhileRevalidate": () => (/* binding */ StaleWhileRevalidate)
+/* harmony export */ });
+/* harmony import */ var workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! workbox-core/_private/assert.js */ "./node_modules/workbox-core/_private/assert.js");
+/* harmony import */ var workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! workbox-core/_private/logger.js */ "./node_modules/workbox-core/_private/logger.js");
+/* harmony import */ var workbox_core_private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! workbox-core/_private/WorkboxError.js */ "./node_modules/workbox-core/_private/WorkboxError.js");
+/* harmony import */ var _plugins_cacheOkAndOpaquePlugin_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./plugins/cacheOkAndOpaquePlugin.js */ "./node_modules/workbox-strategies/plugins/cacheOkAndOpaquePlugin.js");
+/* harmony import */ var _Strategy_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Strategy.js */ "./node_modules/workbox-strategies/Strategy.js");
+/* harmony import */ var _utils_messages_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/messages.js */ "./node_modules/workbox-strategies/utils/messages.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-strategies/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_6__);
+/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+
+
+
+
+
+/**
+ * An implementation of a
+ * [stale-while-revalidate]{@link https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate}
+ * request strategy.
+ *
+ * Resources are requested from both the cache and the network in parallel.
+ * The strategy will respond with the cached version if available, otherwise
+ * wait for the network response. The cache is updated with the network response
+ * with each successful request.
+ *
+ * By default, this strategy will cache responses with a 200 status code as
+ * well as [opaque responses]{@link https://developers.google.com/web/tools/workbox/guides/handle-third-party-requests}.
+ * Opaque responses are cross-origin requests where the response doesn't
+ * support [CORS]{@link https://enable-cors.org/}.
+ *
+ * If the network request fails, and there is no cache match, this will throw
+ * a `WorkboxError` exception.
+ *
+ * @extends workbox-strategies.Strategy
+ * @memberof workbox-strategies
+ */
+class StaleWhileRevalidate extends _Strategy_js__WEBPACK_IMPORTED_MODULE_4__.Strategy {
+    /**
+     * @param {Object} [options]
+     * @param {string} [options.cacheName] Cache name to store and retrieve
+     * requests. Defaults to cache names provided by
+     * {@link workbox-core.cacheNames}.
+     * @param {Array<Object>} [options.plugins] [Plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}
+     * to use in conjunction with this caching strategy.
+     * @param {Object} [options.fetchOptions] Values passed along to the
+     * [`init`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+     * of [non-navigation](https://github.com/GoogleChrome/workbox/issues/1796)
+     * `fetch()` requests made by this strategy.
+     * @param {Object} [options.matchOptions] [`CacheQueryOptions`](https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions)
+     */
+    constructor(options = {}) {
+        super(options);
+        // If this instance contains no plugins with a 'cacheWillUpdate' callback,
+        // prepend the `cacheOkAndOpaquePlugin` plugin to the plugins list.
+        if (!this.plugins.some((p) => 'cacheWillUpdate' in p)) {
+            this.plugins.unshift(_plugins_cacheOkAndOpaquePlugin_js__WEBPACK_IMPORTED_MODULE_3__.cacheOkAndOpaquePlugin);
+        }
+    }
+    /**
+     * @private
+     * @param {Request|string} request A request to run this strategy for.
+     * @param {workbox-strategies.StrategyHandler} handler The event that
+     *     triggered the request.
+     * @return {Promise<Response>}
+     */
+    async _handle(request, handler) {
+        const logs = [];
+        if (true) {
+            workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__.assert.isInstance(request, Request, {
+                moduleName: 'workbox-strategies',
+                className: this.constructor.name,
+                funcName: 'handle',
+                paramName: 'request',
+            });
+        }
+        const fetchAndCachePromise = handler.fetchAndCachePut(request).catch(() => {
+            // Swallow this error because a 'no-response' error will be thrown in
+            // main handler return flow. This will be in the `waitUntil()` flow.
+        });
+        void handler.waitUntil(fetchAndCachePromise);
+        let response = await handler.cacheMatch(request);
+        let error;
+        if (response) {
+            if (true) {
+                logs.push(`Found a cached response in the '${this.cacheName}'` +
+                    ` cache. Will update with the network response in the background.`);
+            }
+        }
+        else {
+            if (true) {
+                logs.push(`No response found in the '${this.cacheName}' cache. ` +
+                    `Will wait for the network response.`);
+            }
+            try {
+                // NOTE(philipwalton): Really annoying that we have to type cast here.
+                // https://github.com/microsoft/TypeScript/issues/20006
+                response = (await fetchAndCachePromise);
+            }
+            catch (err) {
+                if (err instanceof Error) {
+                    error = err;
+                }
+            }
+        }
+        if (true) {
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.groupCollapsed(_utils_messages_js__WEBPACK_IMPORTED_MODULE_5__.messages.strategyStart(this.constructor.name, request));
+            for (const log of logs) {
+                workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.log(log);
+            }
+            _utils_messages_js__WEBPACK_IMPORTED_MODULE_5__.messages.printFinalResponse(response);
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_1__.logger.groupEnd();
+        }
+        if (!response) {
+            throw new workbox_core_private_WorkboxError_js__WEBPACK_IMPORTED_MODULE_2__.WorkboxError('no-response', { url: request.url, error });
+        }
+        return response;
+    }
+}
+
+
+
+/***/ }),
+
 /***/ "./node_modules/workbox-strategies/Strategy.js":
 /*!*****************************************************!*\
   !*** ./node_modules/workbox-strategies/Strategy.js ***!
@@ -3622,7 +5115,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * An abstract base class that all other strategy classes must extend from:
  *
- * @memberof module:workbox-strategies
+ * @memberof workbox-strategies
  */
 class Strategy {
     /**
@@ -3636,7 +5129,7 @@ class Strategy {
      * @param {Object} [options]
      * @param {string} [options.cacheName] Cache name to store and retrieve
      * requests. Defaults to the cache names provided by
-     * [workbox-core]{@link module:workbox-core.cacheNames}.
+     * {@link workbox-core.cacheNames}.
      * @param {Array<Object>} [options.plugins] [Plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}
      * to use in conjunction with this caching strategy.
      * @param {Object} [options.fetchOptions] Values passed along to the
@@ -3651,7 +5144,7 @@ class Strategy {
         /**
          * Cache name to store and retrieve
          * requests. Defaults to the cache names provided by
-         * [workbox-core]{@link module:workbox-core.cacheNames}.
+         * {@link workbox-core.cacheNames}.
          *
          * @type {string}
          */
@@ -3686,7 +5179,7 @@ class Strategy {
      * a `Response`, invoking all relevant plugin callbacks.
      *
      * When a strategy instance is registered with a Workbox
-     * [route]{@link module:workbox-routing.Route}, this method is automatically
+     * {@link workbox-routing.Route}, this method is automatically
      * called when the route matches.
      *
      * Alternatively, this method can be used in a standalone `FetchEvent`
@@ -3705,9 +5198,9 @@ class Strategy {
         return responseDone;
     }
     /**
-     * Similar to [`handle()`]{@link module:workbox-strategies.Strategy~handle}, but
+     * Similar to {@link workbox-strategies.Strategy~handle}, but
      * instead of just returning a `Promise` that resolves to a `Response` it
-     * it will return an tuple of [response, done] promises, where the former
+     * it will return an tuple of `[response, done]` promises, where the former
      * (`response`) is equivalent to what `handle()` returns, and the latter is a
      * Promise that will resolve once any promises that were added to
      * `event.waitUntil()` as part of performing the strategy have completed.
@@ -3819,7 +5312,7 @@ class Strategy {
 
 /**
  * Classes extending the `Strategy` based class should implement this method,
- * and leverage the [`handler`]{@link module:workbox-strategies.StrategyHandler}
+ * and leverage the {@link workbox-strategies.StrategyHandler}
  * arg to perform all fetching and cache logic, which will ensure all relevant
  * cache, cache options, fetch options and plugins are used (per the current
  * strategy instance).
@@ -3829,10 +5322,10 @@ class Strategy {
  * @abstract
  * @function
  * @param {Request} request
- * @param {module:workbox-strategies.StrategyHandler} handler
+ * @param {workbox-strategies.StrategyHandler} handler
  * @return {Promise<Response>}
  *
- * @memberof module:workbox-strategies.Strategy
+ * @memberof workbox-strategies.Strategy
  */
 
 
@@ -3879,12 +5372,12 @@ function toRequest(input) {
 }
 /**
  * A class created every time a Strategy instance instance calls
- * [handle()]{@link module:workbox-strategies.Strategy~handle} or
- * [handleAll()]{@link module:workbox-strategies.Strategy~handleAll} that wraps all fetch and
+ * {@link workbox-strategies.Strategy~handle} or
+ * {@link workbox-strategies.Strategy~handleAll} that wraps all fetch and
  * cache actions around plugin callbacks and keeps track of when the strategy
  * is "done" (i.e. all added `event.waitUntil()` promises have resolved).
  *
- * @memberof module:workbox-strategies
+ * @memberof workbox-strategies
  */
 class StrategyHandler {
     /**
@@ -3894,15 +5387,14 @@ class StrategyHandler {
      * The constructor also initializes the state that will be passed to each of
      * the plugins handling this request.
      *
-     * @param {module:workbox-strategies.Strategy} strategy
+     * @param {workbox-strategies.Strategy} strategy
      * @param {Object} options
      * @param {Request|string} options.request A request to run this strategy for.
      * @param {ExtendableEvent} options.event The event associated with the
      *     request.
      * @param {URL} [options.url]
-     * @param {*} [options.params]
-     *     [match callback]{@link module:workbox-routing~matchCallback},
-     *     (if applicable).
+     * @param {*} [options.params] The return value from the
+     *     {@link workbox-routing~matchCallback} (if applicable).
      */
     constructor(strategy, options) {
         this._cacheKeys = {};
@@ -3912,14 +5404,14 @@ class StrategyHandler {
          * @name request
          * @instance
          * @type {Request}
-         * @memberof module:workbox-strategies.StrategyHandler
+         * @memberof workbox-strategies.StrategyHandler
          */
         /**
          * The event associated with this request.
          * @name event
          * @instance
          * @type {ExtendableEvent}
-         * @memberof module:workbox-strategies.StrategyHandler
+         * @memberof workbox-strategies.StrategyHandler
          */
         /**
          * A `URL` instance of `request.url` (if passed to the strategy's
@@ -3929,19 +5421,19 @@ class StrategyHandler {
          * @name url
          * @instance
          * @type {URL|undefined}
-         * @memberof module:workbox-strategies.StrategyHandler
+         * @memberof workbox-strategies.StrategyHandler
          */
         /**
          * A `param` value (if passed to the strategy's
          * `handle()` or `handleAll()` method).
          * Note: the `param` param will be present if the strategy was invoked
          * from a workbox `Route` object and the
-         * [match callback]{@link module:workbox-routing~matchCallback} returned
+         * {@link workbox-routing~matchCallback} returned
          * a truthy value (it will be that value).
          * @name params
          * @instance
          * @type {*|undefined}
-         * @memberof module:workbox-strategies.StrategyHandler
+         * @memberof workbox-strategies.StrategyHandler
          */
         if (true) {
             workbox_core_private_assert_js__WEBPACK_IMPORTED_MODULE_0__.assert.isInstance(options.event, ExtendableEvent, {
@@ -4248,7 +5740,7 @@ class StrategyHandler {
      * Note: since this method runs all plugins, it's not suitable for cases
      * where the return value of a callback needs to be applied prior to calling
      * the next callback. See
-     * [`iterateCallbacks()`]{@link module:workbox-strategies.StrategyHandler#iterateCallbacks}
+     * {@link workbox-strategies.StrategyHandler#iterateCallbacks}
      * below for how to handle that case.
      *
      * @param {string} name The name of the callback to run within each plugin.
@@ -4293,7 +5785,7 @@ class StrategyHandler {
      * `FetchEvent`).
      *
      * Note: you can await
-     * [`doneWaiting()`]{@link module:workbox-strategies.StrategyHandler~doneWaiting}
+     * {@link workbox-strategies.StrategyHandler~doneWaiting}
      * to know when all added promises have settled.
      *
      * @param {Promise} promise A promise to add to the extend lifetime promises
@@ -4305,7 +5797,7 @@ class StrategyHandler {
     }
     /**
      * Returns a promise that resolves once all promises passed to
-     * [`waitUntil()`]{@link module:workbox-strategies.StrategyHandler~waitUntil}
+     * {@link workbox-strategies.StrategyHandler~waitUntil}
      * have settled.
      *
      * Note: any work done after `doneWaiting()` settles should be manually
@@ -4389,9 +5881,161 @@ class StrategyHandler {
 
 // @ts-ignore
 try {
-    self['workbox:strategies:6.4.1'] && _();
+    self['workbox:strategies:6.4.2'] && _();
 }
 catch (e) { }
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-strategies/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/workbox-strategies/index.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CacheFirst": () => (/* reexport safe */ _CacheFirst_js__WEBPACK_IMPORTED_MODULE_0__.CacheFirst),
+/* harmony export */   "CacheOnly": () => (/* reexport safe */ _CacheOnly_js__WEBPACK_IMPORTED_MODULE_1__.CacheOnly),
+/* harmony export */   "NetworkFirst": () => (/* reexport safe */ _NetworkFirst_js__WEBPACK_IMPORTED_MODULE_2__.NetworkFirst),
+/* harmony export */   "NetworkOnly": () => (/* reexport safe */ _NetworkOnly_js__WEBPACK_IMPORTED_MODULE_3__.NetworkOnly),
+/* harmony export */   "StaleWhileRevalidate": () => (/* reexport safe */ _StaleWhileRevalidate_js__WEBPACK_IMPORTED_MODULE_4__.StaleWhileRevalidate),
+/* harmony export */   "Strategy": () => (/* reexport safe */ _Strategy_js__WEBPACK_IMPORTED_MODULE_5__.Strategy),
+/* harmony export */   "StrategyHandler": () => (/* reexport safe */ _StrategyHandler_js__WEBPACK_IMPORTED_MODULE_6__.StrategyHandler)
+/* harmony export */ });
+/* harmony import */ var _CacheFirst_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CacheFirst.js */ "./node_modules/workbox-strategies/CacheFirst.js");
+/* harmony import */ var _CacheOnly_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CacheOnly.js */ "./node_modules/workbox-strategies/CacheOnly.js");
+/* harmony import */ var _NetworkFirst_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NetworkFirst.js */ "./node_modules/workbox-strategies/NetworkFirst.js");
+/* harmony import */ var _NetworkOnly_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NetworkOnly.js */ "./node_modules/workbox-strategies/NetworkOnly.js");
+/* harmony import */ var _StaleWhileRevalidate_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./StaleWhileRevalidate.js */ "./node_modules/workbox-strategies/StaleWhileRevalidate.js");
+/* harmony import */ var _Strategy_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Strategy.js */ "./node_modules/workbox-strategies/Strategy.js");
+/* harmony import */ var _StrategyHandler_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./StrategyHandler.js */ "./node_modules/workbox-strategies/StrategyHandler.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_version.js */ "./node_modules/workbox-strategies/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_7__);
+/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+
+
+
+
+
+
+/**
+ * There are common caching strategies that most service workers will need
+ * and use. This module provides simple implementations of these strategies.
+ *
+ * @module workbox-strategies
+ */
+
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-strategies/plugins/cacheOkAndOpaquePlugin.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/workbox-strategies/plugins/cacheOkAndOpaquePlugin.js ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "cacheOkAndOpaquePlugin": () => (/* binding */ cacheOkAndOpaquePlugin)
+/* harmony export */ });
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_version.js */ "./node_modules/workbox-strategies/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_0__);
+/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+const cacheOkAndOpaquePlugin = {
+    /**
+     * Returns a valid response (to allow caching) if the status is 200 (OK) or
+     * 0 (opaque).
+     *
+     * @param {Object} options
+     * @param {Response} options.response
+     * @return {Response|null}
+     *
+     * @private
+     */
+    cacheWillUpdate: async ({ response }) => {
+        if (response.status === 200 || response.status === 0) {
+            return response;
+        }
+        return null;
+    },
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-strategies/utils/messages.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/workbox-strategies/utils/messages.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "messages": () => (/* binding */ messages)
+/* harmony export */ });
+/* harmony import */ var workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! workbox-core/_private/logger.js */ "./node_modules/workbox-core/_private/logger.js");
+/* harmony import */ var workbox_core_private_getFriendlyURL_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! workbox-core/_private/getFriendlyURL.js */ "./node_modules/workbox-core/_private/getFriendlyURL.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_version.js */ "./node_modules/workbox-strategies/_version.js");
+/* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_version_js__WEBPACK_IMPORTED_MODULE_2__);
+/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+
+
+
+const messages = {
+    strategyStart: (strategyName, request) => `Using ${strategyName} to respond to '${(0,workbox_core_private_getFriendlyURL_js__WEBPACK_IMPORTED_MODULE_1__.getFriendlyURL)(request.url)}'`,
+    printFinalResponse: (response) => {
+        if (response) {
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_0__.logger.groupCollapsed(`View the final response here.`);
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_0__.logger.log(response || '[No response returned]');
+            workbox_core_private_logger_js__WEBPACK_IMPORTED_MODULE_0__.logger.groupEnd();
+        }
+    },
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-core/index.mjs":
+/*!*********************************************!*\
+  !*** ./node_modules/workbox-core/index.mjs ***!
+  \*********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "_private": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__._private),
+/* harmony export */   "cacheNames": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.cacheNames),
+/* harmony export */   "clientsClaim": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.clientsClaim),
+/* harmony export */   "copyResponse": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.copyResponse),
+/* harmony export */   "registerQuotaErrorCallback": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.registerQuotaErrorCallback),
+/* harmony export */   "setCacheNameDetails": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.setCacheNameDetails),
+/* harmony export */   "skipWaiting": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.skipWaiting)
+/* harmony export */ });
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "./node_modules/workbox-core/index.js");
 
 
 /***/ }),
@@ -4418,6 +6062,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "precacheAndRoute": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.precacheAndRoute)
 /* harmony export */ });
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "./node_modules/workbox-precaching/index.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-routing/index.mjs":
+/*!************************************************!*\
+  !*** ./node_modules/workbox-routing/index.mjs ***!
+  \************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "NavigationRoute": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.NavigationRoute),
+/* harmony export */   "RegExpRoute": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.RegExpRoute),
+/* harmony export */   "Route": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.Route),
+/* harmony export */   "Router": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.Router),
+/* harmony export */   "registerRoute": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.registerRoute),
+/* harmony export */   "setCatchHandler": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.setCatchHandler),
+/* harmony export */   "setDefaultHandler": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.setDefaultHandler)
+/* harmony export */ });
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "./node_modules/workbox-routing/index.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/workbox-strategies/index.mjs":
+/*!***************************************************!*\
+  !*** ./node_modules/workbox-strategies/index.mjs ***!
+  \***************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CacheFirst": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.CacheFirst),
+/* harmony export */   "CacheOnly": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.CacheOnly),
+/* harmony export */   "NetworkFirst": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.NetworkFirst),
+/* harmony export */   "NetworkOnly": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.NetworkOnly),
+/* harmony export */   "StaleWhileRevalidate": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.StaleWhileRevalidate),
+/* harmony export */   "Strategy": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.Strategy),
+/* harmony export */   "StrategyHandler": () => (/* reexport safe */ _index_js__WEBPACK_IMPORTED_MODULE_0__.StrategyHandler)
+/* harmony export */ });
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "./node_modules/workbox-strategies/index.js");
 
 
 /***/ })
@@ -4504,20 +6190,67 @@ var __webpack_exports__ = {};
   \******************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var workbox_precaching__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! workbox-precaching */ "./node_modules/workbox-precaching/index.mjs");
- // Use with precache injection
+/* harmony import */ var workbox_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! workbox-core */ "./node_modules/workbox-core/index.mjs");
+/* harmony import */ var workbox_routing__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! workbox-routing */ "./node_modules/workbox-routing/index.mjs");
+/* harmony import */ var workbox_strategies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! workbox-strategies */ "./node_modules/workbox-strategies/index.mjs");
+
+
+
+ //config
+
+(0,workbox_core__WEBPACK_IMPORTED_MODULE_1__.setCacheNameDetails)({
+  prefix: 'sample-app',
+  precache: 'sample-app-precache',
+  suffix: 'v1'
+}); // Use with precache injection
 // will precache all files in globDirectory that match globPatterns
 
-const machineGeneratedPreCacheList = [{'revision':null,'url':'/dist/ReactApps/App_ReactApps_SampleApp_Pages_AssetsLoadSample_AssetsLoadSample_js@764ed1df2a79bc11b421.chunk.js'},{'revision':null,'url':'/dist/ReactApps/App_ReactApps_SampleApp_Pages_FolderStructure_FolderStructure_js@9aa3b618e516b99be142.chunk.js'},{'revision':null,'url':'/dist/ReactApps/App_ReactApps_SampleApp_Pages_Index_Index_js@4df75cc5fc5532a1dd01.chunk.js'},{'revision':'25445777a5dac60df386ed64700840fd','url':'/dist/ReactApps/SampleApp/SampleApp.js'},{'revision':null,'url':'/dist/ReactApps/assets/images/05c80f266535944fa798.png'},{'revision':null,'url':'/dist/ReactApps/assets/images/070d6c4b6f2ee9a36bc7.jpg'},{'revision':null,'url':'/dist/ReactApps/assets/images/37340165bb582c490a85.PNG'},{'revision':null,'url':'/dist/ReactApps/assets/images/6cb76579770f26e392de.png'}];
+const machineGeneratedPreCacheList = [{'revision':null,'url':'/dist/ReactApps/App_ReactApps_SampleApp_Pages_AssetsLoadSample_AssetsLoadSample_js@764ed1df2a79bc11b421.chunk.js'},{'revision':null,'url':'/dist/ReactApps/App_ReactApps_SampleApp_Pages_FolderStructure_FolderStructure_js@9aa3b618e516b99be142.chunk.js'},{'revision':null,'url':'/dist/ReactApps/App_ReactApps_SampleApp_Pages_Index_Index_js@4df75cc5fc5532a1dd01.chunk.js'},{'revision':'566463c8c3a320fef3cbfee8fcefa429','url':'/dist/ReactApps/SampleApp/SampleApp.js'},{'revision':null,'url':'/dist/ReactApps/assets/images/05c80f266535944fa798.png'},{'revision':null,'url':'/dist/ReactApps/assets/images/070d6c4b6f2ee9a36bc7.jpg'},{'revision':null,'url':'/dist/ReactApps/assets/images/37340165bb582c490a85.PNG'},{'revision':null,'url':'/dist/ReactApps/assets/images/6cb76579770f26e392de.png'}];
 const htmlFilePath = '/sample-app';
-let preCacheList = [{
+const htmlFileCacheEntity = {
   url: htmlFilePath,
-  revision: '383676'
-}, ...machineGeneratedPreCacheList];
+  revision: '100001'
+};
+const manifestCacheEntity = {
+  url: '/sample-app/manifest.json',
+  revision: '100002'
+};
+const precachedStyles = [{
+  url: '/App/Assets/Css/Common/Layout.css',
+  revision: '100003'
+}, {
+  url: '/App/Assets/Css/Common/General.css',
+  revision: '100004'
+}];
+let preCacheList = [htmlFileCacheEntity, manifestCacheEntity, ...precachedStyles, ...machineGeneratedPreCacheList];
 (0,workbox_precaching__WEBPACK_IMPORTED_MODULE_0__.precacheAndRoute)(preCacheList, {
   // Ignore all URL parameters. /about.html?q=1 => /about.html
   ignoreURLParametersMatching: [/.*/],
   directoryIndex: null
-});
+}); // cache routes
+
+(0,workbox_routing__WEBPACK_IMPORTED_MODULE_2__.registerRoute)(({
+  request
+}) => {
+  console.log(request); //check url for more specific cache rules
+  //const reqUrl = request.url;
+
+  const isImage = request.destination === 'image';
+  return isImage;
+}, new workbox_strategies__WEBPACK_IMPORTED_MODULE_3__.CacheFirst({
+  cacheName: 'app-image-cache'
+}));
+(0,workbox_routing__WEBPACK_IMPORTED_MODULE_2__.registerRoute)(({
+  request
+}) => {
+  console.log(request); //check url for more specific cache rules
+  //const reqUrl = request.url;
+
+  const isImage = request.destination === 'font';
+  return isImage;
+}, new workbox_strategies__WEBPACK_IMPORTED_MODULE_3__.CacheFirst({
+  cacheName: 'app-font-cache'
+}));
 })();
 
 /******/ })()
