@@ -10,6 +10,7 @@ import WebpackBundleAnalyzer from 'webpack-bundle-analyzer';
 import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
 import { resolvedAliases } from '../../Config/PathAliasesConfig.js';
 import { ServiceWorkerBuilder } from './ServiceWorkerBuilder.js';
+import TerserPlugin from 'terser-webpack-plugin';
 
 export class ReactBuilder {
     constructor(app) {
@@ -148,6 +149,16 @@ export class ReactBuilder {
         }
         // inject serviceworker
         inputOptions.plugins.push(ServiceWorkerBuilder.getWebpackPluginConfig());
+        if(generalConfigServer.env == "production"){
+            inputOptions.optimization ={
+                minimize: true,
+                minimizer: [new TerserPlugin({
+                    terserOptions:{
+                        safari10: true,
+                    }
+                })],
+            };
+        }
         return inputOptions;
     }
     static getReactAppBabelOption() {
