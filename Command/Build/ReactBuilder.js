@@ -9,6 +9,7 @@ import webPackHotMiddleware from "webpack-hot-middleware";
 import WebpackBundleAnalyzer from 'webpack-bundle-analyzer';
 import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
 import { resolvedAliases } from '../../Config/PathAliasesConfig.js';
+import { ServiceWorkerBuilder } from './ServiceWorkerBuilder.js';
 import TerserPlugin from 'terser-webpack-plugin';
 
 export class ReactBuilder {
@@ -146,6 +147,8 @@ export class ReactBuilder {
                 statsFilename: 'webpack-bundle-analysis.json'
             }));
         }
+        // inject serviceworker
+        inputOptions.plugins.push(ServiceWorkerBuilder.getWebpackPluginConfig());
         if(generalConfigServer.env == "production"){
             inputOptions.optimization ={
                 minimize: true,

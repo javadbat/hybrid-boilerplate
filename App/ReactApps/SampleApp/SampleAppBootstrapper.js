@@ -5,12 +5,12 @@ import { ErrorHandler } from '../../Utils/Error/ErrorHandler';
 
 
 
-window.addEventListener('beforeinstallprompt', (e) => {
-    // Prevent the mini-infobar from appearing on mobile
-    e.preventDefault();
-    // Update UI notify the user they can install the PWA
-    e.prompt();
-});
+// window.addEventListener('beforeinstallprompt', (e) => {
+//     // Prevent the mini-infobar from appearing on mobile
+//     e.preventDefault();
+//     // Update UI notify the user they can install the PWA
+//     e.prompt();
+// });
 const mountNode = document.getElementById('SampleAppWrapper');
 //Bootstrap Application
 export class SampleApp{
@@ -26,7 +26,7 @@ export class SampleApp{
     registerServiceWorker() {
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
-                navigator.serviceWorker.register('service-worker.js')
+                navigator.serviceWorker.register('/service-worker.js')
                     .then(reg => {
                         console.log('Service worker registered! 😎', reg);
                     })
@@ -62,5 +62,5 @@ if (import.meta.webpackHot) {
     });
 }
 //uncomment it if you have PWA and want service worker
-//sampleApp.registerServiceWorker();
+sampleApp.registerServiceWorker();
 
