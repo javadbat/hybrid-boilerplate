@@ -126,7 +126,7 @@ export class ReactBuilder {
                 ]
             },
             plugins: [
-                new webpack.EnvironmentPlugin(['NODE_ENV', 'APP_STAGE'])
+                new webpack.EnvironmentPlugin(['NODE_ENV', 'APP_STAGE','npm_package_version'])
             ],
             resolve: {
                 alias: resolvedAliases,
