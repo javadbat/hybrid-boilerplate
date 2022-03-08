@@ -25,8 +25,19 @@ class StaticRoutes{
 
         if(this.appConfig.env == 'dev'){
             //disable cach for dev 
-            assetsOptions.maxAge = 0;
+            assetsOptions.maxAge = '0s';
         }
+        const serviceWorkerAssetOption = {
+            dotfiles: 'ignore',
+            etag: false,
+            extensions: ['js'],
+            index: false,
+            maxAge: '0s',
+            redirect: false,
+            setHeaders: function (res, path, stat) {
+                res.set('x-timestamp', Date.now());
+            }
+        } 
         this.app.use('/node_modules',express.static(path.join(this.appConfig.basePath,'node_modules'),assetsOptions));
         this.app.use('/App/Assets/Css',express.static(path.join(this.appConfig.basePath,'App','Assets','Css'),assetsOptions));
         this.app.use('/App/Assets/Fonts',express.static(path.join(this.appConfig.basePath,'App','Assets','Fonts'),assetsOptions));
@@ -38,7 +49,7 @@ class StaticRoutes{
         this.app.use(express.static('Config'));
         // pwa config file
         this.app.use('/sample-app/manifest.json',express.static(path.join(this.appConfig.basePath,'App','ReactApps', 'SampleApp', 'PWA', 'Manifest.json')));
-        this.app.use('/service-worker.js',express.static(path.join(this.appConfig.basePath,'App', 'dist', 'ReactApps', 'SampleApp', 'PWA', 'ServiceWorker.js')));
+        this.app.use('/service-worker.js',express.static(path.join(this.appConfig.basePath,'App', 'dist', 'ReactApps', 'SampleApp', 'PWA', 'ServiceWorker.js'),serviceWorkerAssetOption));
     }
 }
 export default StaticRoutes;
