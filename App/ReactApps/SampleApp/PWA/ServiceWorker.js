@@ -55,8 +55,8 @@ if(!isDevelopment){
         ({ request }) => {
             //check url for more specific cache rules
             //const reqUrl = request.url;
-            const isImage = request.destination === 'font';
-            return isImage;
+            const isFont = request.destination === 'font';
+            return isFont;
         },
         new CacheFirst({
             cacheName: 'app-font-cache',
