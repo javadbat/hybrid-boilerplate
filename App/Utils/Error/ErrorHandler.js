@@ -1,5 +1,8 @@
 import { message } from "../AppMessage/AppMessage";
 class ErrorStack{
+    get length(){
+        return this.stack.length;
+    }
     constructor(){
         this.stack = [];
     }
@@ -13,7 +16,7 @@ export class ErrorHandler{
     }
     onError(error){
         this.stack.add(error);
-        if(error.show){
+        if(typeof error == "object" && error.show){
             message.show({message:error.message , type:'error'});
         }
     }
