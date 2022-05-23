@@ -8,14 +8,17 @@ module.exports = {
         "worker":true,
     },
     "plugins": [
-        
+        //uncomment if you are using typescript
+        //"@typescript-eslint",
     ],
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        //"plugin:@typescript-eslint/recommended",
     ],
     "globals": {
         "Atomics": "readonly",
+        //uncomment if you are using typescript
         "SharedArrayBuffer": "readonly"
     },
     "parserOptions": {
@@ -23,6 +26,8 @@ module.exports = {
         "sourceType": "module"
     },
     "parser": "babel-eslint",
+    //replace with this if you are using typescript
+    //"parser": "@typescript-eslint/parser",
     "rules": {
         "indent": ["warn", 4, { "SwitchCase": 1 }],
         "no-console": "off",

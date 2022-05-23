@@ -89,7 +89,7 @@ export class ReactBuilder {
             module: {
                 rules: [
                     {
-                        test: /\.(js|jsx)$/,
+                        test: /\.(js|jsx|ts|tsx)$/,
                         exclude: /node_modules/,
                         loader: 'babel-loader',
                         options: babelOption,
@@ -130,7 +130,7 @@ export class ReactBuilder {
             ],
             resolve: {
                 alias: resolvedAliases,
-                extensions: ['*', '.js', '.jsx'],
+                extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
                 modules: [path.join(generalConfigServer.basePath, 'node_modules')],
             },
             resolveLoader: {
