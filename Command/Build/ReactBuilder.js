@@ -171,6 +171,7 @@ export class ReactBuilder {
                     "loose":true
                 }],
                 "@babel/preset-react",
+                "@babel/preset-typescript",
             ],
             plugins: [
                 ["@babel/plugin-proposal-decorators", { "legacy": true }],
