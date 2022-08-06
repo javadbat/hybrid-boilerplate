@@ -11,7 +11,8 @@ import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
 import { resolvedAliases } from '../../Config/PathAliasesConfig.js';
 import { ServiceWorkerBuilder } from './ServiceWorkerBuilder.js';
 import TerserPlugin from 'terser-webpack-plugin';
-
+import zlib from 'zlib';
+import CompressionPlugin from 'compression-webpack-plugin'
 export class ReactBuilder {
     constructor(app) {
         this.app = app;
@@ -39,7 +40,7 @@ export class ReactBuilder {
                     ignored: /node_modules/,
                     poll: undefined
                 },
-                (err, stat) => { this._onWebpackStatCallback(err, stat); }
+                    (err, stat) => { this._onWebpackStatCallback(err, stat); }
                 );
             }
         } else {
@@ -66,7 +67,7 @@ export class ReactBuilder {
             path: path.join(generalConfigServer.basePath, ...config.reactApps.baseOutputPath.split('/')),
             filename: "[name].js",
             //in production we make it id to make it less readble
-            chunkFilename: generalConfigServer.env=="production"?path.join('[id]@[contenthash].chunk.js'):path.join('[name]@[contenthash].chunk.js'),
+            chunkFilename: generalConfigServer.env == "production" ? path.join('[id]@[contenthash].chunk.js') : path.join('[name]@[contenthash].chunk.js'),
             sourceMapFilename: '[file].map',
             publicPath: config.reactApps.basePublicPath,
         };
@@ -126,7 +127,7 @@ export class ReactBuilder {
                 ]
             },
             plugins: [
-                new webpack.EnvironmentPlugin(['NODE_ENV', 'APP_STAGE','npm_package_version'])
+                new webpack.EnvironmentPlugin(['NODE_ENV', 'APP_STAGE', 'npm_package_version'])
             ],
             resolve: {
                 alias: resolvedAliases,
@@ -149,15 +150,30 @@ export class ReactBuilder {
         }
         // inject serviceworker
         inputOptions.plugins.push(ServiceWorkerBuilder.getWebpackPluginConfig());
-        if(generalConfigServer.env == "production"){
-            inputOptions.optimization ={
+        if (generalConfigServer.env == "production") {
+            inputOptions.optimization = {
                 minimize: true,
                 minimizer: [new TerserPlugin({
-                    terserOptions:{
+                    terserOptions: {
                         safari10: true,
                     }
                 })],
             };
+            //setup brotli
+            inputOptions.plugins.push(new CompressionPlugin({
+                //remove source map from br file
+                exclude: /.*\.map$/,
+                filename: '[file].br[query]',
+                algorithm: "brotliCompress",
+                test: /\.(js|css|html|svg)$/,
+                compressionOptions: {
+                    level: 11,
+                    params: {
+                        [zlib.constants.BROTLI_PARAM_QUALITY]: 11,
+                    },
+                },
+                deleteOriginalAssets: false,
+            }))
         }
         return inputOptions;
     }
@@ -168,7 +184,7 @@ export class ReactBuilder {
                     "targets": { "browsers": ["last 2 chrome versions"] },
                     "useBuiltIns": "usage",
                     "corejs": "3.6.5",
-                    "loose":true
+                    "loose": true
                 }],
                 "@babel/preset-react",
                 "@babel/preset-typescript",
@@ -185,7 +201,7 @@ export class ReactBuilder {
     }
     deletePrevBuild(dir) {
         console.log(`Deleting Previus Build Folder in ${dir}`);
-        if(fs.existsSync(dir)){
+        if (fs.existsSync(dir)) {
             fs.rmSync(dir, { recursive: true });
         }
     }
