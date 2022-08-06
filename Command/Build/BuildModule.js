@@ -1,4 +1,4 @@
-import {rollup,watch} from'rollup' ;
+import { rollup, watch } from 'rollup';
 import path from 'path';
 import html from 'rollup-plugin-html';
 import postcss from 'rollup-plugin-postcss';
@@ -6,7 +6,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import rollupJson from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 import config from '../../Config/BuildConfig.js';
-import rollupReplace from'@rollup/plugin-replace';
+import rollupReplace from '@rollup/plugin-replace';
 import rollupAlias from '@rollup/plugin-alias';
 import { terser } from "rollup-plugin-terser";
 import SassBuilder from './SassBuilder.js';
@@ -15,7 +15,7 @@ import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
 import { resolvedAliases } from '../../Config/PathAliasesConfig.js';
 import typescript from 'rollup-plugin-typescript2';
 import chalk from 'chalk';
-
+import brotli from "rollup-plugin-brotli";
 /**
  * @classdesc responible to build project files like react apps, web components or sass files
  */
@@ -65,7 +65,7 @@ class Build {
             bundle.write(outputOptions).then(function (output) {
                 console.log(output.output[0].facadeModuleId.green);
             });
-        }).catch((err)=>{
+        }).catch((err) => {
             console.error(err);
         });
         return bundlePromise;
@@ -127,11 +127,15 @@ class Build {
         ];
         const isTypeScriptModule = this._isTypeScriptModule(module);
         if (isTypeScriptModule) {
-            plugins.push(typescript({tsconfigDefaults:this._getTypeScriptCompilerOptions(module)}));
+            plugins.push(typescript({ tsconfigDefaults: this._getTypeScriptCompilerOptions(module) }));
         }
-        if(generalConfigServer.env == "production" && config.reactApps.useMinifier){
-            //add minifier
-            plugins.push(terser());
+        if (generalConfigServer.env == "production") {
+            if (config.reactApps.useMinifier) {
+                //add minifier
+                plugins.push(terser());
+            }
+            //add gzip brotli google algorithm
+            plugins.push(brotli());
         }
         let inputOptions = {
             input: path.join(...module.path.split('/')),
@@ -148,7 +152,7 @@ class Build {
         return fileExtension === 'ts';
     }
     _getTypeScriptCompilerOptions(module) {
-        const includePaths = path.join(...module.path.split('/').slice(0, -1))+ '/**/*';
+        const includePaths = path.join(...module.path.split('/').slice(0, -1)) + '/**/*';
         const externalModules = module.external || [];
         return {
             "compilerOptions": {
@@ -191,7 +195,7 @@ class Build {
         return outputOptions;
     }
 
-    
+
 
 }
 export default Build;
