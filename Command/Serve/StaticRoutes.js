@@ -37,6 +37,9 @@ class StaticRoutes{
             setHeaders: function (res, path, stat) {
                 res.set('x-timestamp', Date.now());
             }
+        }
+        if(generalConfigServer.env == "production"){
+            this.registerBrotliMiddleware();
         } 
         this.app.use('/node_modules',express.static(path.join(this.appConfig.basePath,'node_modules'),assetsOptions));
         this.app.use('/App/Assets/Css',express.static(path.join(this.appConfig.basePath,'App','Assets','Css'),assetsOptions));
@@ -50,6 +53,27 @@ class StaticRoutes{
         // pwa config file
         this.app.use('/sample-app/manifest.json',express.static(path.join(this.appConfig.basePath,'App','ReactApps', 'SampleApp', 'PWA', 'Manifest.json')));
         this.app.use('/service-worker.js',express.static(path.join(this.appConfig.basePath,'App', 'dist', 'ReactApps', 'SampleApp', 'PWA', 'ServiceWorker.js'),serviceWorkerAssetOption));
+    }
+    registerBrotliMiddleware(){
+        // add css file fallback to use broteli compress file
+        this.app.get('*.css', (req, res, next) => {
+            if (req.header('Accept-Encoding').includes('br')) {
+                req.url = req.url + '.br';
+                res.set('Content-Encoding', 'br');
+                res.set('Content-Type', 'text/css; charset=UTF-8');
+            }
+            next();
+        });
+        // add js file fallback to use broteli compress file
+        this.app.get('*.js', (req, res, next) => {
+            if (req.header('Accept-Encoding').includes('br')) {
+                req.url = req.url + '.br';
+                res.set('Content-Encoding', 'br');
+                res.set('Content-Type', 'application/javascript; charset=UTF-8');
+            }
+            next();
+        });
+        //TODO: add brotly to webpack builded files
     }
 }
 export default StaticRoutes;
