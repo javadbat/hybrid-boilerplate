@@ -4,7 +4,7 @@ import chalk from 'chalk';
 import path from 'path';
 import buildConfig from '../../Config/BuildConfig.js';
 import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
-
+import brotli from 'brotli';
 /**
  * @classdesc this class is responsible to convert sass file to css file
  */
@@ -65,27 +65,8 @@ class SassBuilder {
             outputStyle: 'compressed',
             outFile: path.join(generalConfigServer.basePath, ...fileConfig.outputPath.split('/')),
         };
-        sass.render(config, function (err, result) {
-            if (!err) {
-                fs.writeFile(config.outFile, result.css, (err) => {
-                    if (!err) {
-                        console.log(chalk.green(`${config.file} `), chalk.bgGreen.black(' BUILT '));
-                    } else {
-                        console.error(err);
-                    }
-                    //write map file
-                    if (result.map) {
-                        fs.writeFile(config.outFile + '.map', result.map, (err) => {
-                            if (err) {
-                                console.error(err);
-                            }
-                        });
-                    }
-
-                });
-            } else {
-                console.error(err);
-            }
+        sass.render(config, (err, result) => {
+            this.onCompileFinish(err, result, config.file, config.outFile);
         });
     }
     ensureDirectoryExistence(filePath) {
@@ -96,6 +77,47 @@ class SassBuilder {
         }
         this.ensureDirectoryExistence(dirname);
         fs.mkdirSync(dirname);
+    }
+    compressSassFile(fileContent) {
+        const result = brotli.compress(fileContent, { lgwin: 22, mode: 1, quality: 11 });
+        return result;
+    }
+    /**
+     * 
+     * @param {sass.LegacyException} err 
+     * @param {sass.LegacyResult} result
+     * @param {String} sourceFilePath
+     * @param {String} outputFilePath
+     */
+    onCompileFinish(err, result, sourceFilePath, outputFilePath) {
+        if (!err) {
+            const compressedFile = this.compressSassFile(result.css);
+            fs.writeFile(outputFilePath + '.br', compressedFile,(err) => {
+                if (err) {
+                    console.error(err);
+                }
+            });
+            fs.writeFile(outputFilePath, result.css, (err) => {
+                if (!err) {
+                    console.log(chalk.green(`${sourceFilePath} `), chalk.bgGreen.black(' BUILT '));
+                    //TODO: watch for dep file from result.stats.includedFiles;
+                } else {
+                    console.error(err);
+                }
+                //write map file
+                if (result.map) {
+                    fs.writeFile(outputFilePath + '.map', result.map, (err) => {
+                        if (err) {
+                            console.error(err);
+                        }
+                    });
+                }
+
+            });
+        } else {
+            console.error(err);
+        }
+
     }
 }
 export default SassBuilder;
