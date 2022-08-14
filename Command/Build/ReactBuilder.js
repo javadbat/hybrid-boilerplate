@@ -16,6 +16,7 @@ import CompressionPlugin from 'compression-webpack-plugin'
 export class ReactBuilder {
     constructor(app) {
         this.app = app;
+        this.hotReloadStatus = config.reactApps.hotReload && generalConfigServer.env !== "production"
     }
     buildReactApps(watch) {
         const inputOptions = this._getReactAppInputOption(config.reactApps.appList, watch);
@@ -30,7 +31,7 @@ export class ReactBuilder {
             output: outputOptions,
         });
         if (watch) {
-            if (config.reactApps.hotReload) {
+            if (this.hotReloadStatus) {
                 this.app.use(webpackMiddleware(compiler, { writeToDisk: true }));
                 this.app.use(webPackHotMiddleware(compiler));
             } else {
@@ -78,7 +79,7 @@ export class ReactBuilder {
         const entry = {};
         appList.forEach((reactApp) => {
             const entryPath = [path.join(generalConfigServer.basePath, ...reactApp.path.split('/'))];
-            if (watch && config.reactApps.hotReload) {
+            if (watch && this.hotReloadStatus) {
                 entryPath.push('webpack-hot-middleware/client');
             }
             entry[path.join(reactApp.name, reactApp.name)] = entryPath;
@@ -138,7 +139,7 @@ export class ReactBuilder {
                 modules: ["node_modules", path.join(generalConfigServer.basePath, 'node_modules')]
             },
         };
-        if (watch && config.reactApps.hotReload) {
+        if (watch && this.hotReloadStatus) {
             inputOptions.plugins.push(new webpack.HotModuleReplacementPlugin());
         }
         if (generalConfigServer.env == "development" && config.reactApps.enableAnalyzer) {
