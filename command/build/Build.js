@@ -1,6 +1,6 @@
-import Build from './BuildModule.js';
-import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
-import { ServiceWorkerBuilder } from './ServiceWorkerBuilder.js';
+import Build from './build-module.js';
+import { generalConfigServer } from '../../config/general-config-server.js';
+import { ServiceWorkerBuilder } from './service-worker-builder.js';
 
 if(!process.env.NODE_ENV){
     process.env.NODE_ENV = generalConfigServer.env;

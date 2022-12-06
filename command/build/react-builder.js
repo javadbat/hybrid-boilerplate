@@ -9,7 +9,7 @@ import webPackHotMiddleware from "webpack-hot-middleware";
 import WebpackBundleAnalyzer from 'webpack-bundle-analyzer';
 import { generalConfigServer } from '../../config/general-config-server.js';
 import { resolvedAliases } from '../../config/path-aliases-config.js';
-import { ServiceWorkerBuilder } from './ServiceWorkerBuilder.js';
+import { ServiceWorkerBuilder } from './service-worker-builder.js';
 import TerserPlugin from 'terser-webpack-plugin';
 import zlib from 'zlib';
 import CompressionPlugin from 'compression-webpack-plugin'

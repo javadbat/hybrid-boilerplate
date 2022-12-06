@@ -1,5 +1,5 @@
-import HTML from './ProjectBuildInfo.html';
-import CSS from './ProjectBuildInfo.scss';
+import HTML from './project-build-info.html';
+import CSS from './project-build-info.scss';
 import {ElementsObject} from './types';
 export class ProjectBuildInfoWebComponent extends HTMLElement {
     elements:ElementsObject;

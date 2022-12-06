@@ -4,10 +4,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "serve": "node Command/Serve/Serve.js",
-    "build": "node Command/Build/Build.js",
-    "start": "node Command/Start/Start.js",
-    "analysis": "node Command/Analysis/Analysis.js",
+    "serve": "node command/serve/serve.js",
+    "build": "node command/build/build.js",
+    "start": "node command/start/start.js",
+    "analysis": "node command/analysis/analysis.js",
     "test": "node Command/Test/Test.js",
     "eslint": "./node_modules/.bin/eslint --ignore-path .gitignore ."
   },
