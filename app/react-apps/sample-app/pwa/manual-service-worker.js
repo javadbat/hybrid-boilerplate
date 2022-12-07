@@ -4,10 +4,10 @@ const cacheName = 'sample-app-cache';
 const version = '1.0.0';
 const precacheResources = [
     '/sample-app',
-    '/dist/ReactApps/SampleApp/SampleApp.js',
-    '/App/Assets/Css/Common/Layout.css',
-    '/App/Assets/Css/Common/General.css',
-    '/App/Assets/Images/logo.svg'
+    '/dist/react-apps/sample-app/sample-app.js',
+    '/app/assets/styles/layout.css',
+    '/app/assets/styles/general.css',
+    '/app/assets/images/logo.svg'
 ];
 
 self.addEventListener('install', event => {

@@ -1,6 +1,26 @@
 "use strict";
 (self["webpackChunkhybrid_boilerplate"] = self["webpackChunkhybrid_boilerplate"] || []).push([["app_react-apps_sample-app_pages_assets-load-sample_AssetsLoadSample_js"],{
 
+/***/ "./app/react-apps/sample-app/pages/assets-load-sample/components/load-image-by-relative-path/image.jpg":
+/*!*************************************************************************************************************!*\
+  !*** ./app/react-apps/sample-app/pages/assets-load-sample/components/load-image-by-relative-path/image.jpg ***!
+  \*************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/images/070d6c4b6f2ee9a36bc7.jpg";
+
+/***/ }),
+
+/***/ "./app/react-apps/sample-app/pages/assets-load-sample/customize-static-route.PNG":
+/*!***************************************************************************************!*\
+  !*** ./app/react-apps/sample-app/pages/assets-load-sample/customize-static-route.PNG ***!
+  \***************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/images/37340165bb582c490a85.PNG";
+
+/***/ }),
+
 /***/ "./app/react-apps/sample-app/pages/assets-load-sample/components/load-image-with-source/webpack-logo.svg":
 /*!***************************************************************************************************************!*\
   !*** ./app/react-apps/sample-app/pages/assets-load-sample/components/load-image-with-source/webpack-logo.svg ***!
@@ -114,26 +134,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./app/react-apps/sample-app/pages/assets-load-sample/components/load-image-by-relative-path/image.jpg":
-/*!*************************************************************************************************************!*\
-  !*** ./app/react-apps/sample-app/pages/assets-load-sample/components/load-image-by-relative-path/image.jpg ***!
-  \*************************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "assets/images/070d6c4b6f2ee9a36bc7.jpg";
-
-/***/ }),
-
-/***/ "./app/react-apps/sample-app/pages/assets-load-sample/customize-static-route.PNG":
-/*!***************************************************************************************!*\
-  !*** ./app/react-apps/sample-app/pages/assets-load-sample/customize-static-route.PNG ***!
-  \***************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "assets/images/37340165bb582c490a85.PNG";
-
-/***/ }),
-
 /***/ "./app/react-apps/sample-app/pages/assets-load-sample/AssetsLoadSample.js":
 /*!********************************************************************************!*\
   !*** ./app/react-apps/sample-app/pages/assets-load-sample/AssetsLoadSample.js ***!
@@ -184,8 +184,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function LoadImageByUrl() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "/App/Assets/Images/600px-JavaScript-logo.png"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "to load image with absolute url you just need to put your image in ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "`/App/Assets/Images/`"), "and write down image tag with url like ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("pre", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("code", null, "<img src=\"/App/Assets/Images/600px-JavaScript-logo.png\" />")), " and it will loaded perfectly."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "load image by absolute URL is suitable for situation where you have image used in multiple page and component or your image loaded in non-react app too"));
+    src: "/app/assets/images/600px-JavaScript-logo.png"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "to load image with absolute url you just need to put your image in ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "`/app/assets/images/`"), "and write down image tag with url like ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("pre", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("code", null, "<img src=\"/app/assets/images/600px-JavaScript-logo.png\" />")), " and it will loaded perfectly."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "load image by absolute URL is suitable for situation where you have image used in multiple page and component or your image loaded in non-react app too"));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LoadImageByUrl);
 
@@ -238,4 +238,4 @@ function LoadImageWithSource() {
 /***/ })
 
 }]);
-//# sourceMappingURL=app_react-apps_sample-app_pages_assets-load-sample_AssetsLoadSample_js@c95f25f4dbc03b38c614.chunk.js.map
+//# sourceMappingURL=app_react-apps_sample-app_pages_assets-load-sample_AssetsLoadSample_js@8b2831caa9705682241f.chunk.js.map

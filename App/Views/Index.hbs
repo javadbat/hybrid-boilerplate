@@ -10,14 +10,14 @@
     {{> common-head-content}}
     <title>hybrid app boilerplate</title>
     {{!-- TODO: --}}
-    <link rel="stylesheet" href="/App/Assets/Css/Pages/Index.css">
-    <script src="/App/Assets/Js/Pages/Index.js" type="module"></script>
+    <link rel="stylesheet" href="/app/dist/assets/styles/pages/index.css">
+    <script src="/app/assets/javascripts/pages/index.js" type="module"></script>
 </head>
 
 <body>
     <div id="IndexPage">
             <div class="main-wrapper">
-                <img src="/App/Assets/Images/logo.svg" class="logo">
+                <img src="/app/assets/images/logo.svg" class="logo">
                 <div class="welcome-text">WELCOME TO HYBRID BOILERPLATE PROJECT</div>
                 <project-build-info version="{{version}}" build-env="{{buildEnv}}" app-stage="{{appStage}}"></project-build-info>
                 <a href="/sample-app"><jb-button >react sample app</jb-button></a>

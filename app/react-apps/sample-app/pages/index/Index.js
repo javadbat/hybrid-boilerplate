@@ -9,7 +9,7 @@ function Index() {
         <div className="index-page">
             <div className="content-box">
                 <div className="logo-wrapper">
-                    <img src="/App/Assets/Images/react-logo.svg"></img>
+                    <img src="/app/assets/images/react-logo.svg"></img>
                 </div>
                 <SampleAppTitle />
                 <div className="link-box">

@@ -81,68 +81,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./Config/address-config.js":
-/*!**********************************!*\
-  !*** ./Config/address-config.js ***!
-  \**********************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/**
- * @classdesc base address of external resources will gather here and will be accessed base on a defined APP_STAGE envirement variable. you can add your server custom address here
- * if your addresses are not depend of app envirement you could add static get method
- */
-class AddressConfig {
-  constructor(appStage) {
-    this.appStage = appStage;
-  }
-  get serviceUrl() {
-    switch (this.appStage) {
-      case 'dev':
-        return 'https://devapi.com';
-      case 'uat':
-        return 'https://uatapi.com';
-      case 'release':
-        return 'https://releaseapi.com';
-      case 'main':
-        return 'https://api.com';
-    }
-    return 'NOT_VALID_ENV';
-  }
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AddressConfig);
-
-/***/ }),
-
-/***/ "./Config/general-config.js":
-/*!**********************************!*\
-  !*** ./Config/general-config.js ***!
-  \**********************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _address_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./address-config */ "./Config/address-config.js");
-
-class GeneralConfig {
-  constructor(env, appStage) {
-    this.env = env;
-    //app stage tell which stage our app are in for example if you are in local env or you are in dev or master envirement.
-    //curenlty it only use to determine server address but you can write more logic on it for example you can chnage your app log level base on envirement
-    this.appStage = appStage;
-    this.address = new _address_config__WEBPACK_IMPORTED_MODULE_0__["default"](this.appStage);
-  }
-}
-const generalConfig = new GeneralConfig("development", "dev");
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (generalConfig);
-
-/***/ }),
-
 /***/ "./app/react-apps/sample-app/components/layouts/app-title/AppTitle.js":
 /*!****************************************************************************!*\
   !*** ./app/react-apps/sample-app/components/layouts/app-title/AppTitle.js ***!
@@ -154,7 +92,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SampleAppTitle": () => (/* binding */ SampleAppTitle)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _config_general_config_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @config/general-config.js */ "./Config/general-config.js");
+/* harmony import */ var _config_general_config_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @config/general-config.js */ "./config/general-config.js");
 
 
 const SampleAppTitle = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -189,7 +127,7 @@ function Index() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "logo-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "/App/Assets/Images/react-logo.svg"
+    src: "/app/assets/images/react-logo.svg"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_layouts_app_title_AppTitle__WEBPACK_IMPORTED_MODULE_2__.SampleAppTitle, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "link-box"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
@@ -200,7 +138,69 @@ function Index() {
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Index);
 
+/***/ }),
+
+/***/ "./config/address-config.js":
+/*!**********************************!*\
+  !*** ./config/address-config.js ***!
+  \**********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * @classdesc base address of external resources will gather here and will be accessed base on a defined APP_STAGE envirement variable. you can add your server custom address here
+ * if your addresses are not depend of app envirement you could add static get method
+ */
+class AddressConfig {
+  constructor(appStage) {
+    this.appStage = appStage;
+  }
+  get serviceUrl() {
+    switch (this.appStage) {
+      case 'dev':
+        return 'https://devapi.com';
+      case 'uat':
+        return 'https://uatapi.com';
+      case 'release':
+        return 'https://releaseapi.com';
+      case 'main':
+        return 'https://api.com';
+    }
+    return 'NOT_VALID_ENV';
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AddressConfig);
+
+/***/ }),
+
+/***/ "./config/general-config.js":
+/*!**********************************!*\
+  !*** ./config/general-config.js ***!
+  \**********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _address_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./address-config */ "./config/address-config.js");
+
+class GeneralConfig {
+  constructor(env, appStage) {
+    this.env = env;
+    //app stage tell which stage our app are in for example if you are in local env or you are in dev or master envirement.
+    //curenlty it only use to determine server address but you can write more logic on it for example you can chnage your app log level base on envirement
+    this.appStage = appStage;
+    this.address = new _address_config__WEBPACK_IMPORTED_MODULE_0__["default"](this.appStage);
+  }
+}
+const generalConfig = new GeneralConfig("development", "dev");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (generalConfig);
+
 /***/ })
 
 }]);
-//# sourceMappingURL=app_react-apps_sample-app_pages_index_Index_js@b0bf5ccded9fb4327f1c.chunk.js.map
+//# sourceMappingURL=app_react-apps_sample-app_pages_index_Index_js@c50a40fdb59c46f36216.chunk.js.map

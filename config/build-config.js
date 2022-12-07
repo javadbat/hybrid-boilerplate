@@ -4,7 +4,7 @@ export const buildConfig = {
         {
             name:'index',
             path:'/app/assets/javascripts/pages/index.js',
-            outputPath:'/app/assets/javascripts/pages/index.js',
+            outputPath:'/app/dist/assets/javascripts/pages/index.js',
             //for performance reason and due to limited of watching file you can made them not be watch even in development mode
             // in production mode they dont be watched
             watch:true,

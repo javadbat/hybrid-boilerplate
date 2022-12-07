@@ -1,6 +1,26 @@
 "use strict";
 (self["webpackChunkhybrid_boilerplate"] = self["webpackChunkhybrid_boilerplate"] || []).push([["app_react-apps_sample-app_pages_folder-structure_FolderStructure_js"],{
 
+/***/ "./app/react-apps/sample-app/pages/folder-structure/images/app-folder.png":
+/*!********************************************************************************!*\
+  !*** ./app/react-apps/sample-app/pages/folder-structure/images/app-folder.png ***!
+  \********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/images/05c80f266535944fa798.png";
+
+/***/ }),
+
+/***/ "./app/react-apps/sample-app/pages/folder-structure/images/app-folders.png":
+/*!*********************************************************************************!*\
+  !*** ./app/react-apps/sample-app/pages/folder-structure/images/app-folders.png ***!
+  \*********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/images/6cb76579770f26e392de.png";
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./app/react-apps/sample-app/pages/folder-structure/FolderStructure.scss":
 /*!************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./app/react-apps/sample-app/pages/folder-structure/FolderStructure.scss ***!
@@ -78,26 +98,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_FolderStructure_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_FolderStructure_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_FolderStructure_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
-
-/***/ }),
-
-/***/ "./app/react-apps/sample-app/pages/folder-structure/images/app-folder.png":
-/*!********************************************************************************!*\
-  !*** ./app/react-apps/sample-app/pages/folder-structure/images/app-folder.png ***!
-  \********************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "assets/images/05c80f266535944fa798.png";
-
-/***/ }),
-
-/***/ "./app/react-apps/sample-app/pages/folder-structure/images/app-folders.png":
-/*!*********************************************************************************!*\
-  !*** ./app/react-apps/sample-app/pages/folder-structure/images/app-folders.png ***!
-  \*********************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "assets/images/6cb76579770f26e392de.png";
 
 /***/ }),
 
