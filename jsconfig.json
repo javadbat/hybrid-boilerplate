@@ -5,10 +5,10 @@
     "baseUrl": ".",
     "paths": {
       "*": ["__INVALID__/*"],
-      "@config/*": ["Config/*"],
-      "@utils/*": ["App/Utils/*"],
-      "@assets/*": ["App/Assets/*"]
+      "@config/*": ["config/*"],
+      "@utils/*": ["app/utils/*"],
+      "@assets/*": ["app/assets/*"]
     }
   },
-  "exclude": ["node_modules", "dist", "App/dist"]
+  "exclude": ["node_modules", "dist", "app/dist"]
 }
