@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    {{> CommonHeadContent}}
+    <link rel="manifest" href="/sample-app/manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="sample app">
+    <meta name="apple-mobile-web-app-title" content="sample app">
+    <meta name="theme-color" content="#FF9800">
+    <meta name="msapplication-navbutton-color" content="#FF9800">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/sample-app">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" sizes="128x128" href="/app/assets/images/logo-128.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="/app/assets/images/logo-128.png">
+    <link rel="icon" sizes="192x192" href="/app/assets/images/logo-192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/app/assets/images/logo-192.png">
+    <link rel="icon" sizes="256x256" href="/app/assets/images/logo-256.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="/app/assets/images/logo-256.png">
+    <link rel="icon" sizes="384x384" href="/app/assets/images/logo-384.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="/app/assets/images/logo-384.png">
+    <link rel="icon" sizes="512x512" href="/app/assets/Images/logo-512.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/app/assets/images/logo-512.png">
+    <title>react app</title>
+</head>
+
+<body>
+    <div id="SampleAppPage">
+        <div id="SampleAppWrapper">
+            <center style="color: rgb(13, 113, 228);margin:50% auto">
+                wait a minute please
+            </center>
+        </div>
+    </div>
+    {{!-- this file will be built in dist after build,original file is sample-app-bootstrapper  --}}
+    <script src="/dist/react-apps/sample-app/sample-app.js"></script>
+</body>
+
+</html>

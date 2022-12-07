@@ -6127,6 +6127,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// Check if module is in cache
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
+/******/ 			if (cachedModule.error !== undefined) throw cachedModule.error;
 /******/ 			return cachedModule.exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
@@ -6137,7 +6138,12 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		try {
+/******/ 			__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		} catch(e) {
+/******/ 			module.error = e;
+/******/ 			throw e;
+/******/ 		}
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -6203,7 +6209,7 @@ __webpack_require__.r(__webpack_exports__);
 
 //node app version
 // ATTENTION: use appVersion in cache name you want to delete cache when app version change
-const appVersion = `app-ver${undefined}`;
+const appVersion = `app-ver${"1.0.0"}`;
 const isDevelopment = "development" === 'development';
 //config
 (0,workbox_core__WEBPACK_IMPORTED_MODULE_1__.setCacheNameDetails)({
@@ -6215,7 +6221,7 @@ const isDevelopment = "development" === 'development';
 // Use with precache injection
 // will precache all files in globDirectory that match globPatterns
 if (!isDevelopment) {
-  const machineGeneratedPreCacheList = [{'revision':null,'url':'/dist/react-apps/app_react-apps_sample-app_pages_assets-load-sample_AssetsLoadSample_js@8b2831caa9705682241f.chunk.js'},{'revision':null,'url':'/dist/react-apps/app_react-apps_sample-app_pages_folder-structure_FolderStructure_js@6af27eb46d82cf89d231.chunk.js'},{'revision':null,'url':'/dist/react-apps/app_react-apps_sample-app_pages_index_Index_js@c50a40fdb59c46f36216.chunk.js'},{'revision':null,'url':'/dist/react-apps/assets/images/05c80f266535944fa798.png'},{'revision':null,'url':'/dist/react-apps/assets/images/070d6c4b6f2ee9a36bc7.jpg'},{'revision':null,'url':'/dist/react-apps/assets/images/37340165bb582c490a85.PNG'},{'revision':null,'url':'/dist/react-apps/assets/images/6cb76579770f26e392de.png'},{'revision':'e2a28468b968e3530552f40a4f071486','url':'/dist/react-apps/sample-app/sample-app.js'}];
+  const machineGeneratedPreCacheList = [{'revision':null,'url':'/dist/react-apps/app_react-apps_sample-app_pages_assets-load-sample_AssetsLoadSample_js@45a3f1c0031a8e0fd5cc.chunk.js'},{'revision':null,'url':'/dist/react-apps/app_react-apps_sample-app_pages_folder-structure_FolderStructure_js@19d2f3b135bef4b70e64.chunk.js'},{'revision':null,'url':'/dist/react-apps/app_react-apps_sample-app_pages_index_Index_js@59e6ef84b9ce82099bdb.chunk.js'},{'revision':null,'url':'/dist/react-apps/assets/images/05c80f266535944fa798.png'},{'revision':null,'url':'/dist/react-apps/assets/images/070d6c4b6f2ee9a36bc7.jpg'},{'revision':null,'url':'/dist/react-apps/assets/images/37340165bb582c490a85.PNG'},{'revision':null,'url':'/dist/react-apps/assets/images/6cb76579770f26e392de.png'},{'revision':'7eb40586dd72d774d017cb1eabbcbac3','url':'/dist/react-apps/sample-app/sample-app.js'}];
   const htmlFilePath = '/sample-app';
   const htmlFileCacheEntity = {
     url: htmlFilePath,

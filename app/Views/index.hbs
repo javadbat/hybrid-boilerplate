@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="fa">
+<!--<![endif]-->
+
+<head>
+    {{> common-head-content}}
+    <title>hybrid app boilerplate</title>
+    {{!-- TODO: --}}
+    <link rel="stylesheet" href="/app/dist/assets/styles/pages/index.css">
+    <script src="/app/assets/javascripts/pages/index.js" type="module"></script>
+</head>
+
+<body>
+    <div id="IndexPage">
+            <div class="main-wrapper">
+                <img src="/app/assets/images/logo.svg" class="logo">
+                <div class="welcome-text">WELCOME TO HYBRID BOILERPLATE PROJECT</div>
+                <project-build-info version="{{version}}" build-env="{{buildEnv}}" app-stage="{{appStage}}"></project-build-info>
+                <a href="/sample-app"><jb-button >react sample app</jb-button></a>
+            </div>
+    </div>
+    <script src="" async defer></script>
+</body>
+
+</html>
