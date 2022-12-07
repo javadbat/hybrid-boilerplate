@@ -1,5 +1,5 @@
 import React from 'react';
-import Loading from '../Loading/Loading';
+import Loading from '../loading/loading';
 import './FloatingLoading.scss';
 
 export default function FloatingLoading(props) {

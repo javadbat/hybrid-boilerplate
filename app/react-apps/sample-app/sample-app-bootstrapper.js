@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './Layout/Layout';
+import Layout from './layout/Layout';
 import { ErrorHandler } from '../../utils/Error/ErrorHandler';
 
 
@@ -58,7 +58,7 @@ const sampleApp = new SampleApp();
 sampleApp.registerGlobalAppErrorHandler();
 sampleApp.render();
 if (import.meta.webpackHot) {
-    import.meta.webpackHot.accept('./Layout/Layout', () => {
+    import.meta.webpackHot.accept('./layout/Layout', () => {
         sampleApp.render();
     });
 }
