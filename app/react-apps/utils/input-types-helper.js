@@ -1,4 +1,4 @@
-import { faToEnDigits } from "./PersianHelper";
+import { faToEnDigits } from "./persian-helper";
 
 /**
  * convert 09122244859 to 9190740819 to send to backend

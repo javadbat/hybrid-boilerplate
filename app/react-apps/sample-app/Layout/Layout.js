@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Router from './router/Router';
 import './Layout.scss';
-import { fixMobileHeightVH } from '../../utils/LayoutHelper';
+import { fixMobileHeightVH } from '../../utils/layout-helper';
 
 function Layout() {
     useEffect(() => {
