@@ -5,7 +5,7 @@ when we want to show any of the errors that is stacked using `ErrorHandler` we u
 ## use
 
 ```js
-import { AppError } from "./AppError";
+import { AppError } from "./app-error";
 
 ```
 ```jsx

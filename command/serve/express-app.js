@@ -1,4 +1,4 @@
-import { generalConfigServer } from '../../config/GeneralConfigServer.js';
+import { generalConfigServer } from '../../config/general-config-server';
 if (!process.env.NODE_ENV) {
     process.env.NODE_ENV = generalConfigServer.env;
 }
@@ -7,8 +7,8 @@ if (!process.env.APP_STAGE) {
 }
 console.log('==================' + process.env.NODE_ENV + '-' + process.env.APP_STAGE + '=============================');
 import express from 'express';
-import StaticsRoutes from './StaticRoutes.js';
-import PageRoutes from './PageRoutes.js';
+import StaticsRoutes from './static-routes.js';
+import PageRoutes from './page-routes.js';
 import cookieParser from 'cookie-parser';
 import tcpPortUsed from 'tcp-port-used';
 import chalk from 'chalk';

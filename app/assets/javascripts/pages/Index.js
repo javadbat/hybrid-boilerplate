@@ -1,5 +1,5 @@
 import 'jb-button';
-import '../../../WebComponents/project-build-info/dist/ProjectBuildInfo';
+import '../../../web-components/project-build-info/dist/project-build-info';
 class IndexPage {
     constructor() {
 

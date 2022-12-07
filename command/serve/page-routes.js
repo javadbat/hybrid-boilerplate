@@ -1,7 +1,7 @@
 import path from 'path';
 import exphbs from 'express-handlebars';
-import SampleAppController from '../../server/Controllers/SampleAppController.js';
-import {generalConfigServer} from '../../config/GeneralConfigServer.js';
+import SampleAppController from '../../server/controllers/sample-app-controller.js';
+import {generalConfigServer} from '../../config/general-config-server.js';
 class PageRoutes {
     constructor(app, config) {
         this.app = app;

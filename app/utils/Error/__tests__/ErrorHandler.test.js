@@ -1,6 +1,6 @@
 import { describe, expect, it, beforeEach, afterEach, jest } from '@jest/globals';
-import { AppError } from '../AppError';
-import { ErrorHandler } from '../ErrorHandler';
+import { AppError } from '../app-error';
+import { ErrorHandler } from '../error-handler';
 
 describe('Error handler must stack properly',()=>{
     it("could handle non AppError errors",()=>{

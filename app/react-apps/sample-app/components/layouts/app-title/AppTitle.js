@@ -1,5 +1,5 @@
 import React from "react";
-import generalConfig from "@config/GeneralConfig";
+import generalConfig from "@config/general-config.js";
 
 export const SampleAppTitle = () => (
     <div className="project-title">

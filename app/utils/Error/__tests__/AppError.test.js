@@ -1,5 +1,5 @@
 import { describe, expect, it, beforeEach, afterEach, jest } from '@jest/globals';
-import { AppError } from '../AppError';
+import { AppError } from '../app-error';
 
 describe("app error should build correctly", () => {
     it("should have correct message",()=>{

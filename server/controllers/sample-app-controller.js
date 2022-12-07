@@ -8,7 +8,7 @@ class SampleAppController{
     SampleApp(req, res) {
         const hbsData = {
         };
-        res.render(path.join('SampleApp', 'index.hbs'), hbsData);
+        res.render(path.join('sample-app', 'index.hbs'), hbsData);
     }
 
 

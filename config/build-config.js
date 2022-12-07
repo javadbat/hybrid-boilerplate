@@ -23,7 +23,7 @@ export const buildConfig = {
             //you can define multiple react apps here
             {
                 name:'sample-app',
-                path:'/App/react-apps/sample-app/sample-app-bootstrapper.js',
+                path:'/app/react-apps/sample-app/sample-app-bootstrapper.js',
             },
         ]
     },

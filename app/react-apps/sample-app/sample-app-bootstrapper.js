@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Layout from './layout/Layout';
-import { ErrorHandler } from '../../utils/Error/ErrorHandler';
+import { ErrorHandler } from '../../utils/error/error-handler';
 
 
 

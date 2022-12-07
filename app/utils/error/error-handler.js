@@ -1,4 +1,4 @@
-import { message } from "../AppMessage/AppMessage";
+import { message } from "../app-message/app-message";
 class ErrorStack{
     get length(){
         return this.stack.length;

@@ -1,4 +1,4 @@
-import {ReactBuilder} from "../Build/ReactBuilder.js";
+import {ReactBuilder} from "../build/react-builder.js";
 
 const babelConfig = ReactBuilder.getReactAppBabelOption();
 export default babelConfig;
