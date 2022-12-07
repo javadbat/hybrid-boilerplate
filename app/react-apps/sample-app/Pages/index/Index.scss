@@ -1,0 +1,48 @@
+.index-page{
+    width: 100%;
+    height: 100%;
+    background-color: #1E2832;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    .content-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .logo-wrapper{
+            width: 200px;
+            height: 200px;
+            animation: rotate-logo 5s 0s linear infinite;
+            img{
+                width:100%;
+                height: 100%;
+            }
+            @keyframes rotate-logo {
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(359deg);
+                }
+            }
+        }
+        .project-title{
+            font-size: 2em;
+            text-align: center;
+            color:#fff;
+            font-weight: 600;
+        }
+        .link-box{
+            display: flex;
+            gap:8px;
+            a{
+                color:#ededed;
+                &:visited{
+                    color:aqua;
+                }
+            }
+        }
+    }
+}

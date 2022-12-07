@@ -1,8 +1,8 @@
 import React from 'react';
 import './AssetsLoadSample.scss';
-import LoadImageByRelativePath from './Components/LoadImageByRelativePath/LoadImageByRelativePath';
-import LoadByUrl from './Components/LoadImageByUrl/LoadImageByUrl';
-import LoadImageWithSource from './Components/LoadImageWithSource/LoadImageWithSource';
+import LoadImageByRelativePath from './components/load-image-by-relative-path/LoadImageByRelativePath';
+import LoadByUrl from './components/load-image-by-Url/LoadImageByUrl';
+import LoadImageWithSource from './components/load-image-with-source/LoadImageWithSource';
 import CustomizeStaticRouteImage from './customize-static-route.PNG';
 function AssetsLoadSample() {
     return (
