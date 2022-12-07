@@ -1,4 +1,4 @@
-import config from '../../config/build-config.js';
+import {buildConfig} from '../../config/build-config.js';
 import path from 'path';
 import fs from 'fs';
 /* webpack section */
@@ -16,15 +16,15 @@ import CompressionPlugin from 'compression-webpack-plugin'
 export class ReactBuilder {
     constructor(app) {
         this.app = app;
-        this.hotReloadStatus = config.reactApps.hotReload && generalConfigServer.env !== "production"
+        this.hotReloadStatus = buildConfig.reactApps.hotReload && generalConfigServer.env !== "production"
     }
     buildReactApps(watch) {
-        const inputOptions = this._getReactAppInputOption(config.reactApps.appList, watch);
+        const inputOptions = this._getReactAppInputOption(buildConfig.reactApps.appList, watch);
         const outputOptions = this._getReactAppOutputOption();
         this.buildReactApp(inputOptions, outputOptions, watch);
     }
     buildReactApp(inputOptions, outputOptions, watch = true) {
-        this.deletePrevBuild(path.join(generalConfigServer.basePath, ...config.reactApps.baseOutputPath.split('/')));
+        this.deletePrevBuild(path.join(generalConfigServer.basePath, ...buildConfig.reactApps.baseOutputPath.split('/')));
 
         const compiler = webpack({
             ...inputOptions,
@@ -65,12 +65,12 @@ export class ReactBuilder {
     _getReactAppOutputOption() {
         let outputOptions = {
             // core output options
-            path: path.join(generalConfigServer.basePath, ...config.reactApps.baseOutputPath.split('/')),
+            path: path.join(generalConfigServer.basePath, ...buildConfig.reactApps.baseOutputPath.split('/')),
             filename: "[name].js",
             //in production we make it id to make it less readble
             chunkFilename: generalConfigServer.env == "production" ? path.join('[id]@[contenthash].chunk.js') : path.join('[name]@[contenthash].chunk.js'),
             sourceMapFilename: '[file].map',
-            publicPath: config.reactApps.basePublicPath,
+            publicPath: buildConfig.reactApps.basePublicPath,
         };
         return outputOptions;
     }
@@ -142,7 +142,7 @@ export class ReactBuilder {
         if (watch && this.hotReloadStatus) {
             inputOptions.plugins.push(new webpack.HotModuleReplacementPlugin());
         }
-        if (generalConfigServer.env == "development" && config.reactApps.enableAnalyzer) {
+        if (generalConfigServer.env == "development" && buildConfig.reactApps.enableAnalyzer) {
             inputOptions.plugins.push(new WebpackBundleAnalyzer.BundleAnalyzerPlugin({
                 analyzerMode: 'disabled',
                 generateStatsFile: true,

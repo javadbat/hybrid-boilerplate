@@ -2,7 +2,7 @@ import sass from 'sass';
 import fs from 'fs';
 import chalk from 'chalk';
 import path from 'path';
-import buildConfig from '../../config/build-config.js';
+import {buildConfig} from '../../config/build-config.js';
 import { generalConfigServer } from '../../config/general-config-server.js';
 import brotli from 'brotli';
 /**

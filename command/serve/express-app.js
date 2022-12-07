@@ -1,4 +1,4 @@
-import { generalConfigServer } from '../../config/general-config-server';
+import { generalConfigServer } from '../../config/general-config-server.js';
 if (!process.env.NODE_ENV) {
     process.env.NODE_ENV = generalConfigServer.env;
 }

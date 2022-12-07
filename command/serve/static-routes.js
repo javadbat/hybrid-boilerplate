@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import { generalConfigServer } from '../../config/general-config-server.js';
 
 class StaticRoutes{
     constructor(app,config){

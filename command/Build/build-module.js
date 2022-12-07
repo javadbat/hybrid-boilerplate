@@ -5,7 +5,7 @@ import postcss from 'rollup-plugin-postcss';
 import commonjs from '@rollup/plugin-commonjs';
 import rollupJson from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
-import config from '../../config/BuildConfig.js';
+import {buildConfig} from '../../config/build-config.js';
 import rollupReplace from '@rollup/plugin-replace';
 import rollupAlias from '@rollup/plugin-alias';
 import { terser } from "rollup-plugin-terser";
@@ -35,7 +35,7 @@ class Build {
     }
     buildWebComponents(watch) {
         const allPromises = [];
-        config.webComponents.forEach((module) => {
+        buildConfig.webComponents.forEach((module) => {
             //TODO: write special function for just webComponent
             const buildPromise = this.BuildPageModule(module, watch);
             allPromises.push(buildPromise);
@@ -43,7 +43,7 @@ class Build {
         return Promise.all(allPromises);
     }
     BuildPageModules(watch) {
-        config.pagesBundle.forEach((module) => {
+        buildConfig.pagesBundle.forEach((module) => {
             const moduleWatch = module.watch && watch;
             this.BuildPageModule(module, moduleWatch);
         });
@@ -130,7 +130,7 @@ class Build {
             plugins.push(typescript({ tsconfigDefaults: this._getTypeScriptCompilerOptions(module) }));
         }
         if (generalConfigServer.env == "production") {
-            if (config.reactApps.useMinifier) {
+            if (buildConfig.reactApps.useMinifier) {
                 //add minifier
                 plugins.push(terser());
             }
@@ -141,7 +141,7 @@ class Build {
             input: path.join(...module.path.split('/')),
             external: module.external || [],
             plugins: plugins,
-            //manualChunks: config.chuncks
+            //manualChunks: buildConfig.chuncks
         };
         return inputOptions;
     }
