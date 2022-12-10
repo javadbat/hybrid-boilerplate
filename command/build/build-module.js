@@ -8,7 +8,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import {buildConfig} from '../../config/build-config.js';
 import rollupReplace from '@rollup/plugin-replace';
 import rollupAlias from '@rollup/plugin-alias';
-import { terser } from "rollup-plugin-terser";
+import  terser  from "@rollup/plugin-terser";
 import SassBuilder from './sass-builder.js';
 import { ReactBuilder } from './react-builder.js';
 import { generalConfigServer } from '../../config/general-config-server.js';
