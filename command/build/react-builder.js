@@ -195,7 +195,9 @@ export class ReactBuilder {
                 "@babel/plugin-proposal-optional-chaining",
                 "@babel/proposal-nullish-coalescing-operator",
                 ["@babel/plugin-proposal-class-properties", { loose: true }],
-                "@babel/plugin-syntax-dynamic-import"
+                "@babel/plugin-syntax-dynamic-import",
+                //TODO: see https://github.com/Igorbek/typescript-plugin-styled-components for typescript compatibility
+                ["babel-plugin-styled-components",{"ssr": false,"displayName": generalConfigServer.env !== "production","pure": true,"transpileTemplateLiterals": false}]
             ]
         };
         return babelOption;

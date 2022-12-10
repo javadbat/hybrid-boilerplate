@@ -62,3 +62,32 @@ npm run analysis
 ```
 
 it will open analytic report of your app package so you can detect heavy package of your app. remember you cant run this command before you build your project and you have to build your project once before run this command.
+
+## styling
+### sass
+
+hybrid-boilerplate support sass for hbs , html , web-component and react apps.
+in web-component and react apps ypu can easily import sass file in your js/ts file:
+
+```js
+import './style.scss';
+```
+for handlebar or simple html file you may compile scss to css, then use it in your page. to doso you should add your sass file to `config/build-config.js` in `sassFiles` section like this:
+
+```js
+sassFiles:[
+        {
+            //orginal path of file
+            path:'/app/assets/styles/pages/your-file.scss',
+            //determine where we put compiled css after compile
+            outputPath:'/app/dist/assets/styles/pages/your-file.css',
+            //you can make watch true to decrease build and watch overhead and run npm run build manually every time you need to build the sass file
+            watch:true
+        },
+    ]
+```
+and then use link tag in your html file to access compiled css
+
+### styled component
+you can use styled component only in react apps by just writing them and importing them in your component.
+we recommend to defile your global styles class in sass files and define your specific element and components styles in styled component files to make your code flexible and maintainable as best as it could be.
