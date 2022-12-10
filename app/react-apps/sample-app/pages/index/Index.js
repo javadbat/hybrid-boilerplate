@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import './Index.scss';
 import { SampleAppTitle } from '../../components/layouts/app-title/AppTitle';
-
 function Index() {
     return (
         <div className="index-page">

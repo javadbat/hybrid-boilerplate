@@ -11,7 +11,7 @@ function Layout() {
     }, []);
     return (
         <div className="sample-app">
-            <BrowserRouter basename={`/sample-app/`}>
+            <BrowserRouter basename={`/sample-app`}>
                 <Router></Router>
             </BrowserRouter>
         </div>
