@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PageLoader = styled.div`
+export const PageLoading = styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;

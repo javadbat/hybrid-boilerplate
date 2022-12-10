@@ -22,8 +22,7 @@ if(!isDevelopment){
     const htmlFileCacheEntity = { url: htmlFilePath, revision: '100001' };
     const manifestCacheEntity = { url: '/sample-app/manifest.json', revision: '100002' };
     const precachedStyles = [
-        { url: '/app/assets/styles/layout.css', revision: '100003' },
-        { url: '/app/assets/styles/general.css', revision: '100004' }
+        { url: '/app/dist/assets/styles/pages/sample-app.css', revision: '100003' },
     ];
     let preCacheList = [htmlFileCacheEntity, manifestCacheEntity, ...precachedStyles, ...machineGeneratedPreCacheList];
     precacheAndRoute(preCacheList, {

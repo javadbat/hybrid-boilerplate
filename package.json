@@ -59,7 +59,6 @@
     "@rollup/plugin-replace": "^3.0.0",
     "@svgr/webpack": "^6.1.2",
     "@types/webpack-env": "^1.17.0",
-    "ace-builds": "^1.4.12",
     "axios": "^0.24.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.3",

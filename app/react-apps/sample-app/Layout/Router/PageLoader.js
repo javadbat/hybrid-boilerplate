@@ -1,16 +1,16 @@
 import React from 'react';
 import Loading from '../../../components/loadings/loading/loading';
-import { PageLoaderText, PageLoaderTextWrapper } from './PageLoader.styled';
+import { PageLoaderText, PageLoaderTextWrapper,PageLoading } from './PageLoader.styled';
 
-export default function PageLoader(props) {
+export default function PageLoader() {
     return (
-        <PageLoader>
+        <PageLoading>
             <div>
                 <Loading />
             </div>
             <PageLoaderTextWrapper>
                 <PageLoaderText>لطفا کمی صبر کنید</PageLoaderText>
             </PageLoaderTextWrapper>
-        </PageLoader>
+        </PageLoading>
     );
 }
