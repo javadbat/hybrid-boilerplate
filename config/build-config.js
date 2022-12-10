@@ -40,6 +40,12 @@ export const buildConfig = {
             outputPath:'/app/dist/assets/styles/pages/index.css',
             //you can make watch true to decrease build and watch overhead and run npm run build manually every time you need to build the sass file
             watch:true
+        },
+        {
+            path:'/app/assets/styles/pages/sample-app.scss',
+            outputPath:'/app/dist/assets/styles/pages/sample-app.css',
+            //you can make watch true to decrease build and watch overhead and run npm run build manually every time you need to build the sass file
+            watch:true
         }
     ]
 };
