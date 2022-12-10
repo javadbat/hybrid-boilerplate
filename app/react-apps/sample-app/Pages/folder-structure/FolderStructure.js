@@ -2,6 +2,7 @@ import React from 'react';
 import './FolderStructure.scss';
 import overallImageSrc from './images/app-folders.png';
 import appImageSrc from './images/app-folder.png';
+
 function FolderStructure() {
     return (
         <div className="folder-structure">

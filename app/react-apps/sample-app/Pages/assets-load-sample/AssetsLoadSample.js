@@ -3,7 +3,7 @@ import './AssetsLoadSample.scss';
 import LoadImageByRelativePath from './components/load-image-by-relative-path/LoadImageByRelativePath';
 import LoadByUrl from './components/load-image-by-Url/LoadImageByUrl';
 import LoadImageWithSource from './components/load-image-with-source/LoadImageWithSource';
-import CustomizeStaticRouteImage from './customize-static-route.PNG';
+import customizeStaticRouteImage from './customize-static-route.PNG';
 function AssetsLoadSample() {
     return (
         <div className="assets-load-sample">
@@ -33,7 +33,7 @@ function AssetsLoadSample() {
                         <p>
                             in project source code go to <i>Command\Serve\StaticRoutes.js</i>
                         </p>
-                        <img src={CustomizeStaticRouteImage} width="100%"></img>
+                        <img src={customizeStaticRouteImage} width="100%"></img>
                         <p>
                             you can change cache behavior or the url of the assets or event path of assets here.
                             for more information <i>this.appConfig.basePath</i> is a base path of your project and lead you to project root
