@@ -1,0 +1,18 @@
+
+//12*11*10 = 1320
+$desktop-large-width: 1320;
+$desktop-width: 1024;
+$tablet-width: 768;
+$mobile-width: 480;
+$mobile-small-width:320;
+@use 'mq' as * with (
+  $breakpoints: (
+    small-mobile: 320px,
+    mobile: 480px,
+    tablet: 780px,
+    desktop: 1024px,
+    wide: 1320px,
+  )
+);
+@forward 'mq';
+//if it smaller than 320 i think he must change device :D
