@@ -2,14 +2,15 @@ import sass from 'sass';
 import fs from 'fs';
 import chalk from 'chalk';
 import path from 'path';
-import {buildConfig} from '../../config/build-config.js';
-import { generalConfigServer } from '../../config/general-config-server.js';
+import buildConfig from '../../Config/BuildConfig.js';
+import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
 import brotli from 'brotli';
 /**
  * @classdesc this class is responsible to convert sass file to css file
  */
 class SassBuilder {
     constructor() {
+        this.isWatchMode = false;
 
     }
     buildSassFiles(watch) {
@@ -20,6 +21,7 @@ class SassBuilder {
         });
         if (watch) {
             const watchList = fileList.filter(file => file.watch);
+            this.isWatchMode = true;
             if (watchList.length > 0) {
                 this.watchSassFiles(watchList);
             }
@@ -52,6 +54,7 @@ class SassBuilder {
             }
         });
     }
+    
     /**
      *
      * build css file from scss file
@@ -66,7 +69,7 @@ class SassBuilder {
             outFile: path.join(generalConfigServer.basePath, ...fileConfig.outputPath.split('/')),
         };
         sass.render(config, (err, result) => {
-            this.onCompileFinish(err, result, config.file, config.outFile);
+            this.onCompileFinish(fileConfig,err, result, config.file, config.outFile);
         });
     }
     ensureDirectoryExistence(filePath) {
@@ -89,7 +92,7 @@ class SassBuilder {
      * @param {String} sourceFilePath
      * @param {String} outputFilePath
      */
-    onCompileFinish(err, result, sourceFilePath, outputFilePath) {
+    onCompileFinish(fileConfig,err, result, sourceFilePath, outputFilePath) {
         if (!err) {
             const compressedFile = this.compressSassFile(result.css);
             fs.writeFile(outputFilePath + '.br', compressedFile,(err) => {
@@ -100,7 +103,15 @@ class SassBuilder {
             fs.writeFile(outputFilePath, result.css, (err) => {
                 if (!err) {
                     console.log(chalk.green(`${sourceFilePath} `), chalk.bgGreen.black(' BUILT '));
-                    //TODO: watch for dep file from result.stats.includedFiles;
+                    //fileConfig.dependacyList will make sure that dep list is only added for watch for first time
+                    if(this.isWatchMode && fileConfig.dependacyList == undefined){
+                    //TODO: check each file watch config
+                    fileConfig.dependacyList = result.stats.includedFiles;
+                    fileConfig.dependacyList.forEach((dep)=>{
+                        this.watchDependancy(dep,fileConfig);
+                    });
+                    }
+
                 } else {
                     console.error(err);
                 }
@@ -118,6 +129,22 @@ class SassBuilder {
             console.error(err);
         }
 
+    }
+    watchDependancy(depPath,fileConfig){
+        let fsWait = false;
+        fs.watch(depPath, (event, fileName) => {
+            if (fileName) {
+                if (fsWait) return;
+                fsWait = setTimeout(() => {
+                    fsWait = false;
+                }, 300);
+            }
+            if (fileName && event == "change") {
+                setTimeout(() => {
+                    this.buildSassFile(fileConfig);
+                }, 300);
+            }
+        });
     }
 }
 export default SassBuilder;
