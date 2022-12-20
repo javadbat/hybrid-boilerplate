@@ -13,15 +13,13 @@ import { ErrorHandler } from '../../utils/error/error-handler';
 // });
 const mountNode = document.getElementById('SampleAppWrapper');
 //Bootstrap Application
-export class SampleApp{
-    constructor(){
+export class SampleApp {
+    constructor() {
 
     }
-    render(){
-        ReactDOM.render(
-            <Layout />,
-            mountNode
-        );
+    render() {
+        const root = ReactDOM.createRoot(mountNode);
+        root.render(<Layout />)
     }
     registerServiceWorker() {
         if ('serviceWorker' in navigator) {
@@ -40,10 +38,10 @@ export class SampleApp{
                     this.state;
                 });
             }
-    
+
         }
     }
-    registerGlobalAppErrorHandler(){
+    registerGlobalAppErrorHandler() {
         //register error handlers
         const errorHandler = new ErrorHandler();
         window.addEventListener('error', function (event) {
