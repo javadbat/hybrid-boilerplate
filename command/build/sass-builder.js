@@ -2,8 +2,8 @@ import sass from 'sass';
 import fs from 'fs';
 import chalk from 'chalk';
 import path from 'path';
-import buildConfig from '../../Config/BuildConfig.js';
-import { generalConfigServer } from '../../Config/GeneralConfigServer.js';
+import {buildConfig} from '../../config/build-config.js';
+import { generalConfigServer } from '../../config/general-config-server.js';
 import brotli from 'brotli';
 /**
  * @classdesc this class is responsible to convert sass file to css file
