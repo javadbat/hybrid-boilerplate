@@ -69,7 +69,7 @@ export class ReactBuilder {
             filename: "[name].js",
             //in production we make it id to make it less readble
             chunkFilename: generalConfigServer.env == "production" ? path.join('[id]@[contenthash].chunk.js') : path.join('[name]@[contenthash].chunk.js'),
-            sourceMapFilename: '[file].map',
+            sourceMapFilename: '[name][hash].map',
             publicPath: buildConfig.reactApps.basePublicPath,
         };
         return outputOptions;
@@ -128,7 +128,13 @@ export class ReactBuilder {
                 ]
             },
             plugins: [
-                new webpack.EnvironmentPlugin(['NODE_ENV', 'APP_STAGE', 'npm_package_version'])
+                new webpack.EnvironmentPlugin(['NODE_ENV', 'APP_STAGE', 'npm_package_version']),
+                new webpack.SourceMapDevToolPlugin({
+                    filename: 'sourcemaps/[name]([hash]).map',
+                    publicPath: `${generalConfigServer.siteURL}/dist/react-apps/`,
+                    fileContext: 'public',
+                    // fileContext : generalConfigServer.host
+                  })
             ],
             resolve: {
                 alias: resolvedAliases,
