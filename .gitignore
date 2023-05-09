@@ -1,6 +1,7 @@
 node_modules
 app/dist
 app/web-components/**/dist
+wasm/hello-world/target
 .env
 envs
 Dockerfile_SIT

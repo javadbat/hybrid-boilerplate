@@ -54,6 +54,8 @@ class StaticRoutes{
         // pwa config file
         this.app.use('/sample-app/manifest.json',express.static(path.join(this.appConfig.basePath,'app','react-apps', 'sample-app', 'pwa', 'manifest.json')));
         this.app.use('/service-worker.js',express.static(path.join(this.appConfig.basePath,'app', 'dist', 'react-apps', 'sample-app', 'pwa', 'service-worker.js'),serviceWorkerAssetOption));
+        // for web assembly files
+        this.app.use('/wasm',express.static(path.join(this.appConfig.basePath,'wasm')));
     }
     registerBrotliMiddleware(){
         // add css file fallback to use broteli compress file
