@@ -2,7 +2,7 @@ import path, {dirname} from 'path';
 import { fileURLToPath } from 'url';
 import AddressConfig from"./address-config-server.js";
 
-class GeneralConfig{
+class GeneralConfigServer{
     constructor(){
         this.env = process.env.NODE_ENV?process.env.NODE_ENV:'development';
         // our app have stages from develop to production in realease process and determine which server we send request to
@@ -12,7 +12,8 @@ class GeneralConfig{
         this.host = '0.0.0.0';
         this.port = 3000;
         this.address = new AddressConfig(this.env);
+        this.siteURL = `http://localhost:${this.port}`
     }
 }
 
-export const generalConfigServer = new GeneralConfig();
+export const generalConfigServer = new GeneralConfigServer();

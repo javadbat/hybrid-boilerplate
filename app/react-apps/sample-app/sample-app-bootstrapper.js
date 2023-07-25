@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import Layout from './layout/Layout';
 import { ErrorHandler } from '../../utils/error/error-handler';
 
@@ -51,6 +51,15 @@ export class SampleApp {
             errorHandler.onError(event.reason);
         });
     }
+    loadWasmPackage() {
+        import('../../../wasm/hello-world/pkg/hello_wasm').then((module)=>{
+            const init = module.default
+            init().then(() => {
+            module.greet("hello wasm🐍");
+        })
+        })
+        
+    }
 }
 const sampleApp = new SampleApp();
 sampleApp.registerGlobalAppErrorHandler();
@@ -62,4 +71,4 @@ if (import.meta.webpackHot) {
 }
 //uncomment it if you have PWA and want service worker
 sampleApp.registerServiceWorker();
-
+sampleApp.loadWasmPackage();

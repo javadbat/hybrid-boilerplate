@@ -23,6 +23,7 @@ you can load data in nodejs server and render it serverside for SEO need
 - ExpressJs
 - Rollup
 - Webpack
+- Rust
 
 ## usage
 
@@ -63,6 +64,25 @@ npm run analysis
 
 it will open analytic report of your app package so you can detect heavy package of your app. remember you cant run this command before you build your project and you have to build your project once before run this command.
 
+build wasm projects:    
+open terminal in project root ant type
+```command
+wasm-pack build --target web
+```
+### using WASM
+```bash
+cargo install wasm-pack  
+```
+build wasm projects:  
+we just put hello-world lib as a sample in wasm folder. you can modify it or create new WASM library in wasm folder.
+```command
+cargo new --lib wasm/hello-wasm2
+```
+After that to biuld your library do the following:  
+open terminal in project root folder for example wasm/hello-world and type
+```command
+wasm-pack build --target web
+```
 ## styling
 ### sass
 
