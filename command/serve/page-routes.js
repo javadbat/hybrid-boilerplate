@@ -6,8 +6,8 @@ class PageRoutes {
     constructor(app, config) {
         this.app = app;
         this.appConfig = config;
-        this.appPath = 'App';
-        this.viewsDirectory = 'Views';
+        this.appPath = 'app';
+        this.viewsDirectory = 'views';
         this.viewsPath = path.join(this.appConfig.basePath, this.appPath, this.viewsDirectory);
     }
     init() {
@@ -46,7 +46,7 @@ class PageRoutes {
             buildEnv:generalConfigServer.env,
             appStage:generalConfigServer.appStage
         };
-        res.render('Index.hbs', hbsData);
+        res.render('index.hbs', hbsData);
     }
     
 }
