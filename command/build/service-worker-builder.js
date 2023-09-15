@@ -7,8 +7,8 @@ export class ServiceWorkerBuilder {
 
     }
     static getWebpackPluginConfig() {
-        const swSrc = path.join(generalConfigServer.basePath, 'app', 'react-apps', 'tracking', 'PWA', 'service-worker.js');
-        const swDest = path.join(generalConfigServer.basePath, 'app', 'dist', 'react-apps', 'tracking', 'PWA', 'service-worker.js');
+        const swSrc = path.join(generalConfigServer.basePath, 'app', 'react-apps', 'tracking', 'pwa', 'service-worker.js');
+        const swDest = path.join(generalConfigServer.basePath, 'app', 'dist', 'react-apps', 'tracking', 'pwa', 'service-worker.js');
         const configuredPlugin = new InjectManifest({
             swSrc,
             swDest,
