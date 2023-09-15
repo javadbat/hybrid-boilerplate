@@ -1,5 +1,5 @@
 import React from 'react';
-import Loading from '../../../components/loadings/loading/loading';
+import Loading from '../../../components/loadings/loading/Loading';
 import { PageLoaderText, PageLoaderTextWrapper,PageLoading } from './PageLoader.styled';
 
 export default function PageLoader() {
