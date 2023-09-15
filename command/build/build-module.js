@@ -5,10 +5,10 @@ import postcss from 'rollup-plugin-postcss';
 import commonjs from '@rollup/plugin-commonjs';
 import rollupJson from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
-import {buildConfig} from '../../config/build-config.js';
+import { buildConfig } from '../../config/build-config.js';
 import rollupReplace from '@rollup/plugin-replace';
 import rollupAlias from '@rollup/plugin-alias';
-import  terser  from "@rollup/plugin-terser";
+import terser from "@rollup/plugin-terser";
 import SassBuilder from './sass-builder.js';
 import { ReactBuilder } from './react-builder.js';
 import { generalConfigServer } from '../../config/general-config-server.js';
@@ -16,6 +16,7 @@ import { resolvedAliases } from '../../config/path-aliases-config.js';
 import typescript from 'rollup-plugin-typescript2';
 import chalk from 'chalk';
 import brotli from "rollup-plugin-brotli";
+import { wasm } from '@rollup/plugin-wasm';
 /**
  * @classdesc responible to build project files like react apps, web components or sass files
  */
@@ -25,28 +26,25 @@ class Build {
         this.reactBuilder = new ReactBuilder(app);
         this.app = app;
     }
-    build(watch) {
-        this.buildWebComponents(watch).then(() => {
-            this.BuildPageModules(watch);
-            this.reactBuilder.buildReactApps(watch);
-        });
-        this.sassBuilder.buildSassFiles(watch);
+    async build(watch) {
+        await this.sassBuilder.buildSassFiles(watch);
+        await this.buildWebComponents(watch)
+        await this.BuildPageModules(watch);
+        await this.reactBuilder.buildReactApps(watch);
+        console.log(chalk.bgGreen("All BUILD PROCESS SUCCESSFULLY FINISHED"))
 
     }
-    buildWebComponents(watch) {
-        const allPromises = [];
-        buildConfig.webComponents.forEach((module) => {
+    async buildWebComponents(watch) {
+        for (const module of buildConfig.webComponents) {
             //TODO: write special function for just webComponent
-            const buildPromise = this.BuildPageModule(module, watch);
-            allPromises.push(buildPromise);
-        });
-        return Promise.all(allPromises);
+            await this.BuildPageModule(module, watch);
+        }
     }
-    BuildPageModules(watch) {
-        buildConfig.pagesBundle.forEach((module) => {
+    async BuildPageModules(watch) {
+        for(const module of  buildConfig.pagesBundle){
             const moduleWatch = module.watch && watch;
-            this.BuildPageModule(module, moduleWatch);
-        });
+            await this.BuildPageModule(module, moduleWatch);
+        }
     }
 
     BuildPageModule(module, watch = true) {
@@ -58,17 +56,16 @@ class Build {
             return this.buildAndWatchModule(inputOptions, outputOptions, module);
         }
     }
-    buildModule(inputOptions, outputOptions) {
+    async buildModule(inputOptions, outputOptions) {
         //build module with rollup without any watch or something
-        let bundlePromise = rollup(inputOptions);
-        bundlePromise.then(function (bundle) {
-            bundle.write(outputOptions).then(function (output) {
-                console.log(output.output[0].facadeModuleId.green);
-            });
-        }).catch((err) => {
+        try{
+            let bundle = await rollup(inputOptions);
+            const output = await bundle.write(outputOptions)
+            console.log(chalk.greenBright(output.output[0].facadeModuleId), chalk.bgGreenBright("  BUILD")  );
+            return;
+        }catch(err){
             console.error(err);
-        });
-        return bundlePromise;
+        }
     }
     buildAndWatchModule(inputOptions, outputOptions, module) {
         return new Promise((resolve, reject) => {
@@ -124,6 +121,9 @@ class Build {
                 entries: resolvedAliases
             }),
             rollupJson(),
+            wasm({
+                copy: true,
+            }),
         ];
         const isTypeScriptModule = this._isTypeScriptModule(module);
         if (isTypeScriptModule) {
@@ -165,10 +165,12 @@ class Build {
                 "experimentalDecorators": true,
                 "removeComments": false,
                 "noImplicitAny": false,
-                "suppressImplicitAnyIndexErrors": true,
+                //comment due to deprecation
+                //"suppressImplicitAnyIndexErrors": true,
                 "noLib": false,
                 "preserveConstEnums": true,
-                "suppressExcessPropertyErrors": true,
+                //comment due to deprecation
+                //"suppressExcessPropertyErrors": true,
                 "allowJs": true,
                 "declaration": true,
                 "declarationDir": './',

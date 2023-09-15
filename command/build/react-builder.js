@@ -13,19 +13,21 @@ import { ServiceWorkerBuilder } from './service-worker-builder.js';
 import TerserPlugin from 'terser-webpack-plugin';
 import zlib from 'zlib';
 import CompressionPlugin from 'compression-webpack-plugin'
+import chalk from 'chalk';
+import CaseSensitivePathsWebpackPlugin from 'case-sensitive-paths-webpack-plugin';
 export class ReactBuilder {
     constructor(app) {
         this.app = app;
         this.hotReloadStatus = buildConfig.reactApps.hotReload && generalConfigServer.env !== "production"
     }
-    buildReactApps(watch) {
+    async buildReactApps(watch) {
         const inputOptions = this._getReactAppInputOption(buildConfig.reactApps.appList, watch);
         const outputOptions = this._getReactAppOutputOption();
-        this.buildReactApp(inputOptions, outputOptions, watch);
+        await this.buildReactApp(inputOptions, outputOptions, watch);
     }
-    buildReactApp(inputOptions, outputOptions, watch = true) {
-        this.deletePrevBuild(path.join(generalConfigServer.basePath, ...buildConfig.reactApps.baseOutputPath.split('/')));
+    async buildReactApp(inputOptions, outputOptions, watch = true) {
 
+        await this.deletePrevBuild(path.join(generalConfigServer.basePath, ...buildConfig.reactApps.baseOutputPath.split('/')));
         const compiler = webpack({
             ...inputOptions,
             output: outputOptions,
@@ -41,14 +43,32 @@ export class ReactBuilder {
                     ignored: /node_modules/,
                     poll: undefined
                 },
-                    (err, stat) => { this._onWebpackStatCallback(err, stat); }
+                (err, stat) => { this._onWebpackStatCallback(err, stat); }
                 );
             }
         } else {
-            compiler.run((err, stat) => { this._onWebpackStatCallback(err, stat); });
+            //will add extra build process log so we can debug in build process on production
+            new webpack.ProgressPlugin().apply(compiler);
+            await this.runWebpackCompiler(compiler);
         }
         // compiler.plugin('done', (ss) => { console.log(ss) })
 
+    }
+    /**
+     * 
+     * @param {webpack.compiler} compiler 
+     */
+    runWebpackCompiler(compiler){
+        return new Promise((resolve, reject) => { 
+            compiler.run((err, stat) => { 
+                if(!err && !stat.hasErrors()){
+                    resolve();
+                }else{
+                    reject();
+                }
+                this._onWebpackStatCallback(err, stat);
+            });
+         })
     }
     _onWebpackStatCallback(err, stats) {
         // if config are set incorrectly it throw err here
@@ -57,6 +77,7 @@ export class ReactBuilder {
             return;
         }
         // Done processing
+        console.log(stats);
         console.log(stats.toString({
             chunks: false, // Makes the build much quieter
             colors: true // Shows colors in the console
@@ -69,7 +90,7 @@ export class ReactBuilder {
             filename: "[name].js",
             //in production we make it id to make it less readble
             chunkFilename: generalConfigServer.env == "production" ? path.join('[id]@[contenthash].chunk.js') : path.join('[name]@[contenthash].chunk.js'),
-            sourceMapFilename: '[name][hash].map',
+            //sourceMapFilename: '[name][hash].[ext].map',
             publicPath: buildConfig.reactApps.basePublicPath,
         };
         return outputOptions;
@@ -100,7 +121,7 @@ export class ReactBuilder {
                         }
                     },
                     {
-                        test: /\.s[ac]ss$/i,
+                        test: /\.(s[ac]ss|css)$/i,
                         use: [
                             // Creates `style` nodes from JS strings
                             'style-loader',
@@ -130,11 +151,12 @@ export class ReactBuilder {
             plugins: [
                 new webpack.EnvironmentPlugin(['NODE_ENV', 'APP_STAGE', 'npm_package_version']),
                 new webpack.SourceMapDevToolPlugin({
-                    filename: 'sourcemaps/[name]([hash]).map',
+                    filename: 'sourcemaps/[file][contenthash].map[query]',
                     publicPath: `${generalConfigServer.siteURL}/dist/react-apps/`,
                     fileContext: 'public',
                     // fileContext : generalConfigServer.host
-                  })
+                  }),
+                  new CaseSensitivePathsWebpackPlugin(),
             ],
             resolve: {
                 alias: resolvedAliases,
@@ -200,6 +222,7 @@ export class ReactBuilder {
                 ["@babel/plugin-proposal-decorators", { "legacy": true }],
                 "@babel/plugin-proposal-optional-chaining",
                 "@babel/proposal-nullish-coalescing-operator",
+                ["@babel/plugin-transform-private-methods", { loose: true }],
                 ["@babel/plugin-proposal-class-properties", { loose: true }],
                 "@babel/plugin-syntax-dynamic-import",
                 //TODO: see https://github.com/Igorbek/typescript-plugin-styled-components for typescript compatibility
@@ -208,10 +231,20 @@ export class ReactBuilder {
         };
         return babelOption;
     }
-    deletePrevBuild(dir) {
-        console.log(`Deleting Previus Build Folder in ${dir}`);
+    async deletePrevBuild(dir) {
         if (fs.existsSync(dir)) {
-            fs.rmSync(dir, { recursive: true });
+            console.log(`Deleting Previus Build Folder in ${dir}`);
+            await this.deleteDir(dir);
+        }else{
+            return
         }
+    }
+    deleteDir(dir){
+        return new Promise((resolve, reject) => { 
+            fs.rm(dir, { recursive: true },()=>{
+                console.log("Delete Previus Build ", chalk.bgGreen("FINISHED"));
+                resolve();
+            });
+         })
     }
 }

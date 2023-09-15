@@ -10,5 +10,5 @@ if(!process.env.APP_STAGE){
 }
 
 const build = new Build();
-build.build(false);
+await build.build(false);
 

@@ -1,4 +1,4 @@
-import sass from 'sass';
+import * as sass from 'sass';
 import fs from 'fs';
 import chalk from 'chalk';
 import path from 'path';
@@ -13,12 +13,12 @@ class SassBuilder {
         this.isWatchMode = false;
 
     }
-    buildSassFiles(watch) {
+    async buildSassFiles(watch) {
         const fileList = buildConfig.sassFiles;
-        fileList.forEach((file) => {
+        for(const file of fileList){
             this.ensureDirectoryExistence(path.join(generalConfigServer.basePath, ...file.outputPath.split('/')));
-            this.buildSassFile(file);
-        });
+            await this.buildSassFile(file);
+        }
         if (watch) {
             const watchList = fileList.filter(file => file.watch);
             this.isWatchMode = true;
