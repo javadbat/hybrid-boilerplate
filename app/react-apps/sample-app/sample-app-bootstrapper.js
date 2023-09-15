@@ -52,12 +52,12 @@ export class SampleApp {
         });
     }
     loadWasmPackage() {
-        import('../../../wasm/hello-world/pkg/hello_wasm').then((module)=>{
-            const init = module.default
-            init().then(() => {
-            module.greet("hello wasm🐍");
-        })
-        })
+        // import('../../../wasm/hello-world/pkg/hello_wasm').then((module)=>{
+        //     const init = module.default
+        //     init().then(() => {
+        //     module.greet("hello wasm🐍");
+        // })
+        // })
         
     }
 }
