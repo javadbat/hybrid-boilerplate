@@ -78,6 +78,7 @@
     "jalaliday": "^2.3.0",
     "jb-button": "^2.0.2",
     "jb-input": "^2.8.1",
+    "jb-loading-react": "^1.0.2",
     "jb-message": "^1.1.0",
     "mobx": "^6.9.0",
     "mobx-react": "^7.6.0",

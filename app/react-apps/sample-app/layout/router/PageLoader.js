@@ -1,12 +1,12 @@
 import React from 'react';
-import Loading from '../../../components/loadings/loading/Loading';
 import { PageLoaderText, PageLoaderTextWrapper,PageLoading } from './PageLoader.styled';
+import { JBLoading } from 'jb-loading-react';
 
 export default function PageLoader() {
     return (
         <PageLoading>
             <div>
-                <Loading />
+                <JBLoading />
             </div>
             <PageLoaderTextWrapper>
                 <PageLoaderText>لطفا کمی صبر کنید</PageLoaderText>
