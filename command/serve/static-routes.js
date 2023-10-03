@@ -47,7 +47,7 @@ class StaticRoutes{
         this.app.use('/app/assets/fonts',express.static(path.join(this.appConfig.basePath,'app','assets','fonts'),assetsOptions));
         this.app.use('/app/assets/images',express.static(path.join(this.appConfig.basePath,'app','assets','images'),assetsOptions));
         //we redirect js load to compiled version
-        this.app.use('/app/assets/javascripts',express.static(path.join(this.appConfig.basePath,'app','dist','assets','javascripts'),assetsOptions));
+        this.app.use('/app/assets/scripts',express.static(path.join(this.appConfig.basePath,'app','dist','assets','scripts'),assetsOptions));
         this.app.use('/dist',express.static(path.join(this.appConfig.basePath,'app','dist'),assetsOptions));
         this.app.use('/web-components',express.static(path.join(this.appConfig.basePath,'app','web-components'),assetsOptions));
         this.app.use(express.static('Config'));
