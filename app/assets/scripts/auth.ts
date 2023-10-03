@@ -1,11 +1,14 @@
+export type UserInfo = any;
 class Auth {
+    //TODO: type this base on your app user info
+    #userInfo:UserInfo
     get userInfo() {
-        if (this._userInfo) {
-            return this._userInfo;
+        if (this.#userInfo) {
+            return this.#userInfo;
         }else{
             const userInfoString = window.localStorage.getItem('USER_INFO');
-            this._userInfo = JSON.parse(userInfoString);
-            return this._userInfo;
+            this.#userInfo = JSON.parse(userInfoString);
+            return this.#userInfo;
         }
     }
     get accessToken(){
@@ -15,21 +18,21 @@ class Auth {
         window.localStorage.setItem('ACCESS_TOKEN', accessToken);
     }
     callbacks = {
-        onTokenUpdate:()=>{console.log('you must define onTokenUpdate to call it');}
+        onTokenUpdate:(_:string)=>{console.log('you must define onTokenUpdate to call it');}
     }
-    setUser(accessToken, userInfo) {
+    setUser(accessToken:string, userInfo:UserInfo) {
         window.localStorage.setItem('ACCESS_TOKEN', accessToken);
         this.callbacks.onTokenUpdate(accessToken);
         this.setCookie(accessToken);
         window.localStorage.setItem('USER_INFO', JSON.stringify(userInfo));
     }
-    setCookie(accessToken){
+    setCookie(accessToken:string){
         document.cookie = `Authorization=${accessToken}; SameSite=None`;
     }
     deleteCookie() {
         var d = new Date;
         d.setTime(d.getTime() + 24*60*60*1000*-1);
-        document.cookie = "Authorization=null;path=/;expires=" + d.toGMTString();
+        document.cookie = "Authorization=null;path=/;expires=" + d.toISOString();
     }
     logout(){
         window.localStorage.removeItem('ACCESS_TOKEN');

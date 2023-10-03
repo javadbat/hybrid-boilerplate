@@ -15,7 +15,7 @@ const axiosWithAuth = axios.create({
 const axiosWithoutAuth = axios.create({
     ...config
 });
-function updateAxiosAuth(accessToken){
+function updateAxiosAuth(accessToken:string){
     axiosWithAuth.defaults.headers.Authorization = 'Bearer '+ accessToken;
 }
 authManager.callbacks.onTokenUpdate = updateAxiosAuth;
