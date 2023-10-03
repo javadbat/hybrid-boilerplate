@@ -9,8 +9,8 @@ function Router() {
     return (
         <Suspense fallback={<div><PageLoader /> </div>}>
             <Routes>
-                <Route path="/folder-structure" element={<FolderStructure />} exact={true}></Route>
-                <Route path="/assets-load-sample" element={<AssetsLoadSample />} exact={true}></Route>
+                <Route path="/folder-structure" element={<FolderStructure />} ></Route>
+                <Route path="/assets-load-sample" element={<AssetsLoadSample />}></Route>
                 <Route path="/" element={<Index />}></Route>
             </Routes>
         </Suspense>

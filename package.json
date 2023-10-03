@@ -15,6 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.4",
+    "@types/react-dom": "^18.2.8",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
     "babel-jest": "^29.7.0",
@@ -80,6 +81,7 @@
     "jb-input": "^2.8.2",
     "jb-loading-react": "^1.0.2",
     "jb-message": "^1.2.0",
+    "jb-notification": "^0.3.0",
     "mobx": "^6.10.2",
     "mobx-react": "^9.0.1",
     "npm": "^10.1.0",

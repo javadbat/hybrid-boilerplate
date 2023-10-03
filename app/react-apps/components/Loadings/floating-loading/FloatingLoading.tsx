@@ -1,12 +1,11 @@
 import React from 'react';
-import Loading from '../loading/loading';
 import './FloatingLoading.scss';
-
-export default function FloatingLoading(props) {
-    if (props.isLoading) {
+import { JBLoading } from 'jb-loading-react';
+export default function FloatingLoading({isLoading}) {
+    if (isLoading) {
         return (
             <div className='floating-loading'>
-                <Loading />
+                <JBLoading />
             </div>
         );
     } else return null;

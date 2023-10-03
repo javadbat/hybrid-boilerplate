@@ -7,6 +7,9 @@ export const PageLoading = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    --jb-loading-color:rgb(13, 113, 228);
+    --jb-loading-width:4rem;
+    --jb-loading-height:4rem;
 `;
 export const PageLoaderTextWrapper = styled.div`
     margin-top: 20px;

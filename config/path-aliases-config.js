@@ -4,9 +4,9 @@ import { generalConfigServer } from "./general-config-server.js";
 // WARNIING: do not use this file iinsiide client code
 /* replace `require` with `import` after node supports `json` import */
 const require = createRequire(import.meta.url);
-const jsconfig = require("../jsconfig.json");
+const tsconfig = require("../tsconfig.json");
 
-const aliases = jsconfig.compilerOptions.paths;
+const aliases = tsconfig.compilerOptions.paths;
 
 // converts `{path}/*` to `{path}`
 const removeStars = (path) => path.slice(-2) === "/*" ? path.slice(0, -2) : path;

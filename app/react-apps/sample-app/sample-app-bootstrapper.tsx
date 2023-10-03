@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Layout from './layout/Layout';
@@ -18,8 +19,12 @@ export class SampleApp {
 
     }
     render() {
-        const root = ReactDOM.createRoot(mountNode);
-        root.render(<Layout />)
+        if(mountNode){
+            const root = ReactDOM.createRoot(mountNode);
+           root.render(<Layout />)
+        }else{
+            console.error("We Cant Mount React because React Mount Node is not available");
+        }
     }
     registerServiceWorker() {
         if ('serviceWorker' in navigator) {

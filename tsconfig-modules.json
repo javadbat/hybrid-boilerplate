@@ -9,15 +9,8 @@
         "sourceMap": true,
         "allowJs": true,
         "target": "es6",
-        "paths": {
-            "*": ["__INVALID__/*"],
-            "@config/*": ["config/*"],
-            "@utils/*": ["app/utils/*"],
-            "@assets/*": ["app/assets/*"]
-        }
     },
     "include": [
-        "app/**/*.ts"
     ],
     "exclude": [
         "node_modules",

@@ -1,23 +1,25 @@
-import { message } from "../app-message/app-message";
+import { messageManager } from "../app-message/app-message";
+import { AppError } from "./app-error";
 class ErrorStack{
+    stack:AppError[] = []
     get length(){
         return this.stack.length;
     }
     constructor(){
-        this.stack = [];
     }
-    add(error){
+    add(error:AppError){
         this.stack.push(error);
     }
 }
 export class ErrorHandler{
+    stack:ErrorStack
     constructor(){
         this.stack = new ErrorStack();
     }
-    onError(error){
+    onError(error:AppError){
         this.stack.add(error);
         if(typeof error == "object" && error.show){
-            message.show({message:error.message , type:'error'});
+            messageManager.newMessage(error.message,"ERROR")
         }
     }
 }
