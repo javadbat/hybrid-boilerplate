@@ -24,7 +24,7 @@ export default{
         "ecmaVersion": 11,
         "sourceType": "module"
     },
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     //replace with this if you are using typescript
     //"parser": "@typescript-eslint/parser",
     "rules": {
