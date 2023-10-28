@@ -26,7 +26,7 @@ class PageRoutes {
             layoutsDir: 'Layouts',
             defaultLayout: false,
             //helpers      : 'path/to/helpers/directory',
-            partialsDir: path.join(this.viewsPath, 'Partials')
+            partialsDir: path.join(this.viewsPath, 'partials')
         });
         this.app.engine('.hbs', hbs.engine);
         this.app.set('view engine', '.hbs');
