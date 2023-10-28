@@ -89,7 +89,7 @@ export class ReactBuilder {
             path: path.join(generalConfigServer.basePath, ...buildConfig.reactApps.baseOutputPath.split('/')),
             filename: "[name].js",
             //in production we make it id to make it less readble
-            chunkFilename: generalConfigServer.env == "production" ? path.join('[id]@[contenthash].chunk.js') : path.join('[name]@[contenthash].chunk.js'),
+            chunkFilename: generalConfigServer.env == "production" ? path.join('[name]@[contenthash].chunk.js') : path.join('[id]@[contenthash].chunk.js'),
             //sourceMapFilename: '[name][hash].[ext].map',
             publicPath: buildConfig.reactApps.basePublicPath,
         };
