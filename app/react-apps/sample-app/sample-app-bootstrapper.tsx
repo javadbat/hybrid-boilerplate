@@ -57,6 +57,7 @@ export class SampleApp {
         });
     }
     loadWasmPackage() {
+        //you have to initiate wasm compile in your server and local ci/cd to enable this
         // import('../../../wasm/hello-world/pkg/hello_wasm').then((module)=>{
         //     const init = module.default
         //     init().then(() => {
