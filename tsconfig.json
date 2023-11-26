@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "strict": true,
         "baseUrl": ".",
         "module": "es2020",
         "noImplicitAny": true,

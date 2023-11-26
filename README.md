@@ -45,7 +45,7 @@ you can load data in nodejs server and render it serverside for SEO need
 | env variable name| values                      |
 | -------------    | -------------               |
 | NODE_ENV         | development, production     |
-| App_Stage        | dev, uat, release, main,... |
+| App_Stage        | dev, test, release, main,... |
 
 ### command
 

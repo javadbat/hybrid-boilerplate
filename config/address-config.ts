@@ -1,16 +1,18 @@
+import {AppStage} from './general-config'
 /**
  * @classdesc base address of external resources will gather here and will be accessed base on a defined APP_STAGE envirement variable. you can add your server custom address here
  * if your addresses are not depend of app envirement you could add static get method
  */
 class AddressConfig{
-    constructor(appStage){
+    appStage:AppStage
+    constructor(appStage:AppStage){
         this.appStage = appStage;
     }
     get serviceUrl(){
         switch(this.appStage){
             case 'dev':
                 return 'https://devapi.com';
-            case 'uat':
+            case 'test':
                 return 'https://uatapi.com';
             case 'release':
                 return 'https://releaseapi.com';
