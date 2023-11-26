@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 
 // check if user clicks outside of a component to hide it
-export const useClickOutside = (initialIsVisible, shouldCloseOnSelection = false) => {
+export const useClickOutside = (initialIsVisible:boolean, shouldCloseOnSelection = false) => {
     const [isComponentVisible, setIsComponentVisible] = useState(initialIsVisible);
-    const ref = useRef(null);
+    const ref = useRef<HTMLElement>(null);
 
-    const handleClickOutside = (event) => {
-        if (ref.current && (!ref.current.contains(event.target) || shouldCloseOnSelection)) {
+    const handleClickOutside = (event:MouseEvent) => {
+        const target  = event.target as HTMLElement;
+        if (ref.current && (!ref.current.contains(target) || shouldCloseOnSelection)) {
             setTimeout(() => {
                 if (ref?.current) setIsComponentVisible(false);
             }, 0);

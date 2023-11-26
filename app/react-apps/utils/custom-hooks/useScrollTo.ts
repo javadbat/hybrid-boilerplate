@@ -6,9 +6,11 @@ import { useEffect } from "react";
  * @param {number} y vertical coordinate
  * @param {any} deps dependency array for useEffect
  */
-export const useScrollTo = (x, y, deps = []) => {
+export const useScrollTo = (x: "top" | number, y:number | null, deps:any[] = []) => {
     useEffect(() => {
         if (x === "top") window.scrollTo({ top: 0, behavior: "smooth" });
-        else window.scrollTo(x, y);
+        else if(typeof y =="number" && typeof x == "number" ){
+             window.scrollTo(x, y)
+        }
     }, deps);
 };

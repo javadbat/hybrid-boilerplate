@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 let counter = 0;
-export function useEvent(dom, event, handler, passive = false) {
+export function useEvent(dom:HTMLElement, event:string, handler:(e:any)=>any, passive = false) {
     useEffect(() => {
         if (dom) {
             // initiate the event handler
