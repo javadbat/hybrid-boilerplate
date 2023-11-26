@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1701034096857" clover="3.2.0">
+  <project timestamp="1701034096857" name="All files">
+    <metrics statements="12" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="4" elements="22" coveredelements="17" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1"/>
+    <file name="persian-helper.js" path="A:\Home\NeveshtAfzar\work\Azad\Azad\hybrid-boilerplate\app\react-apps\utils\persian-helper.js">
+      <metrics statements="12" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="4"/>
+      <line num="2" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="3" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="14" count="1" type="cond" truecount="2" falsecount="2"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="3" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

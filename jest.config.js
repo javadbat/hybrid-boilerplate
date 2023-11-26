@@ -7,7 +7,7 @@ export default async () => {
         verbose: true,
         testEnvironment:'jsdom',
         transform: {
-            '\\.jsx?$': ['babel-jest', { configFile: path.join(generalConfigServer.basePath, 'command', 'test', 'babel-config.js') }]
+            '\\.*.(jsx|tsx|ts)?$': ['babel-jest', { configFile: path.join(generalConfigServer.basePath, 'command', 'test', 'babel-config.js') }]
         },
         moduleNameMapper: {
             '.*\\.(css|less|styl|scss|sass)$': path.join(generalConfigServer.basePath, 'command', 'test', 'mocks', 'style-mocks.js'),
@@ -15,7 +15,7 @@ export default async () => {
             path.join(generalConfigServer.basePath, 'command', 'test', 'mocks', 'media-mocks.js'),
             ...jestAliasMaps,
         },
-        setupFiles: ['raf/polyfill', path.join(generalConfigServer.basePath, 'command', 'test', 'enzyme-config.js')],
+        setupFiles: ['raf/polyfill'],
         globals: {
             NODE_ENV: "test"
         },
