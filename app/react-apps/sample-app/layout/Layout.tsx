@@ -5,6 +5,7 @@ import Router from './router/Router';
 // import './Layout.scss';
 import { fixMobileHeightVH } from '../../utils/layout-helper';
 import { AppLayout } from './Layout.styled';
+import { buildConfig } from '../../../../config/build-config';
 
 function Layout() {
     useEffect(() => {
@@ -12,7 +13,7 @@ function Layout() {
     }, []);
     return (
         <AppLayout>
-            <BrowserRouter basename={`/sample-app`}>
+            <BrowserRouter basename={`/${buildConfig.reactApps.appList[0].urlPrefix}`}>
                 <Router></Router>
             </BrowserRouter>
         </AppLayout>

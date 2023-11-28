@@ -23,6 +23,8 @@ export const buildConfig = {
             //you can define multiple react apps here
             {
                 name:'sample-app',
+                folderName:"sample-app",
+                urlPrefix:"sample-app",
                 path:'/app/react-apps/sample-app/sample-app-bootstrapper.tsx',
             },
         ]

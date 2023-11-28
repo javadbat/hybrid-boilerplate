@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { generalConfigServer } from '../../config/general-config-server.js';
+import { buildConfig } from '../../config/build-config.js';
 
 class StaticRoutes{
     constructor(app,config){
@@ -52,8 +53,8 @@ class StaticRoutes{
         this.app.use('/web-components',express.static(path.join(this.appConfig.basePath,'app','web-components'),assetsOptions));
         this.app.use(express.static('Config'));
         // pwa config file
-        this.app.use('/sample-app/manifest.json',express.static(path.join(this.appConfig.basePath,'app','react-apps', 'sample-app', 'pwa', 'manifest.json')));
-        this.app.use('/service-worker.js',express.static(path.join(this.appConfig.basePath,'app', 'dist', 'react-apps', 'sample-app', 'pwa', 'service-worker.js'),serviceWorkerAssetOption));
+        this.app.use(`/${buildConfig.reactApps.appList[0].folderName}/manifest.json`,express.static(path.join(this.appConfig.basePath,'app','react-apps', buildConfig.reactApps.appList[0].folderName, 'pwa', 'manifest.json')));
+        this.app.use('/service-worker.js',express.static(path.join(this.appConfig.basePath,'app', 'dist', 'react-apps', buildConfig.reactApps.appList[0].folderName, 'pwa', 'service-worker.js'),serviceWorkerAssetOption));
         // for web assembly files
         this.app.use('/wasm',express.static(path.join(this.appConfig.basePath,'wasm')));
     }

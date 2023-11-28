@@ -2,6 +2,7 @@ import path from 'path';
 import exphbs from 'express-handlebars';
 import SampleAppController from '../../server/controllers/sample-app-controller.js';
 import {generalConfigServer} from '../../config/general-config-server.js';
+import { buildConfig } from '../../config/build-config.js';
 class PageRoutes {
     constructor(app, config) {
         this.app = app;
@@ -37,7 +38,7 @@ class PageRoutes {
     }
     registerRoutes() {
         this.app.get('/', this.indexPage.bind(this));
-        this.app.use('/sample-app',this.sampleAppController.router);
+        this.app.use(`/${buildConfig.reactApps.appList[0].urlPrefix}`,this.sampleAppController.router);
         // here you can add your own custom page routes they may be a html page route or react app page route
     }
     indexPage(req, res) {

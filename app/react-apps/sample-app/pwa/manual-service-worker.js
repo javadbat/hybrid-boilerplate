@@ -2,9 +2,10 @@
 // if you want to write your own service worker code please rename this file name to ServiceWorker.js and disable automatic workbox service worker generator 
 const cacheName = 'sample-app-cache';
 const version = '1.0.0';
+const appFolderName = "sample-app"
 const precacheResources = [
     '/sample-app',
-    '/dist/react-apps/sample-app/sample-app.js',
+    `/dist/react-apps/${appFolderName}/sample-app.js`,
     '/app/assets/styles/layout.css',
     '/app/assets/styles/general.css',
     '/app/assets/images/logo.svg'

@@ -14,13 +14,14 @@ setCacheNameDetails({
     runtime: 'runtime',
     suffix: appVersion
 });
+const appFolderName = "sample-app"
 // Use with precache injection
 // will precache all files in globDirectory that match globPatterns
 if(!isDevelopment){
     const machineGeneratedPreCacheList = self.__WB_MANIFEST;
     const htmlFilePath = '/sample-app';
     const htmlFileCacheEntity = { url: htmlFilePath, revision: '100001' };
-    const manifestCacheEntity = { url: '/sample-app/manifest.json', revision: '100002' };
+    const manifestCacheEntity = { url: `/${appFolderName}/manifest.json`, revision: '100002' };
     const precachedStyles = [
         { url: '/app/dist/assets/styles/pages/sample-app.css', revision: '100003' },
     ];
