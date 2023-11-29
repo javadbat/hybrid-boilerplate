@@ -1,6 +1,6 @@
 import path from 'path';
 import exphbs from 'express-handlebars';
-import SampleAppController from '../../server/controllers/sample-app-controller.js';
+import ReactAppController from '../../server/controllers/react-app-controller.js';
 import {generalConfigServer} from '../../config/general-config-server.js';
 import { buildConfig } from '../../config/build-config.js';
 class PageRoutes {
@@ -32,13 +32,18 @@ class PageRoutes {
         this.app.engine('.hbs', hbs.engine);
         this.app.set('view engine', '.hbs');
         // end of handlebar template engine setup
-        //setup controllers
-        this.sampleAppController = new SampleAppController;
         this.registerRoutes();
+    }
+    registersReactAppsRoutes(){
+        //setup controllers
+        buildConfig.reactApps.appList.forEach((app)=>{
+            const appController = new ReactAppController(app.viewFolderName);
+            this.app.use(`/${app.urlPrefix}`,appController.router);
+        })
     }
     registerRoutes() {
         this.app.get('/', this.indexPage.bind(this));
-        this.app.use(`/${buildConfig.reactApps.appList[0].urlPrefix}`,this.sampleAppController.router);
+        this.registersReactAppsRoutes();
         // here you can add your own custom page routes they may be a html page route or react app page route
     }
     indexPage(req, res) {

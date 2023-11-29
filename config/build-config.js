@@ -25,6 +25,7 @@ export const buildConfig = {
                 name:'sample-app',
                 folderName:"sample-app",
                 urlPrefix:"sample-app",
+                viewFolderName:"sample-app",
                 path:'/app/react-apps/sample-app/sample-app-bootstrapper.tsx',
             },
         ]
