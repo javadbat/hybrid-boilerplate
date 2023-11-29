@@ -1,6 +1,6 @@
 import axios from 'axios';
 import authManager from './auth';
-import generalConfig from '../../../config/general-config';
+import generalConfig from '../../config/general-config';
 const accessToken = authManager.accessToken;
 const config ={
     baseURL: generalConfig.address.serviceUrl,
