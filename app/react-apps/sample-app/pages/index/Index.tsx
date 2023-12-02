@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import logoImage from '../../../../assets/images/react-logo.svg';
 import './Index.scss';
 import { SampleAppTitle } from '../../components/layouts/app-title/AppTitle';
 function Index() {

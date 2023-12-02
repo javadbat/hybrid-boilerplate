@@ -9,19 +9,26 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "allowJs": true,
+        "jsx": "preserve",
+        "allowSyntheticDefaultImports": true,
         "target": "es6",
         "paths": {
             "@config/*": ["config/*"],
             "@utils/*": ["app/utils/*"],
             "@assets/*": ["app/assets/*"]
-        }
+        },
+        "typeRoots" : ["./node_modules/@types", "./global.d.ts"],
+        "outDir": "./app/dist"
     },
     "include": [
-        "app/**/*.ts"
+        "global.d.ts",
+        "app/**/*.ts",
+        "**/*.ts", "**/*.tsx"
     ],
     "exclude": [
         "node_modules",
         "**/*.spec.ts",
-        "dist"
+        "dist",
+        "app/dist"
     ]
 }

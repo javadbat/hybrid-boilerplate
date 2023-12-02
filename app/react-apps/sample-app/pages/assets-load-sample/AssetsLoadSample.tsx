@@ -3,7 +3,7 @@ import './AssetsLoadSample.scss';
 import LoadImageByRelativePath from './components/load-image-by-relative-path/LoadImageByRelativePath';
 import LoadByUrl from './components/load-image-by-Url/LoadImageByUrl';
 import LoadImageWithSource from './components/load-image-with-source/LoadImageWithSource';
-import customizeStaticRouteImage from './customize-static-route.PNG';
+import customizeStaticRouteImage from './customize-static-route.png';
 function AssetsLoadSample() {
     return (
         <div className="assets-load-sample">
