@@ -47,7 +47,7 @@ you can load data in nodejs server and render it serverside for SEO need
 | NODE_ENV         | development, production     |
 | App_Stage        | dev, test, release, main,... |
 
-### command
+### commands
 
 set envirement variable on windows:
 
@@ -56,6 +56,11 @@ $env:APP_STAGE="dev"
 
 ```
 
+we have 3 main command in our boilerplate 
+
+1- `build`: this command will build your source code using rollup & webpack and store built file in app/dist folder. remember that `app/dist` don't contain all of your apps source and just contain builded source so other assetsand filed are needed to run the project.
+2- `serve`: will run built application so you can see app with browser
+3- `start`: will build and serve app. this command will run build in watch mode so you must run it only in development env.
 see React apps webpack analytics report:
 
 ```command
@@ -110,4 +115,12 @@ and then use link tag in your html file to access compiled css
 
 ### styled component
 you can use styled component only in react apps by just writing them and importing them in your component.
-we recommend to defile your global styles class in sass files and define your specific element and components styles in styled component files to make your code flexible and maintainable as best as it could be.
+we recommend to define your global styles class in sass files and define your specific element and components styles in styled component files to make your code flexible and maintainable as best as it could be.
+
+## folder structure:
+
+- app: all front-end code will be placed here. learn more...
+- command: executable npm commands like `serve` and `build` will be code there. learn more...
+- config: whole app configs are placed there. learn more...
+- server: if you have custom express server
+- wasm: for rust wasm code if you have one.

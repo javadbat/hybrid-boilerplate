@@ -9,8 +9,8 @@ class GeneralConfig{
     address:AddressConfig;
     constructor(env:NodeEnv,appStage:AppStage){
         this.env = env;
-        //app stage tell which stage our app are in for example if you are in local env or you are in dev or master envirement.
-        //curenlty it only use to determine server address but you can write more logic on it for example you can chnage your app log level base on envirement
+        //app stage tell which stage our app are in for example if you are in local env or you are in dev or master environment.
+        //currently it only use to determine server address but you can write more logic on it for example you can change your app log level base on environment
         this.appStage = appStage;
         this.address = new AddressConfig(this.appStage);
     }

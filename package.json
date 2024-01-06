@@ -52,6 +52,7 @@
     "@rollup/plugin-wasm": "^6.2.2",
     "@svgr/webpack": "^8.1.0",
     "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.32",
     "@types/webpack-env": "^1.18.4",
     "axios": "^1.6.2",
     "babel-eslint": "^10.1.0",
