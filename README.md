@@ -119,8 +119,8 @@ we recommend to define your global styles class in sass files and define your sp
 
 ## folder structure:
 
-- app: all front-end code will be placed here. learn more...
-- command: executable npm commands like `serve` and `build` will be code there. learn more...
-- config: whole app configs are placed there. learn more...
+- app: all front-end code will be placed here.[learn more...](app/README.md) 
+- command: executable npm commands like `serve` and `build` will be code there. [learn more...](command/README.md) 
+- config: whole app configs are placed there. [learn more...](config/README.md) 
 - server: if you have custom express server
 - wasm: for rust wasm code if you have one.
