@@ -15,7 +15,8 @@
         "paths": {
             "@config/*": ["config/*"],
             "@utils/*": ["app/utils/*"],
-            "@assets/*": ["app/assets/*"]
+            "@assets/*": ["app/assets/*"],
+            "@web-components/*": ["app/web-components/*"]
         },
         "typeRoots" : ["./node_modules/@types", "./global.d.ts"],
         "outDir": "./app/dist"
