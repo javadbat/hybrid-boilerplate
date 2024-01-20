@@ -15,6 +15,7 @@ import zlib from 'zlib';
 import CompressionPlugin from 'compression-webpack-plugin'
 import chalk from 'chalk';
 import CaseSensitivePathsWebpackPlugin from 'case-sensitive-paths-webpack-plugin';
+import babelConfig from '../../config/babel.config.json' assert { type: 'json' }
 export class ReactBuilder {
     constructor(app) {
         this.app = app;
@@ -47,12 +48,10 @@ export class ReactBuilder {
                 );
             }
         } else {
-            //will add extra build process log so we can debug in build process on production
-            new webpack.ProgressPlugin().apply(compiler);
+            //TODO: will add extra build process log so we can debug in build process on production uncomment if you need it
+            //new webpack.ProgressPlugin().apply(compiler);
             await this.runWebpackCompiler(compiler);
         }
-        // compiler.plugin('done', (ss) => { console.log(ss) })
-
     }
     /**
      * 
@@ -77,7 +76,8 @@ export class ReactBuilder {
             return;
         }
         // Done processing
-        console.log(stats);
+        //TODO: uncomment log when you need extra log
+        //console.log(stats);
         console.log(stats.toString({
             chunks: false, // Makes the build much quieter
             colors: true // Shows colors in the console
@@ -88,7 +88,7 @@ export class ReactBuilder {
             // core output options
             path: path.join(generalConfigServer.basePath, ...buildConfig.reactApps.baseOutputPath.split('/')),
             filename: "[name].js",
-            //in production we make it id to make it less readble
+            //in production we make it id to make it less readable
             chunkFilename: generalConfigServer.env == "production" ? path.join('[name]@[contenthash].chunk.js') : path.join('[id]@[contenthash].chunk.js'),
             //sourceMapFilename: '[name][hash].[ext].map',
             publicPath: buildConfig.reactApps.basePublicPath,
@@ -207,33 +207,40 @@ export class ReactBuilder {
         return inputOptions;
     }
     static getReactAppBabelOption() {
-        const babelOption = {
-            presets: [
-                ["@babel/preset-env", {
-                    "targets": { "browsers": ["last 2 chrome versions"] },
-                    "useBuiltIns": "usage",
-                    "corejs": "3.6.5",
-                    "loose": true
-                }],
-                "@babel/preset-react",
-                "@babel/preset-typescript",
-            ],
-            plugins: [
-                ["@babel/plugin-proposal-decorators", { "legacy": true }],
-                "@babel/plugin-proposal-optional-chaining",
-                "@babel/proposal-nullish-coalescing-operator",
-                ["@babel/plugin-transform-private-methods", { loose: true }],
-                ["@babel/plugin-proposal-class-properties", { loose: true }],
-                "@babel/plugin-syntax-dynamic-import",
-                //TODO: see https://github.com/Igorbek/typescript-plugin-styled-components for typescript compatibility
-                ["babel-plugin-styled-components",{"ssr": false,"displayName": generalConfigServer.env !== "production","pure": true,"transpileTemplateLiterals": false}]
-            ]
-        };
+        // const babelOption = {
+        //     presets: [
+        //         ["@babel/preset-env", {
+        //             "targets": { "browsers": ["last 2 chrome versions"] },
+        //             "useBuiltIns": "usage",
+        //             "corejs": "3.6.5",
+        //             "loose": true
+        //         }],
+        //         "@babel/preset-react",
+        //         "@babel/preset-typescript",
+        //     ],
+        //     plugins: [
+        //         ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        //         "@babel/plugin-proposal-optional-chaining",
+        //         "@babel/proposal-nullish-coalescing-operator",
+        //         ["@babel/plugin-transform-private-methods", { loose: true }],
+        //         ["@babel/plugin-proposal-class-properties", { loose: true }],
+        //         "@babel/plugin-syntax-dynamic-import",
+        //         //TODO: see https://github.com/Igorbek/typescript-plugin-styled-components for typescript compatibility
+        //         ["babel-plugin-styled-components",{"ssr": false,"displayName": generalConfigServer.env !== "production","pure": true,"transpileTemplateLiterals": false}]
+        //     ]
+        // };
+        const babelOption = babelConfig;
+        babelOption.plugins.find((op)=>{
+            if(Array.isArray(op) && op[0] == "babel-plugin-styled-components" && generalConfigServer.env == "production"){
+                //hide styled component component name in production build
+                op[1]["displayName"]=false;
+            }
+        })
         return babelOption;
     }
     async deletePrevBuild(dir) {
         if (fs.existsSync(dir)) {
-            console.log(`Deleting Previus Build Folder in ${dir}`);
+            console.log(`Deleting Previous Build Folder in ${dir}`);
             await this.deleteDir(dir);
         }else{
             return
@@ -242,7 +249,7 @@ export class ReactBuilder {
     deleteDir(dir){
         return new Promise((resolve, reject) => { 
             fs.rm(dir, { recursive: true },()=>{
-                console.log("Delete Previus Build ", chalk.bgGreen("FINISHED"));
+                console.log("Delete Previous Build ", chalk.bgGreen("FINISHED"));
                 resolve();
             });
          })

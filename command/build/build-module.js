@@ -18,7 +18,7 @@ import chalk from 'chalk';
 import brotli from "rollup-plugin-brotli";
 import { wasm } from '@rollup/plugin-wasm';
 /**
- * @classdesc responible to build project files like react apps, web components or sass files
+ * @classdesc responsible to build project files like react apps, web components or sass files
  */
 class Build {
     constructor(app) {
