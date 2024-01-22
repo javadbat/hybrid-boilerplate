@@ -7,14 +7,17 @@ class Auth {
             return this.#userInfo;
         }else{
             const userInfoString = window.localStorage.getItem('USER_INFO');
-            this.#userInfo = JSON.parse(userInfoString);
-            return this.#userInfo;
+            if(userInfoString){
+                this.#userInfo = JSON.parse(userInfoString);
+                return this.#userInfo;
+            }
+
         }
     }
-    get accessToken(){
+    get accessToken():string | null{
         return window.localStorage.getItem('ACCESS_TOKEN');
     }
-    set accessToken(accessToken){
+    set accessToken(accessToken:string){
         window.localStorage.setItem('ACCESS_TOKEN', accessToken);
     }
     callbacks = {
@@ -40,4 +43,4 @@ class Auth {
         window.localStorage.removeItem('USER_INFO');
     }
 }
-export default new Auth();
+export const authManager =  new Auth();
