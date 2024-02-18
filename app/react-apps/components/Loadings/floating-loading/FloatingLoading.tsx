@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './FloatingLoading.scss';
 import { JBLoading } from 'jb-loading-react';
-export default function FloatingLoading({isLoading}) {
-    if (isLoading) {
+type  FloatingLoadingProps = {
+    isLoading: boolean;
+}
+export default function FloatingLoading(props:FloatingLoadingProps) {
+    if (props.isLoading) {
         return (
             <div className='floating-loading'>
                 <JBLoading />
             </div>
         );
-    } else return null;
+    } else return <Fragment></Fragment>;
 }

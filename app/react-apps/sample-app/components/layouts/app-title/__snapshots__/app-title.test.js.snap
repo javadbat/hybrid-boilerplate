@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component will render 1`] = `
+<div
+  className="project-title"
+>
+  <h1>
+    Sample ReactJs App
+  </h1>
+  <h5>
+    mode: 
+    development
+  </h5>
+</div>
+`;

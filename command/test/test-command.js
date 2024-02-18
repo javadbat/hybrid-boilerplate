@@ -18,4 +18,5 @@ const NoCache = '--no-cache';
 
 const userArgs = process.argv.slice(2);
 const params = [showCoverageReportParam, bailParam,detectOpenHandle];
+// --experimental-vm-modules tells jest to run test in Es module format see this:https://jestjs.io/docs/ecmascript-modules
 const testProcess = spawn(`node`,['--experimental-vm-modules', jestScriptPath, ...params, ...userArgs],{shell:true,stdio:'inherit'});
