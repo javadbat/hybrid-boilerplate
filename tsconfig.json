@@ -16,7 +16,9 @@
             "@config/*": ["config/*"],
             "@utils/*": ["app/utils/*"],
             "@assets/*": ["app/assets/*"],
-            "@web-components/*": ["app/web-components/*"]
+            "@web-components/*": ["app/web-components/*"],
+            "@react-components/*" : ["app/react-apps/components/*"]
+        ]
         },
         "typeRoots" : ["./node_modules/@types", "./global.d.ts"],
         "outDir": "./app/dist"
