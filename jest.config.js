@@ -7,7 +7,7 @@ export default async () => {
         verbose: true,
         testEnvironment:'jsdom',
         transform: {
-            '\\.*.(jsx|tsx|ts)?$': ['babel-jest', { configFile: path.join(generalConfigServer.basePath, 'command', 'test', 'babel-config.js') }]
+            '\\.*.(js|jsx|tsx|ts)?$': ['babel-jest', { configFile: path.join(generalConfigServer.basePath, 'config', 'babel.config.json') }]
         },
         moduleNameMapper: {
             '.*\\.(css|less|styl|scss|sass)$': path.join(generalConfigServer.basePath, 'command', 'test', 'mocks', 'style-mocks.js'),
