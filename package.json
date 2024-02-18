@@ -8,7 +8,7 @@
     "build": "node command/build/build.js",
     "start": "node command/start/start.js",
     "analysis": "node command/analysis/analysis.js",
-    "test": "node command/test/test.js",
+    "test": "node command/test/test-command.js",
     "eslint": "./node_modules/.bin/eslint --ignore-path .gitignore .",
     "prepare": "husky install"
   },

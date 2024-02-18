@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1701034096857" clover="3.2.0">
-  <project timestamp="1701034096857" name="All files">
+<coverage generated="1708242034030" clover="3.2.0">
+  <project timestamp="1708242034031" name="All files">
     <metrics statements="12" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="4" elements="22" coveredelements="17" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1"/>
     <file name="persian-helper.js" path="A:\Home\NeveshtAfzar\work\Azad\Azad\hybrid-boilerplate\app\react-apps\utils\persian-helper.js">
       <metrics statements="12" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="4"/>
