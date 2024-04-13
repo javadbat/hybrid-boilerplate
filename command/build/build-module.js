@@ -131,7 +131,7 @@ class Build {
         ];
         const isTypeScriptModule = this._isTypeScriptModule(module);
         if (isTypeScriptModule) {
-            plugins.push(typescript({ tsconfig: "tsconfig-modules.json", tsconfigDefaults: this._getTypeScriptCompilerOptions(module) }));
+            plugins.push(typescript({clean:true, tsconfig: "tsconfig-modules.json", tsconfigDefaults: this._getTypeScriptCompilerOptions(module) }));
         }
         if (generalConfigServer.env == "production") {
             if (buildConfig.reactApps.useMinifier) {
