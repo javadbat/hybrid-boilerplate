@@ -41,7 +41,7 @@ class Build {
         }
     }
     async BuildPageModules(watch) {
-        for(const module of  buildConfig.pagesBundle){
+        for (const module of buildConfig.pagesBundle) {
             const moduleWatch = module.watch && watch;
             await this.BuildPageModule(module, moduleWatch);
         }
@@ -58,12 +58,12 @@ class Build {
     }
     async buildModule(inputOptions, outputOptions) {
         //build module with rollup without any watch or something
-        try{
+        try {
             let bundle = await rollup(inputOptions);
             const output = await bundle.write(outputOptions)
-            console.log(chalk.greenBright(output.output[0].facadeModuleId), chalk.bgGreenBright("  BUILD")  );
+            console.log(chalk.greenBright(output.output[0].facadeModuleId), chalk.bgGreenBright("  BUILD"));
             return;
-        }catch(err){
+        } catch (err) {
             console.error(err);
         }
     }
@@ -89,6 +89,10 @@ class Build {
             } else if (event.code === 'ERROR' || event.code === 'FATAL') {
                 console.error(chalk.red(event.error));
                 rejecter();
+            }
+            //rollup need to be closed on each result to free up space
+            if (event.result) {
+                event.result.close();
             }
         });
     }
@@ -127,7 +131,7 @@ class Build {
         ];
         const isTypeScriptModule = this._isTypeScriptModule(module);
         if (isTypeScriptModule) {
-            plugins.push(typescript({  tsconfig:"tsconfig-modules.json",tsconfigDefaults: this._getTypeScriptCompilerOptions(module) }));
+            plugins.push(typescript({ tsconfig: "tsconfig-modules.json", tsconfigDefaults: this._getTypeScriptCompilerOptions(module) }));
         }
         if (generalConfigServer.env == "production") {
             if (buildConfig.reactApps.useMinifier) {
