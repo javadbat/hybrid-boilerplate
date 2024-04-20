@@ -7,7 +7,9 @@ export default async () => {
         verbose: true,
         testEnvironment:'jsdom',
         transform: {
-            '\\.*.(js|jsx|tsx|ts)?$': ['babel-jest', { configFile: path.join(generalConfigServer.basePath, 'config', 'babel.config.json') }]
+            "^.*\.html$":path.join(generalConfigServer.basePath,'command','test','mocks','html-transform.js'),
+            '^(?!.*web-components).*\.(js|jsx|tsx|ts)?$': ['babel-jest', { configFile: path.join(generalConfigServer.basePath, 'config', 'babel.config.json') }],
+            '^.*web-components.*\.(js|jsx|tsx|ts)?$': ['ts-jest', { tsconfig: path.join(generalConfigServer.basePath, 'tsconfig-modules.json' ) ,useESM:true}],
         },
         moduleNameMapper: {
             // '.*\\.(css|less|styl|scss|sass)$': path.join(generalConfigServer.basePath, 'command', 'test', 'mocks', 'style-mocks.js'),

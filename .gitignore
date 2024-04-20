@@ -8,3 +8,4 @@ Dockerfile_SIT
 Dockerfile_UAT
 Dockerfile_RELEASE
 Dockerfile_PROD
+coverage/**/*

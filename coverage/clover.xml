@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1708250624509" clover="3.2.0">
-  <project timestamp="1708250624510" name="All files">
+<coverage generated="1713593273372" clover="3.2.0">
+  <project timestamp="1713593273372" name="All files">
     <metrics statements="28" coveredstatements="19" conditionals="12" coveredconditionals="4" methods="9" coveredmethods="8" elements="49" coveredelements="31" complexity="0" loc="28" ncloc="28" packages="3" files="5" classes="5"/>
     <package name="app.react-apps.sample-app.components.layouts.app-title">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
