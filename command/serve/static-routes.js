@@ -55,6 +55,7 @@ class StaticRoutes{
         // pwa config file
         this.app.use(`/${buildConfig.reactApps.appList[0].folderName}/manifest.json`,express.static(path.join(this.appConfig.basePath,'app','react-apps', buildConfig.reactApps.appList[0].folderName, 'pwa', 'manifest.json')));
         this.app.use('/service-worker.js',express.static(path.join(this.appConfig.basePath,'app', 'dist', 'react-apps', buildConfig.reactApps.appList[0].folderName, 'pwa', 'service-worker.js'),serviceWorkerAssetOption));
+        this.app.use('/service-worker.js.br',express.static(path.join(this.appConfig.basePath,'app', 'dist', 'react-apps', buildConfig.reactApps.appList[0].folderName, 'pwa', 'service-worker.js.br'),serviceWorkerAssetOption));
         // for web assembly files
         this.app.use('/wasm',express.static(path.join(this.appConfig.basePath,'wasm')));
     }

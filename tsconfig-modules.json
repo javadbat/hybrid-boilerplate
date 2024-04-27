@@ -6,6 +6,7 @@
         "removeComments": false,
         "preserveConstEnums": true,
         "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
         "sourceMap": true,
         "allowJs": true,
         "target": "es6",
