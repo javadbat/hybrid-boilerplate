@@ -1,14 +1,13 @@
-.folder-structure{
+import styled from "styled-components";
+
+export const AssetsLoadSampleWrapper = styled.div`
     width: 100%;
     padding:128px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    .folder-structure-content{
+    .assets-load-sample-content{
         width: 800px;
-        img{
-            max-width: 100%;
-        }
     }
-}
+`;

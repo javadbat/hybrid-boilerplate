@@ -1,11 +1,11 @@
 import React from 'react';
-import './FolderStructure.scss';
 import overallImageSrc from './images/app-folders.png';
 import appImageSrc from './images/app-folder.png';
+import { FolderStructureWrapper } from './FolderStructure.styled';
 
 function FolderStructure() {
     return (
-        <div className="folder-structure">
+        <FolderStructureWrapper>
             <div className="folder-structure-content">
                 <h1>Folder Structure</h1>
                 <h4>how this project structured</h4>
@@ -43,7 +43,7 @@ function FolderStructure() {
                     </ul>
                 </article>
             </div>
-        </div>
+        </FolderStructureWrapper>
     );
 }
 

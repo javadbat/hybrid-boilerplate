@@ -1,12 +1,12 @@
 import React from 'react';
-import './AssetsLoadSample.scss';
+import {AssetsLoadSampleWrapper} from'./AssetsLoadSample.styled';
 import LoadImageByRelativePath from './components/load-image-by-relative-path/LoadImageByRelativePath';
 import LoadByUrl from './components/load-image-by-Url/LoadImageByUrl';
 import LoadImageWithSource from './components/load-image-with-source/LoadImageWithSource';
 import customizeStaticRouteImage from './customize-static-route.png';
 function AssetsLoadSample() {
     return (
-        <div className="assets-load-sample">
+        <AssetsLoadSampleWrapper>
             <div className="assets-load-sample-content">
                 <h1>Load Assets</h1>
                 <h4>Different way to load assets in react hybrid boilerplate</h4>
@@ -42,7 +42,7 @@ function AssetsLoadSample() {
                     </article>
                 </article>
             </div>
-        </div>
+        </AssetsLoadSampleWrapper>
     );
 }
 
