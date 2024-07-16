@@ -2,6 +2,7 @@ import express from 'npm:express';
 import cookieParser from 'npm:cookie-parser';
 import tcpPortUsed from 'npm:tcp-port-used';
 import chalk from 'npm:chalk';
+import boxen from 'npm:boxen';
 import {serverConfig} from '@config/server-config.ts'
 import StaticsRoutes from './static-routes.ts';
 import PageRoutes from './page-routes.ts';
@@ -11,7 +12,8 @@ export class ExpressApp {
         this.app = express();
     }
     serve() {
-        console.log('==================' + serverConfig.env.nodeEnv + '-' + serverConfig.env.appStage + '=============================');
+       
+       console.log(boxen(`Node_ENV: ${serverConfig.env.nodeEnv} , APP_STAGE: ${serverConfig.env.appStage}`,{padding:0.5,dimBorder:true}));
         const app = this.app;
         const serveApp = function () {
             app.use(cookieParser());
