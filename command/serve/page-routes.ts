@@ -1,29 +1,27 @@
-import path from 'path';
-import exphbs from 'express-handlebars';
-import ReactAppController from '../../server/controllers/react-app-controller.js';
-import {generalConfigServer} from '../../config/general-config-server.js';
-import { buildConfig } from '../../config/build-config.js';
+import path from 'node:path';
+import exphbs from 'npm:express-handlebars';
+import ReactAppController from '../../server/controllers/react-app-controller.ts';
+import { buildConfig } from '@config/build-config.ts';
+import { serverConfig } from "@config/server-config.ts";
+import denoConfig from "../../deno.json" with { type: "json" };
+
 class PageRoutes {
-    constructor(app, config) {
+    app:any
+    appPath = 'app'
+    viewsDirectory = 'views';
+    viewsPath = path.join(serverConfig.basePath, this.appPath, this.viewsDirectory)
+    constructor(app:any) {
         this.app = app;
-        this.appConfig = config;
         this.appPath = 'app';
-        this.viewsDirectory = 'views';
-        this.viewsPath = path.join(this.appConfig.basePath, this.appPath, this.viewsDirectory);
     }
     init() {
         //read express.Router() doc for dynamic and more complex route
         //read req.is to specify diffrent resualt for different request type
         //set handlebar template engine
         this.app.set('views', this.viewsPath);
-        let hbs = exphbs.create({
+        const hbs = exphbs.create({
             extname: '.hbs',
-            helpers: {
-                // TODO: impl real helper like date convertor
-                isEqual: function (arg1, arg2, options) {
-                    return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
-                },
-            },
+            helpers: this.getHandlebarHelpers(),
             layoutsDir: 'Layouts',
             defaultLayout: false,
             //helpers      : 'path/to/helpers/directory',
@@ -33,6 +31,15 @@ class PageRoutes {
         this.app.set('view engine', '.hbs');
         // end of handlebar template engine setup
         this.registerRoutes();
+    }
+    getHandlebarHelpers(){ 
+        const helpers = {
+            // TODO: impl real helper like date convertor
+            isEqual: function (arg1:any, arg2:any, options:any) {
+                return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+            }
+        }
+        return helpers;
     }
     registersReactAppsRoutes(){
         //setup controllers
@@ -46,11 +53,11 @@ class PageRoutes {
         this.registersReactAppsRoutes();
         // here you can add your own custom page routes they may be a html page route or react app page route
     }
-    indexPage(req, res) {
+    indexPage(req:any, res:any) {
         const hbsData = {
-            version: process.env.npm_package_version,
-            buildEnv:generalConfigServer.env,
-            appStage:generalConfigServer.appStage
+            version: denoConfig.version,
+            buildEnv:serverConfig.env.nodeEnv,
+            appStage:serverConfig.env.appStage
         };
         res.render('index.hbs', hbsData);
     }

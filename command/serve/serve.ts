@@ -1,4 +1,4 @@
-import { ExpressApp } from "./express-app.js";
+import { ExpressApp } from "./express-app.ts";
 
 const expressApp = new ExpressApp();
 expressApp.serve();

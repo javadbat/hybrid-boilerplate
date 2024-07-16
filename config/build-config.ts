@@ -14,7 +14,7 @@ export const buildConfig = {
     reactApps:{
         baseOutputPath:'app/dist/react-apps',
         basePublicPath:'/dist/react-apps/',
-        // apply change on the fly in your browser on change in development envirement(NODE_ENV=development)
+        // apply change on the fly in your browser on change in development environment(NODE_ENV=development)
         hotReload:true,
         enableAnalyzer:false,
         // will minify your app on production mode(NODE_ENV=production)
