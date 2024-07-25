@@ -12,7 +12,7 @@ import terser from "@rollup/plugin-terser";
 import SassBuilder from './sass-builder.js';
 import { ReactBuilder } from './react-builder.js';
 import { generalConfigServer } from '../../config/general-config-server.js';
-import { resolvedAliases } from '../../config/path-aliases-config.js';
+import { resolvedAliases } from '../../config/path-aliases-config.ts';
 import typescript from 'rollup-plugin-typescript2';
 import chalk from 'chalk';
 import brotli from "rollup-plugin-brotli";

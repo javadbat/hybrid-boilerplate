@@ -8,7 +8,7 @@ import webPackHotMiddleware from "webpack-hot-middleware";
 /* to analysis our app */
 import WebpackBundleAnalyzer from 'webpack-bundle-analyzer';
 import { generalConfigServer } from '../../config/general-config-server.js';
-import { resolvedAliases } from '../../config/path-aliases-config.js';
+import { resolvedAliases } from '../../config/path-aliases-config.ts';
 import { ServiceWorkerBuilder } from './service-worker-builder.js';
 import TerserPlugin from 'terser-webpack-plugin';
 import zlib from 'zlib';

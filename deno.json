@@ -1,7 +1,8 @@
 {
   "version": "2.0.0",
   "tasks": {
-    "dev": "deno run --watch --allow-read --allow-env --allow-sys --allow-net command/start/start.ts"
+    "dev": "deno run --watch --allow-read --allow-env --allow-sys --allow-net command/start/start.ts",
+    "build": "deno run --allow-env --allow-sys --allow-read --allow-write --allow-ffi command/build/build.ts"
   },
   "imports": {
     "@config/": "./config/"

@@ -1,5 +1,5 @@
 import path from "path";
-import { jestAliasMaps } from "./config/path-aliases-config.js";
+import { jestAliasMaps } from "./config/path-aliases-config.ts";
 import { generalConfigServer } from "./config/general-config-server.js";
 
 export default async () => {
