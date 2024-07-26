@@ -48,9 +48,11 @@
       "npm:boxen": "npm:boxen@8.0.0",
       "npm:brotli": "npm:brotli@1.3.3",
       "npm:brotli@^1.3.3": "npm:brotli@1.3.3",
+      "npm:case-sensitive-paths-webpack-plugin": "npm:case-sensitive-paths-webpack-plugin@2.4.0",
       "npm:case-sensitive-paths-webpack-plugin@^2.4.0": "npm:case-sensitive-paths-webpack-plugin@2.4.0",
       "npm:chalk": "npm:chalk@5.3.0",
       "npm:chalk@^5.3.0": "npm:chalk@5.3.0",
+      "npm:compression-webpack-plugin": "npm:compression-webpack-plugin@11.1.0_webpack@5.93.0__acorn@8.12.1",
       "npm:compression-webpack-plugin@^11.0.0": "npm:compression-webpack-plugin@11.1.0_webpack@5.93.0__acorn@8.12.1",
       "npm:console-gui-tools": "npm:console-gui-tools@3.7.0",
       "npm:cookie-parser": "npm:cookie-parser@1.4.6",
@@ -103,19 +105,26 @@
       "npm:styled-components@^6.1.8": "npm:styled-components@6.1.11_react@18.3.1_react-dom@18.3.1__react@18.3.1",
       "npm:tcp-port-used": "npm:tcp-port-used@1.0.2",
       "npm:tcp-port-used@^1.0.2": "npm:tcp-port-used@1.0.2",
+      "npm:terser-webpack-plugin": "npm:terser-webpack-plugin@5.3.10_webpack@5.93.0__acorn@8.12.1",
       "npm:terser-webpack-plugin@^5.3.10": "npm:terser-webpack-plugin@5.3.10_webpack@5.93.0__acorn@8.12.1",
       "npm:ts-jest@^29.1.2": "npm:ts-jest@29.2.2_@babel+core@7.24.9_babel-jest@29.7.0__@babel+core@7.24.9_jest@29.7.0__@types+node@18.16.19_typescript@5.5.3_@types+node@18.16.19",
       "npm:url": "npm:url@0.11.3",
       "npm:uuid@^9.0.1": "npm:uuid@9.0.1",
+      "npm:webpack": "npm:webpack@5.93.0_acorn@8.12.1",
+      "npm:webpack-bundle-analyzer": "npm:webpack-bundle-analyzer@4.10.2",
       "npm:webpack-bundle-analyzer@^4.10.1": "npm:webpack-bundle-analyzer@4.10.2",
+      "npm:webpack-dev-middleware": "npm:webpack-dev-middleware@7.2.1_webpack@5.93.0__acorn@8.12.1",
       "npm:webpack-dev-middleware@^7.0.0": "npm:webpack-dev-middleware@7.2.1_webpack@5.93.0__acorn@8.12.1",
+      "npm:webpack-hot-middleware": "npm:webpack-hot-middleware@2.26.1",
       "npm:webpack-hot-middleware@^2.26.0": "npm:webpack-hot-middleware@2.26.1",
       "npm:webpack@^5.89.0": "npm:webpack@5.93.0_acorn@8.12.1",
       "npm:workbox-build@^7.0.0": "npm:workbox-build@7.1.0_ajv@8.17.1_@babel+core@7.24.9_rollup@2.79.1",
       "npm:workbox-core@^7.0.0": "npm:workbox-core@7.1.0",
       "npm:workbox-routing@^7.0.0": "npm:workbox-routing@7.1.0",
       "npm:workbox-strategies@^7.0.0": "npm:workbox-strategies@7.1.0",
-      "npm:workbox-webpack-plugin@^7.0.0": "npm:workbox-webpack-plugin@7.1.0_webpack@5.93.0__acorn@8.12.1"
+      "npm:workbox-webpack-plugin": "npm:workbox-webpack-plugin@7.1.0_webpack@5.93.0__acorn@8.12.1",
+      "npm:workbox-webpack-plugin@^7.0.0": "npm:workbox-webpack-plugin@7.1.0_webpack@5.93.0__acorn@8.12.1",
+      "npm:zlib": "npm:zlib@1.0.5"
     },
     "jsr": {
       "@std/assert@0.226.0": {
@@ -9146,6 +9155,10 @@
       },
       "yocto-queue@1.1.1": {
         "integrity": "sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==",
+        "dependencies": {}
+      },
+      "zlib@1.0.5": {
+        "integrity": "sha512-40fpE2II+Cd3k8HWTWONfeKE2jL+P42iWJ1zzps5W51qcTsOUKM5Q5m2PFb0CLxlmFAaUuUdJGc3OfZy947v0w==",
         "dependencies": {}
       }
     }

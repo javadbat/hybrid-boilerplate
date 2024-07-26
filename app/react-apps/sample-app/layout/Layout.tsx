@@ -1,11 +1,11 @@
 
 import React, { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import Router from './router/Router';
+import Router from './router/Router.tsx';
 // import './Layout.scss';
-import { fixMobileHeightVH } from '../../utils/layout-helper';
-import { AppLayout } from './Layout.styled';
-import { buildConfig } from '../../../../config/build-config';
+import { fixMobileHeightVH } from '../../utils/layout-helper.ts';
+import { AppLayout } from './Layout.styled.ts';
+import { reactAppList } from '@config/build-config.ts';
 
 function Layout() {
     useEffect(() => {
@@ -13,7 +13,7 @@ function Layout() {
     }, []);
     return (
         <AppLayout>
-            <BrowserRouter basename={`/${buildConfig.reactApps.appList[0].urlPrefix}`}>
+            <BrowserRouter basename={`/${reactAppList[0].urlPrefix}`}>
                 <Router></Router>
             </BrowserRouter>
         </AppLayout>

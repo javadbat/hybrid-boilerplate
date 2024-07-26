@@ -1,6 +1,6 @@
-import { ServerAddress } from "./server-address.ts";
-import { AppStage, NodeEnv } from "./types.ts";
-
+import { ServerAddress } from "@config/server-address.ts";
+import { AppStage, NodeEnv } from "@config/types.ts";
+import denoConfig from '../deno.json' with { type: 'json' }
 class ServerConfig{
     env = {
         nodeEnv:(Deno.env.get('NODE_ENV') || 'development') as NodeEnv,
@@ -9,6 +9,7 @@ class ServerConfig{
     basePath = Deno.cwd();
     host ="0.0.0.0";
     port= Number(Deno.env.get('PORT')|| 3000);
+    appVersion = denoConfig.version;
     address:ServerAddress
     constructor(){
         this.address = new ServerAddress(this.env.appStage,this.port);

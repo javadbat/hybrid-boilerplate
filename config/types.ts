@@ -17,3 +17,10 @@ export type WebComponentBuildConfig = {
   tsconfigPath?:string;
   globals?: { [key: string]: string };
 };
+export type ReactAppBuildConfig = {
+  name: string,
+  folderName: string,
+  urlPrefix: string,
+  viewFolderName: string,
+  path: string,
+}
